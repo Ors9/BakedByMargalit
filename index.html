@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -20,6 +21,10 @@
   <section class="hero">
     <h2>ברוכים הבאים!</h2>
     <p>מאפים ביתיים בעבודת יד ובאהבה ❤️</p>
+  </section>
+
+  <section class="carousel">
+    <img id="carouselImage" src="images/slide1.jpg" alt="מאפה" />
   </section>
 
   <section class="quick-order">
@@ -39,13 +44,33 @@
   </section>
 
   <section class="contact-links">
-    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">צור קשר בוואטסאפ 📞</a>
+    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא" 
+    target="_blank" 
+    style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif;">
+     📞 צור קשר בוואטסאפ
+ </a>
   </section>
 </main>
 
 <footer>
   <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
 </footer>
+
+<!-- סקריפט לקרוסלת תמונות -->
+<script>
+  const images = [
+    'images/slide1.jpg',
+    'images/slide2.jpg',
+    'images/slide3.jpg'
+  ];
+  let index = 0;
+  const imgElement = document.getElementById("carouselImage");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+  }, 3000);
+</script>
 
 </body>
 </html>
