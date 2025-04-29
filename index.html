@@ -4,58 +4,48 @@
   <meta charset="UTF-8">
   <title>המאפים של אמא</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: sans-serif; margin: 0; padding: 20px; background: #fffbe7; }
-    header { text-align: center; margin-bottom: 40px; }
-    h1 { color: #d2691e; }
-    .menu-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
-    .order-form { margin-top: 40px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
-    label { display: block; margin: 10px 0 5px; }
-    input, textarea { width: 100%; padding: 8px; }
-    button { margin-top: 10px; padding: 10px 20px; background: #d2691e; color: white; border: none; cursor: pointer; }
-    button:hover { background: #b85c19; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>המאפים של אמא</h1>
-  <p>פריקסה, ספינג', עוגיות מרוקאיות ועוד</p>
+  <nav>
+    <a href="index.html">בית</a> |
+    <a href="menu.html">תפריט</a>
+  </nav>
 </header>
 
-<section>
-  <div class="menu-item">
-    <strong>פריקסה</strong> – 15 ₪ ליחידה
-  </div>
-  <div class="menu-item">
-    <strong>ספינג'</strong> – 5 ₪ ליחידה
-  </div>
-  <div class="menu-item">
-    <strong>מופלטה</strong> – 10 ₪ ליחידה
-  </div>
-  <div class="menu-item">
-    <strong>עוגיות מרוקאיות</strong> – 25 ₪ לקופסה
-  </div>
-</section>
+<main>
+  <section class="hero">
+    <h2>ברוכים הבאים!</h2>
+    <p>מאפים ביתיים בעבודת יד ובאהבה 💛</p>
+  </section>
 
-<section class="order-form">
-  <h2>הזמנה</h2>
-  <form>
-    <label for="name">שם מלא</label>
-    <input type="text" id="name" name="name" required>
+  <section class="quick-order">
+    <h2>הזמנה מהירה</h2>
+    <form>
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="phone">טלפון</label>
-    <input type="tel" id="phone" name="phone" required>
+      <label for="phone">טלפון</label>
+      <input type="tel" id="phone" name="phone" required>
 
-    <label for="address">כתובת</label>
-    <input type="text" id="address" name="address" required>
+      <label for="order">מה ברצונך להזמין?</label>
+      <textarea id="order" name="order" rows="4" required></textarea>
 
-    <label for="order">מה ברצונך להזמין?</label>
-    <textarea id="order" name="order" rows="4" required></textarea>
+      <button type="submit">שלח הזמנה</button>
+    </form>
+  </section>
 
-    <button type="submit">שלח הזמנה</button>
-  </form>
-</section>
+  <section class="contact-links">
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">צור קשר בוואטסאפ 📞</a>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
+</footer>
 
 </body>
 </html>
