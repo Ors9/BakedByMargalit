@@ -216,3 +216,26 @@ body {
     font-size: 16px;
     color: #555;
   }
+
+  .social-links {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 18px;
+    color: #6b4f2d;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #f0e0c0;
+    color: #6b4f2d;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .social-links a:hover {
+    background: #e4cfa8;
+  }
