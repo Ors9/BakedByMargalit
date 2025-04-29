@@ -206,3 +206,13 @@ body {
     margin-top: 60px;
   }
   
+  .menu-item div {
+    font-size: 20px;
+    color: #222;
+    line-height: 1.4;
+  }
+  
+  .menu-item .price {
+    font-size: 16px;
+    color: #555;
+  }
