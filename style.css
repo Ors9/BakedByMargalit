@@ -176,3 +176,23 @@ body {
     margin-top: 60px;
   }
   
+  .section-nav {
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px 0;
+    background: #ffeaea;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .section-nav a {
+    margin: 0 12px;
+    font-size: 18px;
+    color: #b71c1c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .section-nav a:hover {
+    text-decoration: underline;
+  }
