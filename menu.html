@@ -164,16 +164,20 @@
       const li = document.createElement("li");
 
       li.innerHTML = `
-        <strong>${item}</strong><br>
-        <div class="quantity-controls">
-          <button onclick="updateCart('${item}', ${cart[item].price}, -1)">➖</button>
-          <span>${cart[item].count}</span>
-          <button onclick="updateCart('${item}', ${cart[item].price}, 1)">➕</button>
-        </div>
-        <div style="margin-top: 5px; font-size: 14px; color: #555;">
-          ${cart[item].count * cart[item].price} ₪
-        </div>
-      `;
+  <strong>${item}</strong><br>
+  <div style="font-size: 14px; color: #777; margin-top: 4px;">
+    🧺 ${cart[item].count} יחידות בסל
+  </div>
+  <div class="quantity-controls">
+    <button onclick="updateCart('${item}', ${cart[item].price}, -1)">➖</button>
+    <span>${cart[item].count}</span>
+    <button onclick="updateCart('${item}', ${cart[item].price}, 1)">➕</button>
+  </div>
+  <div style="margin-top: 5px; font-size: 14px; color: #555;">
+    ${cart[item].count * cart[item].price} ₪
+  </div>
+`;
+
 
       ul.appendChild(li);
       total += cart[item].count * cart[item].price;
