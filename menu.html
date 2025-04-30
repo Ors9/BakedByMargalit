@@ -7,25 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
-<!-- כפתור פתיחת סל -->
-<button class="cart-toggle" onclick="toggleCart()">🛒</button>
-
-<!-- סל צדדי -->
-<div class="side-cart" id="sideCart">
-  <button class="close-btn" onclick="toggleCart()">×</button>
-  <h3>🛒 הסל שלך</h3>
-  <ul id="cart-items"></ul>
-  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
-  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
-</div>
-
-<script>
-  function toggleCart() {
-    document.getElementById("sideCart").classList.toggle("open");
-  }
-</script>
-
 <body>
 
 <header>
@@ -45,15 +26,6 @@
     <a href="#desserts">🧁 קינוחים</a>
   </nav>
 
-
-  <!-- סל קניות -->
-  <section class="cart-summary">
-    <h3>🛒 הסל שלך:</h3>
-    <ul id="cart-items"></ul>
-    <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
-    <a id="whatsappLink" href="#" target="_blank">📤 שלח הזמנה בוואטסאפ</a>
-  </section>
-
   <!-- עוגיות -->
   <section class="menu-section" id="cookies">
     <h2>עוגיות</h2>
@@ -71,9 +43,9 @@
     </div>
   </section>
 
-  <!-- מאפים מלוחים -->
+  <!-- מאפים -->
   <section class="menu-section" id="savory">
-    <h2>מאפים מלוחים</h2>
+    <h2>מאפים</h2>
 
     <div class="menu-item">
       <img src="images/fricasse.jpg" alt="פריקסה">
@@ -132,9 +104,7 @@
     </div>
   </section>
 
-  
-
-  <!-- כפתור קשר -->
+  <!-- כפתור וואטסאפ קבוע -->
   <section class="contact-links">
     <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא" 
     target="_blank" 
@@ -143,7 +113,7 @@
     </a>
   </section>
 
-  <!-- רשתות חברתיות -->
+  <!-- רשתות -->
   <section class="social-icons">
     <p>עקבו אחרינו גם ברשתות החברתיות:</p>
     <div class="icon-container">
@@ -151,14 +121,25 @@
       <a href="https://www.facebook.com/margalit.saban/" target="_blank" class="icon facebook" aria-label="Facebook"></a>
     </div>
   </section>
-
 </main>
+
+<!-- כפתור 🛒 קבוע -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+
+<!-- סל צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
+</div>
 
 <footer>
   <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
 </footer>
 
-<!-- JavaScript של הסל -->
+<!-- סקריפטים -->
 <script>
   const cart = {};
 
@@ -189,6 +170,10 @@
 
     totalSpan.innerText = total;
     link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
+  }
+
+  function toggleCart() {
+    document.getElementById("sideCart").classList.toggle("open");
   }
 </script>
 
