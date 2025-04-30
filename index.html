@@ -18,25 +18,24 @@
 </header>
 
 <main>
-    <section class="hero">
-        <p class="subtitle">מאפים ביתיים בעבודת יד, מחומרים טריים ועם המון אהבה ❤️</p>
-      </section>
+  <section class="hero">
+    <p class="subtitle">מאפים ביתיים בעבודת יד, מחומרים טריים ועם המון אהבה ❤️</p>
+  </section>
 
-      <section class="menu-button-wrap">
-        <a href="menu.html" class="main-button">📋 לתפריט והזמנה</a>
-      </section>
+  <section class="menu-button-wrap">
+    <a href="menu.html" class="main-button">📋 לתפריט והזמנה</a>
+  </section>
 
   <section class="carousel">
     <img id="carouselImage" src="images/slide1.jpg" alt="מאפה" />
   </section>
 
-
   <section class="contact-links">
-    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא" 
-    target="_blank" 
-    style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif;">
-     📞 צור קשר בוואטסאפ
- </a>
+    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא"
+       target="_blank"
+       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif;">
+      📞 צור קשר בוואטסאפ
+    </a>
   </section>
 
   <section class="social-icons">
@@ -46,16 +45,24 @@
       <a href="https://www.facebook.com/margalit.saban/" target="_blank" class="icon facebook" aria-label="Facebook"></a>
     </div>
   </section>
-
 </main>
 
+<!-- 🛒 כפתור קבוע לסל -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
 
+<!-- סל צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <p style="font-size: 18px;">הסל זמין בעמוד התפריט בלבד 😊</p>
+  <a href="menu.html" class="main-button">📋 עבור לתפריט</a>
+</div>
 
 <footer>
   <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
 </footer>
 
-<!-- סקריפט לקרוסלת תמונות -->
+<!-- סקריפט לקרוסלה -->
 <script>
   const images = [
     'images/slide1.jpg',
@@ -69,6 +76,13 @@
     index = (index + 1) % images.length;
     imgElement.src = images[index];
   }, 3000);
+</script>
+
+<!-- סקריפט סל צדדי -->
+<script>
+  function toggleCart() {
+    document.getElementById("sideCart").classList.toggle("open");
+  }
 </script>
 
 </body>
