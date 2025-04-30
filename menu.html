@@ -9,6 +9,18 @@
 
 <body>
 
+<!-- כפתור סל קניות קבוע -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+
+<!-- סל צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
+</div>
+
 <header>
   <h1>תפריט המאפים</h1>
   <nav>
@@ -104,16 +116,16 @@
     </div>
   </section>
 
-  <!-- כפתור וואטסאפ קבוע -->
+  <!-- קישור לוואטסאפ -->
   <section class="contact-links">
-    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא" 
-    target="_blank" 
-    style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif;">
-     📞 צור קשר בוואטסאפ
+    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא"
+       target="_blank"
+       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
+      📞 צור קשר בוואטסאפ
     </a>
   </section>
 
-  <!-- רשתות -->
+  <!-- רשתות חברתיות -->
   <section class="social-icons">
     <p>עקבו אחרינו גם ברשתות החברתיות:</p>
     <div class="icon-container">
@@ -121,25 +133,14 @@
       <a href="https://www.facebook.com/margalit.saban/" target="_blank" class="icon facebook" aria-label="Facebook"></a>
     </div>
   </section>
+
 </main>
-
-<!-- כפתור 🛒 קבוע -->
-<button class="cart-toggle" onclick="toggleCart()">🛒</button>
-
-<!-- סל צדדי -->
-<div class="side-cart" id="sideCart">
-  <button class="close-btn" onclick="toggleCart()">×</button>
-  <h3>🛒 הסל שלך</h3>
-  <ul id="cart-items"></ul>
-  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
-  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
-</div>
 
 <footer>
   <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
 </footer>
 
-<!-- סקריפטים -->
+<!-- סקריפט לניהול סל -->
 <script>
   const cart = {};
 

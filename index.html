@@ -9,6 +9,17 @@
 
 <body>
 
+<!-- כפתור סל קניות קבוע -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+
+<!-- סל צדדי שמפנה לתפריט -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <p style="font-size: 18px;">הסל זמין בעמוד <strong>התפריט</strong> בלבד 😊</p>
+  <a href="menu.html" class="main-button">📋 עבור לתפריט</a>
+</div>
+
 <header>
   <h1>המאפים של אמא</h1>
   <nav>
@@ -18,6 +29,7 @@
 </header>
 
 <main>
+
   <section class="hero">
     <p class="subtitle">מאפים ביתיים בעבודת יד, מחומרים טריים ועם המון אהבה ❤️</p>
   </section>
@@ -33,7 +45,7 @@
   <section class="contact-links">
     <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא"
        target="_blank"
-       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif;">
+       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
       📞 צור קשר בוואטסאפ
     </a>
   </section>
@@ -45,30 +57,16 @@
       <a href="https://www.facebook.com/margalit.saban/" target="_blank" class="icon facebook" aria-label="Facebook"></a>
     </div>
   </section>
+
 </main>
-
-<!-- 🛒 כפתור קבוע לסל -->
-<button class="cart-toggle" onclick="toggleCart()">🛒</button>
-
-<!-- סל צדדי -->
-<div class="side-cart" id="sideCart">
-  <button class="close-btn" onclick="toggleCart()">×</button>
-  <h3>🛒 הסל שלך</h3>
-  <p style="font-size: 18px;">הסל זמין בעמוד התפריט בלבד 😊</p>
-  <a href="menu.html" class="main-button">📋 עבור לתפריט</a>
-</div>
 
 <footer>
   <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
 </footer>
 
-<!-- סקריפט לקרוסלה -->
+<!-- סקריפט קרוסלת תמונות -->
 <script>
-  const images = [
-    'images/slide1.jpg',
-    'images/slide2.jpg',
-    'images/slide3.jpg'
-  ];
+  const images = ['images/slide1.jpg', 'images/slide2.jpg', 'images/slide3.jpg'];
   let index = 0;
   const imgElement = document.getElementById("carouselImage");
 
