@@ -47,6 +47,7 @@
       <strong>עוגיות מרוקאיות</strong><br>
       <span class="price">25 ₪ לקופסה</span><br>
       <div class="quantity-controls">
+        <span style="margin-left: 8px;">הוספה לסל:</span>
         <button onclick="updateCart('עוגיות מרוקאיות', 25, -1, 'images/cookies.jpg')">➖</button>
         <span id="count-עוגיות מרוקאיות">0</span>
         <button onclick="updateCart('עוגיות מרוקאיות', 25, 1, 'images/cookies.jpg')">➕</button>
@@ -64,6 +65,7 @@
     <div>
       <strong>פריקסה</strong><br>
       <span class="price">15 ₪ ליחידה</span><br>
+      <span style="margin-left: 8px;">הוספה לסל:</span>
       <div class="quantity-controls">
         <button onclick="updateCart('פריקסה', 15, -1, 'images/fricasse.jpg')">➖</button>
         <span id="count-פריקסה">0</span>
@@ -78,6 +80,7 @@
       <strong>ספינג'</strong><br>
       <span class="price">5 ₪ ליחידה</span><br>
       <div class="quantity-controls">
+        <span style="margin-left: 8px;">הוספה לסל:</span>
         <button onclick="updateCart('ספינג\'', 5, -1, 'images/sfenj.jpg')">➖</button>
         <span id="count-ספינג'">0</span>
         <button onclick="updateCart('ספינג\'', 5, 1, 'images/sfenj.jpg')">➕</button>
@@ -90,6 +93,7 @@
     <div>
       <strong>מופלטה</strong><br>
       <span class="price">10 ₪ ליחידה</span><br>
+      <span style="margin-left: 8px;">הוספה לסל:</span>
       <div class="quantity-controls">
         <button onclick="updateCart('מופלטה', 10, -1, 'images/mufleta.jpg')">➖</button>
         <span id="count-מופלטה">0</span>
@@ -108,6 +112,7 @@
       <strong>עוגת שוקולד ביתית</strong><br>
       <span class="price">40 ₪ לעוגה</span><br>
       <div class="quantity-controls">
+        <span style="margin-left: 8px;">הוספה לסל:</span>
         <button onclick="updateCart('עוגת שוקולד ביתית', 40, -1, 'images/cake.jpg')">➖</button>
         <span id="count-עוגת שוקולד ביתית">0</span>
         <button onclick="updateCart('עוגת שוקולד ביתית', 40, 1, 'images/cake.jpg')">➕</button>
@@ -178,6 +183,7 @@
       <strong>${item}</strong><br>
       <span style="font-size: 14px; color: #777;">🧺 ${cart[item].count} יחידות בסל</span>
       <div class="quantity-controls">
+        <span style="margin-left: 8px;">הוספה לסל:</span>
         <button onclick="updateCart('${item}', ${cart[item].price}, -1, '${cart[item].image}')">➖</button>
         <span>${cart[item].count}</span>
         <button onclick="updateCart('${item}', ${cart[item].price}, 1, '${cart[item].image}')">➕</button>

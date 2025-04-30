@@ -45,6 +45,7 @@ function renderCart() {
             <strong>${item}</strong><br>
             <span style="font-size: 14px; color: #777;">${product.count} יחידות</span>
             <div class="quantity-controls">
+              <span style="margin-left: 8px;">הוספה לסל:</span>
               <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
               <span>${product.count}</span>
               <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
