@@ -48,7 +48,16 @@
   </section>
 
   <section class="carousel">
-    <img id="carouselImage" src="images/slide1.jpg" alt="מאפה" />
+    <div class="carousel-wrapper">
+      <button class="carousel-btn" onclick="prevSlide()">‹</button>
+      
+      <div class="carousel-image-container">
+        <img id="carouselImage" src="images/mash_events1.jpg" alt="מוצר דגל">
+        <p id="carouselCaption" class="carousel-caption">מגש אירועים חגיגי – 50 עוגיות פרימיום</p>
+      </div>
+      
+      <button class="carousel-btn" onclick="nextSlide()">›</button>
+    </div>
   </section>
 
   <section class="contact-links">
