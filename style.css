@@ -350,7 +350,7 @@ body {
   .menu-button-wrap {
     text-align: center;
     margin: 40px auto;
-    padding: 20px;
+    padding: 0;
     background: #fef4e8;
     border: 2px dashed #e0c9a6;
     border-radius: 16px;
