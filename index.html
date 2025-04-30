@@ -81,14 +81,36 @@
     'images/fricasse.jpg'
   ];
 
-  let index = 0;
-  const imgElement = document.getElementById("carouselImage");
+  const captions = [
+    "מגש אירועים חגיגי – 50 עוגיות פרימיום",
+    "ספינג' מרוקאי אמיתי – טרי ומתוק",
+    "פריקסה טוניסאי – 10 יחידות מושקעות"
+  ];
 
-  setInterval(() => {
-    index = (index + 1) % images.length;
+  let index = 0;
+
+  const imgElement = document.getElementById("carouselImage");
+  const captionElement = document.getElementById("carouselCaption");
+
+  function updateCarousel() {
     imgElement.src = images[index];
-  }, 3000);
+    captionElement.textContent = captions[index];
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  // שינוי אוטומטי כל 5 שניות:
+  setInterval(nextSlide, 5000);
 </script>
+
 
 <!-- סקריפט סל צדדי -->
 <script>
