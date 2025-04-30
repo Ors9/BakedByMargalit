@@ -253,7 +253,7 @@ main {
 .add-to-cart-label {
   font-size: 14px;
   font-weight: bold;
-  color: #6b4f2d;
+  color: #000000;
   margin-bottom: 8px;
   display: block;
 }
@@ -305,7 +305,7 @@ main {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #a47148;
+  background: #fb933d;
   color: white;
   border: none;
   border-radius: 50%;
@@ -470,8 +470,9 @@ footer {
 }
 
 .price-line {
-  font-size: 20px;
-  color: #6b4f2d;
+  font-size: 18px;
+  color: #000;
   font-weight: bold;
+  margin-top: 8px;
 }
 
