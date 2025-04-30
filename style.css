@@ -271,6 +271,20 @@ main {
   display: none; /* מוסתר – משתמשים בסל הצדדי */
 }
 
+.cart-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none; /* מוסתר עד שיש פריטים */
+  z-index: 1001;
+}
+
 .subtitle {
   font-weight: bold;
 }

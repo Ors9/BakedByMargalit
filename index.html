@@ -10,7 +10,11 @@
 <body>
 
 <!-- כפתור סל קניות קבוע -->
-<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+<button class="cart-toggle" onclick="toggleCart()">
+  🛒
+  <span id="cart-count-badge" class="cart-badge">0</span>
+</button>
+
 
 <div class="side-cart" id="sideCart">
   <button class="close-btn" onclick="toggleCart()">×</button>

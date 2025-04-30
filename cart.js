@@ -30,13 +30,17 @@ function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
   const link = document.getElementById("whatsappLink");
+  const badge = document.getElementById("cart-count-badge");
+
   ul.innerHTML = "";
   let total = 0;
+  let itemCount = 0;
   let message = "שלום! אני מעוניין להזמין:\n";
 
   for (let item in cart) {
     const product = cart[item];
     if (product.count > 0) {
+      itemCount += product.count;
       const li = document.createElement("li");
       li.innerHTML = `
         <div style="display: flex; align-items: center; gap: 10px;">
@@ -61,6 +65,14 @@ function renderCart() {
       message += `- ${item} x ${product.count}\n`;
     }
   }
+
+    // עדכון מספר בעיגול
+    if (itemCount > 0) {
+      badge.innerText = itemCount;
+      badge.style.display = "inline-block";
+    } else {
+      badge.style.display = "none";
+    }
 
   totalSpan.innerText = total;
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
