@@ -6,6 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
+
+<script>
+  const cart = {};
+
+  function updateCart(item, price, delta) {
+    if (!cart[item]) cart[item] = { count: 0, price };
+    cart[item].count = Math.max(0, cart[item].count + delta);
+    document.getElementById('count-' + item).innerText = cart[item].count;
+    renderCart();
+  }
+
+  function renderCart() {
+    const ul = document.getElementById("cart-items");
+    const totalSpan = document.getElementById("total");
+    const link = document.getElementById("whatsappLink");
+    ul.innerHTML = "";
+    let total = 0;
+    let message = "שלום! אני מעוניין להזמין:\n";
+
+    for (let item in cart) {
+      if (cart[item].count > 0) {
+        const li = document.createElement("li");
+        li.innerText = `${item} x ${cart[item].count} = ${cart[item].count * cart[item].price} ₪`;
+        ul.appendChild(li);
+        total += cart[item].count * cart[item].price;
+        message += `- ${item} x ${cart[item].count}\n`;
+      }
+    }
+
+    totalSpan.innerText = total;
+    link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
+  }
+</script>
+
 <body>
 
 <header>

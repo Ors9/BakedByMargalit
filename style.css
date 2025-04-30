@@ -239,3 +239,52 @@ body {
   .social-links a:hover {
     background: #e4cfa8;
   }
+
+
+  .quantity-controls {
+    margin-top: 8px;
+  }
+  
+  .quantity-controls button {
+    padding: 5px 12px;
+    font-size: 18px;
+    margin: 0 5px;
+    border: none;
+    background: #a47148;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .quantity-controls span {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .cart-summary {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff9f0;
+    border: 1px solid #e0c9a6;
+    border-radius: 12px;
+  }
+  
+  .cart-summary ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-summary li {
+    margin-bottom: 6px;
+  }
+  
+  .cart-summary a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+  }
