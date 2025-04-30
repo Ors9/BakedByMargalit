@@ -1,4 +1,4 @@
-// קריאת עגלה מה-localStorage
+// טען עגלה מ-localStorage אם קיימת
 const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
 // פתיחה/סגירה של הסל
@@ -7,23 +7,16 @@ function toggleCart() {
 }
 
 // עדכון פריט בעגלה
-function updateCart(item, price, delta) {
-  if (!cart[item]) cart[item] = { count: 0, price };
+function updateCart(item, price, delta, image) {
+  if (!cart[item]) cart[item] = { count: 0, price, image };
   cart[item].count = Math.max(0, cart[item].count + delta);
 
-  // שמור את הסל ב-localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
-
   document.getElementById('count-' + item)?.innerText = cart[item].count;
   renderCart();
 }
 
-// שמירה ל-localStorage
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-// רינדור עגלה
+// רינדור הסל
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
@@ -33,16 +26,29 @@ function renderCart() {
   let message = "שלום! אני מעוניין להזמין:\n";
 
   for (let item in cart) {
-    if (cart[item].count > 0) {
+    const product = cart[item];
+    if (product.count > 0) {
       const li = document.createElement("li");
-      li.innerHTML = `${item} x ${cart[item].count} = ${cart[item].count * cart[item].price} ₪
-        <div class='quantity-controls'>
-          <button onclick=\"updateCart('${item}', ${cart[item].price}, -1)\">➖</button>
-          <button onclick=\"updateCart('${item}', ${cart[item].price}, 1)\">➕</button>
-        </div>`;
+      li.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="${product.image}" alt="${item}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px;">
+          <div style="flex-grow: 1;">
+            <strong>${item}</strong><br>
+            <span style="font-size: 14px; color: #777;">${product.count} יחידות</span>
+            <div class="quantity-controls">
+              <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
+              <span>${product.count}</span>
+              <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
+            </div>
+            <div style="margin-top: 4px; font-size: 14px; color: #555;">
+              סה"כ: ${product.count * product.price} ₪
+            </div>
+          </div>
+        </div>
+      `;
       ul.appendChild(li);
-      total += cart[item].count * cart[item].price;
-      message += `- ${item} x ${cart[item].count}\n`;
+      total += product.count * product.price;
+      message += `- ${item} x ${product.count}\n`;
     }
   }
 

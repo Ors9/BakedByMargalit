@@ -164,19 +164,23 @@
       const li = document.createElement("li");
 
       li.innerHTML = `
-  <strong>${item}</strong><br>
-  <div style="font-size: 14px; color: #777; margin-top: 4px;">
-    🧺 ${cart[item].count} יחידות בסל
-  </div>
-  <div class="quantity-controls">
-    <button onclick="updateCart('${item}', ${cart[item].price}, -1)">➖</button>
-    <span>${cart[item].count}</span>
-    <button onclick="updateCart('${item}', ${cart[item].price}, 1)">➕</button>
-  </div>
-  <div style="margin-top: 5px; font-size: 14px; color: #555;">
-    ${cart[item].count * cart[item].price} ₪
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="${cart[item].image}" alt="${item}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px;">
+    <div style="flex-grow: 1;">
+      <strong>${item}</strong><br>
+      <span style="font-size: 14px; color: #777;">🧺 ${cart[item].count} יחידות בסל</span>
+      <div class="quantity-controls">
+        <button onclick="updateCart('${item}', ${cart[item].price}, -1, '${cart[item].image}')">➖</button>
+        <span>${cart[item].count}</span>
+        <button onclick="updateCart('${item}', ${cart[item].price}, 1, '${cart[item].image}')">➕</button>
+      </div>
+      <div style="margin-top: 5px; font-size: 14px; color: #555;">
+        ${cart[item].count * cart[item].price} ₪
+      </div>
+    </div>
   </div>
 `;
+
 
 
       ul.appendChild(li);
