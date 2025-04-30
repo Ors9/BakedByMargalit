@@ -6,17 +6,26 @@ function toggleCart() {
   document.getElementById("sideCart").classList.toggle("open");
 }
 
-// עדכון פריט בעגלה
-function updateCart(item, price, delta, image) {
+// עדכון פריט בסל
+function updateCart(item, price, delta, image = null) {
   if (!cart[item]) cart[item] = { count: 0, price, image };
   cart[item].count = Math.max(0, cart[item].count + delta);
 
+  // שמירה של התמונה (אם נמסרה)
+  if (image) cart[item].image = image;
+
+  // שמור בעגלה
   localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById('count-' + item)?.innerText = cart[item].count;
+
+  // עדכון כמות בדף התפריט (אם קיים אלמנט כזה)
+  const countSpan = document.getElementById("count-" + item);
+  if (countSpan) countSpan.innerText = cart[item].count;
+
+  // רענן את הסל הצדדי
   renderCart();
 }
 
-// רינדור הסל
+// הצגת תוכן הסל
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
@@ -56,5 +65,5 @@ function renderCart() {
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
 }
 
-// טעינה ראשונית
+// טען את הסל מה-localStorage ברגע שהדף נטען
 document.addEventListener("DOMContentLoaded", renderCart);
