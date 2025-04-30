@@ -349,3 +349,20 @@ footer {
   color: #6b4f2d;
   margin-top: 60px;
 }
+
+.side-cart .quantity-controls {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-cart .quantity-controls button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background: #e0c9a6;
+  border: none;
+  border-radius: 6px;
+  color: #4d392c;
+  cursor: pointer;
+}
