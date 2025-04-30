@@ -452,3 +452,18 @@ footer {
   color: #4d392c;
   cursor: pointer;
 }
+
+
+.cart-product-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.side-cart .unit-label {
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 4px;
+}

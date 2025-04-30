@@ -43,23 +43,23 @@ function renderCart() {
       itemCount += product.count;
       const li = document.createElement("li");
       li.innerHTML = `
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <img src="${product.image}" alt="${item}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px;">
-          <div style="flex-grow: 1;">
-            <strong>${item}</strong><br>
-            <span style="font-size: 14px; color: #777;">${product.count} יחידות</span>
-            <div class="quantity-controls">
-              <span style="margin-left: 8px;">הוספה לסל:</span>
-              <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
-              <span>${product.count}</span>
-              <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
-            </div>
-            <div style="margin-top: 4px; font-size: 14px; color: #555;">
-              סה"כ: ${product.count * product.price} ₪
-            </div>
-          </div>
-        </div>
-      `;
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="${product.image}" alt="${item}" class="cart-product-image">
+    <div style="flex-grow: 1;">
+      <strong>${item}</strong><br>
+      <span class="unit-label">${product.count} יחידות</span>
+      <div class="quantity-controls">
+        <div class="add-to-cart-label">הוספה לסל:</div>
+        <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
+        <span>${product.count}</span>
+        <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
+      </div>
+      <div class="price-line">
+        סה"כ: ${product.count * product.price} ₪
+      </div>
+    </div>
+  </div>
+`;
       ul.appendChild(li);
       total += product.count * product.price;
       message += `- ${item} x ${product.count}\n`;
