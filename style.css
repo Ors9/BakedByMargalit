@@ -305,7 +305,7 @@ main {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #fb933d;
+  background: linear-gradient(135deg, #c6824a, #a47148);
   color: white;
   border: none;
   border-radius: 50%;
