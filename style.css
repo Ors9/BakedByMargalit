@@ -1,4 +1,8 @@
-/* בסיס */
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Varela Round", sans-serif;
   margin: 0;
