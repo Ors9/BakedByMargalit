@@ -261,19 +261,21 @@ main {
 .side-cart {
   position: fixed;
   top: 0;
+  right: 0;
   width: 280px;
-  right: -280px;
   height: 100%;
-  background: #fff6ea; /* קרם בהיר */
+  background: #fff6ea;
   border-left: 1px solid #e0c9a6;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   overflow-y: auto;
-  transition: right 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
   z-index: 999;
 }
+
 .side-cart.open {
-  right: 0;
+  transform: translateX(0);
 }
 .side-cart .close-btn {
   position: absolute;
