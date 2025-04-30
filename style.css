@@ -266,6 +266,10 @@ main {
   display: none; /* מוסתר – משתמשים בסל הצדדי */
 }
 
+.subtitle {
+  font-weight: bold;
+}
+
 /* כפתור 🛒 קבוע */
 .cart-toggle {
   position: fixed;
