@@ -306,3 +306,41 @@ body {
   .main-button:hover {
     background: #8a5e3a;
   }
+
+  .social-icons {
+    text-align: center;
+    margin: 40px auto 20px;
+  }
+  
+  .social-icons p {
+    font-size: 18px;
+    color: #6b4f2d;
+    margin-bottom: 10px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon.instagram {
+    background-image: url('images/instagram-icon.svg');
+  }
+  
+  .icon.facebook {
+    background-image: url('images/facebook-icon.svg');
+  }
