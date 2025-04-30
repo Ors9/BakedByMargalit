@@ -241,10 +241,11 @@ main {
 
 
 .add-to-cart-label {
-  font-size: 6px;
-  font-weight: normal;
+  font-size: 8px;
+  font-weight: bold;
   color: #6b4f2d;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 /* כפתורי כמות */
