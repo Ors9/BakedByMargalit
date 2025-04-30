@@ -84,6 +84,10 @@ main {
   color: #333;
 }
 
+.menu-item strong {
+  color: #6b4f2d;
+}
+
 /* קרוסלה */
 .carousel {
   text-align: center;
