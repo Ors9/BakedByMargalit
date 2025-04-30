@@ -29,13 +29,18 @@ function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
   const link = document.getElementById("whatsappLink");
+  const badge = document.getElementById("cart-count-badge");
   ul.innerHTML = "";
+  
   let total = 0;
   let message = "שלום! אני מעוניין להזמין:\n";
+  let itemCount = 0;
 
   for (let item in cart) {
     const product = cart[item];
     if (product.count > 0) {
+      itemCount += product.count;
+      total += product.count * product.price;
       const li = document.createElement("li");
 
       li.innerHTML = `
@@ -56,13 +61,19 @@ function renderCart() {
       `;
 
       ul.appendChild(li);
-      total += product.count * product.price;
       message += `- ${item} x ${product.count}\n`;
     }
   }
 
   totalSpan.innerText = total;
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
+
+  if (itemCount > 0) {
+    badge.style.display = "inline-block";
+    badge.innerText = itemCount;
+  } else {
+    badge.style.display = "none";
+  }
 }
 
 
