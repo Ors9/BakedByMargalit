@@ -25,6 +25,15 @@ function updateCart(item, price, delta, image = null) {
   renderCart();
 }
 
+function syncQuantitiesFromCart() {
+  for (let item in cart) {
+    const countSpan = document.getElementById("count-" + item);
+    if (countSpan) {
+      countSpan.innerText = cart[item].count;
+    }
+  }
+}
+
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
