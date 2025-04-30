@@ -245,6 +245,10 @@ main {
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
 }
 .cart-toggle:hover {
   background: #8a5e3a;
