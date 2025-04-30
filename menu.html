@@ -152,26 +152,38 @@
   }
 
   function renderCart() {
-    const ul = document.getElementById("cart-items");
-    const totalSpan = document.getElementById("total");
-    const link = document.getElementById("whatsappLink");
-    ul.innerHTML = "";
-    let total = 0;
-    let message = "שלום! אני מעוניין להזמין:\n";
+  const ul = document.getElementById("cart-items");
+  const totalSpan = document.getElementById("total");
+  const link = document.getElementById("whatsappLink");
+  ul.innerHTML = "";
+  let total = 0;
+  let message = "שלום! אני מעוניין להזמין:\n";
 
-    for (let item in cart) {
-      if (cart[item].count > 0) {
-        const li = document.createElement("li");
-        li.innerText = `${item} x ${cart[item].count} = ${cart[item].count * cart[item].price} ₪`;
-        ul.appendChild(li);
-        total += cart[item].count * cart[item].price;
-        message += `- ${item} x ${cart[item].count}\n`;
-      }
+  for (let item in cart) {
+    if (cart[item].count > 0) {
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <strong>${item}</strong><br>
+        <div class="quantity-controls">
+          <button onclick="updateCart('${item}', ${cart[item].price}, -1)">➖</button>
+          <span>${cart[item].count}</span>
+          <button onclick="updateCart('${item}', ${cart[item].price}, 1)">➕</button>
+        </div>
+        <div style="margin-top: 5px; font-size: 14px; color: #555;">
+          ${cart[item].count * cart[item].price} ₪
+        </div>
+      `;
+
+      ul.appendChild(li);
+      total += cart[item].count * cart[item].price;
+      message += `- ${item} x ${cart[item].count}\n`;
     }
-
-    totalSpan.innerText = total;
-    link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
   }
+
+  totalSpan.innerText = total;
+  link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
+}
 
   function toggleCart() {
     document.getElementById("sideCart").classList.toggle("open");
