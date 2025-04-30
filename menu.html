@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
+<!-- כפתור פתיחת סל -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+
+<!-- סל צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
+</div>
+
+<script>
+  function toggleCart() {
+    document.getElementById("sideCart").classList.toggle("open");
+  }
+</script>
+
 <body>
 
 <header>
@@ -25,6 +44,15 @@
     <a href="#savory">🥖 מאפים</a>
     <a href="#desserts">🧁 קינוחים</a>
   </nav>
+
+
+  <!-- סל קניות -->
+  <section class="cart-summary">
+    <h3>🛒 הסל שלך:</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+    <a id="whatsappLink" href="#" target="_blank">📤 שלח הזמנה בוואטסאפ</a>
+  </section>
 
   <!-- עוגיות -->
   <section class="menu-section" id="cookies">
@@ -104,13 +132,7 @@
     </div>
   </section>
 
-  <!-- סל קניות -->
-  <section class="cart-summary">
-    <h3>🛒 הסל שלך:</h3>
-    <ul id="cart-items"></ul>
-    <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
-    <a id="whatsappLink" href="#" target="_blank">📤 שלח הזמנה בוואטסאפ</a>
-  </section>
+  
 
   <!-- כפתור קשר -->
   <section class="contact-links">
