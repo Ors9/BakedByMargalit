@@ -251,10 +251,10 @@ main {
 
 
 .add-to-cart-label {
-  font-size: 8px;
+  font-size: 14px;
   font-weight: bold;
   color: #6b4f2d;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: block;
 }
 
@@ -374,8 +374,8 @@ main {
 }
 
 .side-cart img {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -383,6 +383,7 @@ main {
 
 .side-cart span {
   font-size: 16px;
+  font-weight: bold;
   color: #444;
   font-weight: 500;
 }
@@ -455,25 +456,22 @@ footer {
 
 
 .cart-product-image {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .unit-label {
-  font-size: 16px;
-  color: #444;
-  font-weight: 500;
-  display: block;
-  margin-top: 4px;
+  font-size: 17px;
+  color: #333;
+  font-weight: bold;
 }
 
 .price-line {
-  font-size: 18px;
-  color: #000;
+  font-size: 20px;
+  color: #6b4f2d;
   font-weight: bold;
-  margin-top: 8px;
 }
 
