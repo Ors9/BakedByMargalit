@@ -25,58 +25,46 @@ function updateCart(item, price, delta, image = null) {
   renderCart();
 }
 
-// הצגת תוכן הסל
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
   const link = document.getElementById("whatsappLink");
-  const badge = document.getElementById("cart-count-badge");
-
   ul.innerHTML = "";
   let total = 0;
-  let itemCount = 0;
   let message = "שלום! אני מעוניין להזמין:\n";
 
   for (let item in cart) {
     const product = cart[item];
     if (product.count > 0) {
-      itemCount += product.count;
       const li = document.createElement("li");
+
       li.innerHTML = `
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="${product.image}" alt="${item}" class="cart-product-image">
-    <div style="flex-grow: 1;">
-      <strong>${item}</strong><br>
-      <span class="unit-label">${product.count} יחידות</span>
-      <div class="quantity-controls">
-        <div class="add-to-cart-label">הוספה לסל:</div>
-        <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
-        <span>${product.count}</span>
-        <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
-      </div>
-      <div class="price-line">
-        סה"כ: ${product.count * product.price} ₪
-      </div>
-    </div>
-  </div>
-`;
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <img src="${product.image}" alt="${item}" class="cart-product-image">
+          <div style="flex-grow: 1;">
+            <strong>${item}</strong><br>
+            <span class="unit-label">${product.count} יחידות</span>
+            <div class="add-to-cart-label">הוספה לסל:</div>
+            <div class="quantity-controls">
+              <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
+              <span>${product.count}</span>
+              <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
+            </div>
+            <div class="price-line">סה"כ: ${product.count * product.price} ₪</div>
+          </div>
+        </div>
+      `;
+
       ul.appendChild(li);
       total += product.count * product.price;
       message += `- ${item} x ${product.count}\n`;
     }
   }
 
-    // עדכון מספר בעיגול
-    if (itemCount > 0) {
-      badge.innerText = itemCount;
-      badge.style.display = "inline-block";
-    } else {
-      badge.style.display = "none";
-    }
-
   totalSpan.innerText = total;
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
 }
+
 
 // טען את הסל מה-localStorage ברגע שהדף נטען
 document.addEventListener("DOMContentLoaded", renderCart);
