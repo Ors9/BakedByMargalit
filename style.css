@@ -344,3 +344,33 @@ body {
   .icon.facebook {
     background-image: url('images/facebook-icon.svg');
   }
+
+
+
+  .menu-button-wrap {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fef4e8;
+    border: 2px dashed #e0c9a6;
+    border-radius: 16px;
+    max-width: 400px;
+  }
+  
+  .main-button {
+    display: inline-block;
+    background: #a47148;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .main-button:hover {
+    background: #8a5e3a;
+    transform: scale(1.05);
+  }
