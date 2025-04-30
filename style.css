@@ -532,11 +532,10 @@ footer {
 }
 
 .carousel-btn:first-of-type {
-  right: 100%;
-  margin-right: 10px;
+  left: 10px;
 }
 
 .carousel-btn:last-of-type {
-  left: 100%;
-  margin-left: 10px;
+  right: 10px;
 }
+
