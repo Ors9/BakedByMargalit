@@ -3,128 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>גלריית תמונות - המאפים של אמא</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #fff8f0;
-    }
-
-    h1 {
-      margin-top: 20px;
-    }
-
-    nav {
-      background-color: #fff;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .cart-panel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 100%;
-      background-color: #fff;
-      border-left: 1px solid #ccc;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-
-    .cart-panel.open {
-      transform: translateX(0);
-    }
-
-    .cart-toggle {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: #25d366;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-  </style>
+  <script src="cart.js" defer></script>
 </head>
+
 <body>
 
-    <header>
-        <h1>גלריית המאפים של אמא</h1>
-        <nav>
-            <a href="index.html">🏠 בית</a> |
-            <a href="menu.html">📋 לתפריט והזמנה</a>
-          <a href="gallery.html">📷 גלריה</a>
-        </nav>
-      </header>
+<!-- כפתור סל קניות קבוע -->
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
 
-  <h1>גלריית המאפים של אמא 🥐🍪</h1>
-  <div class="gallery">
+<!-- סל צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+  <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
+</div>
+
+<header>
+  <h1>המאפים של אמא</h1>
+  <nav>
+    <a href="index.html">🏠 בית</a> |
+    <a href="menu.html">📋 לתפריט והזמנה</a> |
+    <a href="gallery.html">📷 גלריה</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="subtitle">טעימה מהמאפים הביתיים שלנו 🍪🥐🧁</p>
+  </section>
+
+  <section class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; max-width: 1000px; margin: auto;">
     <img src="images/cookies.jpg" alt="עוגיות מרוקאיות">
     <img src="images/babka.jpg" alt="עוגת בבקה">
     <img src="images/burekas.jpg" alt="בורקסים">
     <img src="images/sfinge.jpg" alt="ספינג' טרי">
-  </div>
+  </section>
 
-  <br>
-  <a href="index.html">⬅ חזרה לעמוד הבית</a>
+  <section class="menu-button-wrap">
+    <a href="menu.html" class="main-button">📋 להזמנה מתפריט המלא</a>
+  </section>
+</main>
 
-  <!-- Cart Panel -->
-  <div id="cart-panel" class="cart-panel">
-    <h3>העגלה שלי</h3>
-    <ul id="cart-items"></ul>
-    <p id="cart-total">סה"כ: 0 ₪</p>
-    <button onclick="clearCart()">נקה סל</button>
-  </div>
-
-  <button id="cart-toggle" class="cart-toggle" onclick="toggleCart()">🛒</button>
-
-  <script src="cart.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      updateCartDisplay();
-    });
-
-    function toggleCart() {
-      document.getElementById('cart-panel').classList.toggle('open');
-    }
-  </script>
+<footer>
+  <p>© 2025 כל הזכויות שמורות - המאפים של אמא</p>
+</footer>
 
 </body>
 </html>
