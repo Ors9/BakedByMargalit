@@ -476,7 +476,6 @@ footer {
   margin-top: 8px;
 }
 
-
 .carousel {
   display: flex;
   justify-content: center;
@@ -484,20 +483,20 @@ footer {
 }
 
 .carousel-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
 }
 
 .carousel-image-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* יחס 1:1 = ריבוע */
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  text-align: center;
+  position: relative;
 }
 
 .carousel-image-container img {
@@ -507,15 +506,37 @@ footer {
 }
 
 .carousel-caption {
-  margin-top: 8px;
+  text-align: center;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 16px;
+  color: #333;
 }
 
 .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 32px;
-  background: none;
+  background: rgba(255,255,255,0.8);
   border: none;
+  padding: 5px 10px;
   cursor: pointer;
-  color: #333;
+  z-index: 2;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: #eee;
+}
+
+.carousel-btn:first-of-type {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.carousel-btn:last-of-type {
+  left: 100%;
+  margin-left: 10px;
 }
