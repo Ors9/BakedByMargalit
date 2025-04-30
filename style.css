@@ -374,10 +374,23 @@ main {
 }
 
 .side-cart img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.side-cart span {
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+.side-cart .price-line {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 /* רשתות חברתיות */
