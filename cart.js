@@ -10,7 +10,11 @@ function toggleCart() {
 function updateCart(item, price, delta) {
   if (!cart[item]) cart[item] = { count: 0, price };
   cart[item].count = Math.max(0, cart[item].count + delta);
-  saveCart();
+
+  // שמור את הסל ב-localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  document.getElementById('count-' + item)?.innerText = cart[item].count;
   renderCart();
 }
 
