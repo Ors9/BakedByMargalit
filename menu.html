@@ -40,6 +40,67 @@
 
 <main>
 
+  <section class="menu-section" id="platters">
+    <h2>🧁 מגשי האירוח של מרגלית</h2>
+  
+    <div class="menu-item">
+      <img src="images/mash_events1.jpg" alt="מגש אירועים 1">
+      <div>
+        <strong>מגש אירועים 1</strong><br>
+        <span class="price">250 ₪</span><br>
+        <div class="quantity-controls">
+          <span class="add-to-cart-label">הוספה לסל:</span>
+          <button onclick="updateCart('מגש אירועים 1', 250, -1, 'images/mash_events1.jpg')">➖</button>
+          <span id="count-מגש אירועים 1">0</span>
+          <button onclick="updateCart('מגש אירועים 1', 250, 1, 'images/mash_events1.jpg')">➕</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+      <img src="images/mash_events2.jpg" alt="מגש אירועים 2">
+      <div>
+        <strong>מגש אירועים 2</strong><br>
+        <span class="price">200 ₪</span><br>
+        <div class="quantity-controls">
+          <span class="add-to-cart-label">הוספה לסל:</span>
+          <button onclick="updateCart('מגש אירועים 2', 200, -1, 'images/mash_events2.jpg')">➖</button>
+          <span id="count-מגש אירועים 2">0</span>
+          <button onclick="updateCart('מגש אירועים 2', 200, 1, 'images/mash_events2.jpg')">➕</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+      <img src="images/dates_peanuts.jpg" alt="עוגיות תמרים ובוטנים">
+      <div>
+        <strong>מגש עוגיות תמרים ובוטנים</strong><br>
+        <span class="price">150 ₪</span><br>
+        <div class="quantity-controls">
+          <span class="add-to-cart-label">הוספה לסל:</span>
+          <button onclick="updateCart('מגש עוגיות תמרים ובוטנים', 150, -1, 'images/dates_peanuts.jpg')">➖</button>
+          <span id="count-מגש עוגיות תמרים ובוטנים">0</span>
+          <button onclick="updateCart('מגש עוגיות תמרים ובוטנים', 150, 1, 'images/dates_peanuts.jpg')">➕</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+      <img src="images/walnut_cookies.jpg" alt="עוגיות אגוזי מלך">
+      <div>
+        <strong>מגש עוגיות אגוזי מלך</strong><br>
+        <span class="price">150 ₪</span><br>
+        <div class="quantity-controls">
+          <span class="add-to-cart-label">הוספה לסל:</span>
+          <button onclick="updateCart('מגש עוגיות אגוזי מלך', 150, -1, 'images/walnut_cookies.jpg')">➖</button>
+          <span id="count-מגש עוגיות אגוזי מלך">0</span>
+          <button onclick="updateCart('מגש עוגיות אגוזי מלך', 150, 1, 'images/walnut_cookies.jpg')">➕</button>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
 
 
   <!-- עוגיות -->
@@ -61,55 +122,63 @@
     </div>
   </section>
 
-  <!-- מאפים -->
-  <section class="menu-section" id="savory">
-    <h2>המאפים של מרגלית🥐</h2>
-
+  <section class="menu-section" id="breads">
+    <h2>🥪 המאפים האישיים של מרגלית</h2>
+  
     <div class="menu-item">
       <img src="images/fricasse.jpg" alt="פריקסה">
       <div>
-        <strong>פריקסה</strong><br>
+        <strong>פריקסה טוניסאי</strong><br>
         <span class="price">15 ₪ ליחידה</span><br>
         <div class="quantity-controls">
           <span class="add-to-cart-label">הוספה לסל:</span>
-
-          <button onclick="updateCart('פריקסה', 15, -1, 'images/fricasse.jpg')">➖</button>
-          <span id="count-פריקסה">0</span>
-          <button onclick="updateCart('פריקסה', 15, 1, 'images/fricasse.jpg')">➕</button>
+          <button onclick="updateCart('פריקסה טוניסאי', 15, -1, 'images/fricasse.jpg')">➖</button>
+          <span id="count-פריקסה טוניסאי">0</span>
+          <button onclick="updateCart('פריקסה טוניסאי', 15, 1, 'images/fricasse.jpg')">➕</button>
         </div>
       </div>
     </div>
-
+  
     <div class="menu-item">
-      <img src="images/sfenj.jpg" alt="ספינג">
+      <img src="images/sfenj.jpg" alt="ספינג'">
       <div>
-        <strong>ספינג</strong><br>
+        <strong>ספינג'</strong><br>
         <span class="price">5 ₪ ליחידה</span><br>
         <div class="quantity-controls">
           <span class="add-to-cart-label">הוספה לסל:</span>
-    
           <button onclick="updateCart('ספינג', 5, -1, 'images/sfenj.jpg')">➖</button>
           <span id="count-ספינג">0</span>
           <button onclick="updateCart('ספינג', 5, 1, 'images/sfenj.jpg')">➕</button>
         </div>
       </div>
     </div>
+    
+  
 
+  
+  </section>
+
+  <section class="menu-section" id="cookies-by-weight">
+    <h2>🍪 עוגיות לפי ק"ג</h2>
+  
     <div class="menu-item">
-      <img src="images/toy.jpg" alt="מופלטה">
+      <img src="images/machine_cookies.jpg" alt="עוגיות מכונה">
       <div>
-        <strong>מופלטה</strong><br>
-        <span class="price">10 ₪ ליחידה</span><br>
+        <strong>עוגיות מכונה</strong><br>
+        <span class="price">100 ₪ לק"ג</span><br>
         <div class="quantity-controls">
           <span class="add-to-cart-label">הוספה לסל:</span>
-
-          <button onclick="updateCart('מופלטה', 10, -1, 'images/toy.jpg')">➖</button>
-          <span id="count-מופלטה">0</span>
-          <button onclick="updateCart('מופלטה', 10, 1, 'images/toy.jpg')">➕</button>
+          <button onclick="updateCart('עוגיות מכונה', 100, -1, 'images/machine_cookies.jpg')">➖</button>
+          <span id="count-עוגיות מכונה">0</span>
+          <button onclick="updateCart('עוגיות מכונה', 100, 1, 'images/machine_cookies.jpg')">➕</button>
         </div>
       </div>
     </div>
+  
   </section>
+  
+ 
+  
 
   <!-- קינוחים -->
   <section class="menu-section" id="desserts">
@@ -132,12 +201,14 @@
 
 
 
-  <!-- קישור לוואטסאפ -->
   <section class="contact-links">
-    <a href="https://wa.me/972505183940?text=בקשר%20לעוגיות%20של%20אמא"
+    <p style="margin-bottom: 10px; font-size: 18px; font-weight: bold;">
+      לא מצאתם את מה שחיפשתם או יש לכם שאלה?
+    </p>
+    <a href="https://wa.me/972505183940?text=שלום!%20רציתי%20לברר%20על%20מאפה%20או%20הזמנה%20שלא%20מופיעה%20בתפריט"
        target="_blank"
-       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
-      📞 צור קשר בוואטסאפ
+       class="main-button">
+      📩 דברו איתנו בוואטסאפ
     </a>
   </section>
 

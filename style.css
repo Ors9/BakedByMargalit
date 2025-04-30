@@ -539,3 +539,22 @@ footer {
   right: 10px;
 }
 
+
+@media (max-width: 600px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .menu-item div {
+    width: 100%;
+  }
+}
+
