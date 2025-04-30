@@ -215,8 +215,8 @@ main {
   font-size: 18px;
   margin: 0 5px;
   border: none;
-  background: #a47148;
-  color: white;
+  background: #e0c9a6;        /* חום בהיר */
+  color: #4d392c;   
   border-radius: 6px;
   cursor: pointer;
 }
@@ -250,14 +250,13 @@ main {
   background: #8a5e3a;
 }
 
-/* סל צדדי */
 .side-cart {
   position: fixed;
   top: 0;
   right: -320px;
   width: 300px;
   height: 100%;
-  background: #fff9f0;
+  background: #fff6ea; /* קרם בהיר */
   border-left: 1px solid #e0c9a6;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -276,7 +275,7 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  color: #a47148;
+  color: #a47148; /* חום כהה ברור */
 }
 .side-cart ul {
   list-style: none;
