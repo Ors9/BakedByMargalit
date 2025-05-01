@@ -596,20 +596,20 @@ footer {
 @media (min-width: 601px) {
   /* תמונות בתפריט */
   .menu-item img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
   }
 
   /* תמונות בגלריה */
   .gallery img,
   .gallery-grid img {
-    height: 250px;
+    height: 280px;
   }
 
   /* תמונות בקרוסלה */
   .carousel img,
   .carousel-image-container img {
-    max-width: 700px;
+    max-width: 750px;
     height: auto;
   }
 }
