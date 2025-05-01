@@ -540,22 +540,22 @@ footer {
   right: 10px;
 }
 
-
 @media (max-width: 600px) {
   .menu-item {
-    flex-direction: column;
+    flex-direction: row; /* כמו במחשב */
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 10px;
   }
 
   .menu-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
+    width: 100px;
+    height: 100px;
   }
 
   .menu-item div {
-    width: 100%;
+    flex: 1;
+    width: auto;
   }
 }
 
