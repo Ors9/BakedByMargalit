@@ -543,14 +543,15 @@ footer {
 @media (max-width: 600px) {
   .menu-item {
     flex-direction: row; /* כמו במחשב */
-    flex-wrap: wrap;
     align-items: flex-start;
     gap: 10px;
   }
 
   .menu-item img {
-    width: 100px;
-    height: 100px;
+    width: 40%;      
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
   }
 
   .menu-item div {
