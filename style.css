@@ -542,35 +542,52 @@ footer {
 
 @media (max-width: 600px) {
   .menu-item {
-    flex-direction: column; /* הכל בטור */
-    align-items: stretch;
-  }
-
-  .menu-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-
-  .menu-item div {
-    display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: stretch;
   }
 
   .menu-item strong {
     font-size: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* שורה מתחת לכותרת: תמונה מצד אחד, תוכן מצד שני */
+  .menu-item > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menu-item img {
+    width: 40%;
+    height: auto;
+    max-height: 180px;
+    border-radius: 10px;
+  }
+
+  .menu-item .price,
+  .add-to-cart-label,
+  .quantity-controls {
+    font-size: 16px;
+    margin: 5px 0;
   }
 
   .quantity-controls {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .quantity-controls button {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+  .quantity-controls span {
+    font-size: 18px;
+    font-weight: bold;
   }
 }
 
