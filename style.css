@@ -357,20 +357,20 @@ main {
   margin-bottom: 10px;
 }
 .whatsapp-send {
-  position: sticky;
+  position: fixed;
+  right: 0;
+  width: 280px; /* רוחב זהה ל-side-cart */
   bottom: 0;
-  display: block;
   background-color: #25D366;
   color: white;
   padding: 16px 24px;
   text-align: center;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 0;
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  margin-top: 20px;
+  z-index: 1001;
 }
 
 .side-cart img {
