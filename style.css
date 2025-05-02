@@ -332,6 +332,7 @@ main {
   transition: transform 0.3s ease;
   transform: translateX(100%);
   z-index: 999;
+  padding-bottom: 120px;
 }
 
 .side-cart.open {
@@ -365,6 +366,7 @@ main {
   border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
+  position: sticky;
 }
 
 .side-cart img {
