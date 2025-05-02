@@ -357,18 +357,21 @@ main {
   margin-bottom: 10px;
 }
 .whatsapp-send {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #25D366;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 16px 24px;
+  width: auto;
+  background-color: #25D366;
   color: white;
+  text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 20px;
   font-weight: bold;
-  position: sticky;
-  bottom: 10px; /* ⬅️ מוסיף את ההתנהגות "נדבקת למטה" */
-  z-index: 100; /* אופציונלי, אם יש תוכן שעשוי להסתיר את הכפתור */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
 }
 
 .side-cart img {
