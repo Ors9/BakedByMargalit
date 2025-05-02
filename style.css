@@ -367,6 +367,8 @@ main {
   font-size: 18px;
   font-weight: bold;
   position: sticky;
+  bottom: 10px; /* ⬅️ מוסיף את ההתנהגות "נדבקת למטה" */
+  z-index: 100; /* אופציונלי, אם יש תוכן שעשוי להסתיר את הכפתור */
 }
 
 .side-cart img {
