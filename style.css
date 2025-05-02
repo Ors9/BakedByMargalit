@@ -334,6 +334,11 @@ main {
 
   box-sizing: border-box; /* ✅ הפתרון לחריגה ברוחב */
 }
+.cart-summary-wrapper {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed #d2b48c;
+}
 
 .side-cart.open {
   transform: translateX(0);
