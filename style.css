@@ -331,6 +331,8 @@ main {
   box-shadow: none;
   width: 100%;
   margin: 10px 0;
+
+  box-sizing: border-box; /* ✅ הפתרון לחריגה ברוחב */
 }
 
 .side-cart.open {
@@ -673,17 +675,3 @@ footer {
   border: none;
 }
 
-.whatsapp-send {
-  display: block;
-  background-color: #25D366;
-  color: white;
-  padding: 14px 24px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin-top: 20px;
-}
