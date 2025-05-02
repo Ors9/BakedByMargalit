@@ -675,26 +675,17 @@ footer {
   border: none;
 }
 
-.sticky-whatsapp-wrapper {
-  position: sticky;
-  bottom: 0;
-  background: #fff6ea; /* צבע רקע זהה לסל */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  z-index: 999;
-}
-
-/* הכפתור עצמו */
 .whatsapp-send {
   display: block;
-  width: 100%;
   background-color: #25D366;
   color: white;
+  padding: 14px 24px;
   text-align: center;
   text-decoration: none;
   border-radius: 12px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  padding: 16px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
 }
