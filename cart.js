@@ -40,18 +40,58 @@ function renderCart() {
   const link = document.getElementById("whatsappLink");
   const badge = document.getElementById("cart-count-badge");
   ul.innerHTML = "";
-  
+
   let total = 0;
   let message = "שלום! אני מעוניין להזמין:\n";
   let itemCount = 0;
 
+  const halfKey = "חצי קג עוגיות מכונה";
+  const product = cart[halfKey];
+
+  // אם יש עוגיות מכונה - טיפל במבצע
+  if (product && product.count > 0) {
+    const fullKg = Math.floor(product.count / 2);
+    const remainingHalves = product.count % 2;
+    const itemTotal = fullKg * 100 + remainingHalves * product.price;
+
+    total += itemTotal;
+    itemCount += product.count;
+    message += `- ${halfKey} x ${product.count} (כולל מבצע)\n`;
+
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <img src="${product.image}" alt="${halfKey}" class="cart-product-image">
+        <div style="flex-grow: 1;">
+          <strong>${halfKey}</strong><br>
+          <span class="unit-label">${product.count} יחידות</span>
+          <div class="add-to-cart-label">הוספה לסל:</div>
+          <div class="quantity-controls">
+            <button onclick="updateCart('${halfKey}', ${product.price}, -1, '${product.image}')">➖</button>
+            <span>${product.count}</span>
+            <button onclick="updateCart('${halfKey}', ${product.price}, 1, '${product.image}')">➕</button>
+          </div>
+          <div class="price-line">סה"כ: ${itemTotal} ₪ 
+            <span style="color: green;">(${fullKg} ק"ג ב־100 ₪ + ${remainingHalves} חצי ק"ג)</span>
+          </div>
+        </div>
+      </div>
+    `;
+    ul.appendChild(li);
+  }
+
+  // שאר הפריטים
   for (let item in cart) {
+    if (item === halfKey) continue;
+
     const product = cart[item];
     if (product.count > 0) {
+      const itemTotal = product.count * product.price;
+      total += itemTotal;
       itemCount += product.count;
-      total += product.count * product.price;
-      const li = document.createElement("li");
+      message += `- ${item} x ${product.count}\n`;
 
+      const li = document.createElement("li");
       li.innerHTML = `
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
           <img src="${product.image}" alt="${item}" class="cart-product-image">
@@ -64,13 +104,11 @@ function renderCart() {
               <span>${product.count}</span>
               <button onclick="updateCart('${item}', ${product.price}, 1, '${product.image}')">➕</button>
             </div>
-            <div class="price-line">סה"כ: ${product.count * product.price} ₪</div>
+            <div class="price-line">סה"כ: ${itemTotal} ₪</div>
           </div>
         </div>
       `;
-
       ul.appendChild(li);
-      message += `- ${item} x ${product.count}\n`;
     }
   }
 
