@@ -45,7 +45,7 @@ function renderCart() {
   let message = "שלום! אני מעוניין להזמין:\n";
   let itemCount = 0;
 
-  const halfKey = "חצי קג עוגיות מכונה";
+  const halfKey = "חצי ק\"ג עוגיות מכונה";
   const product = cart[halfKey];
 
   // אם יש עוגיות מכונה - טיפל במבצע
