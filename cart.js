@@ -135,7 +135,7 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
-  
+  attachCartTouchListeners();
 
 }
 
@@ -146,23 +146,38 @@ window.onload = () => {
 };
 
 
-// פתרון זום כפול בעגלת קניות
+// מאזין ראשון – לעמודים שבהם הכפתורים קיימים מראש (menu.html)
 document.addEventListener('DOMContentLoaded', function () {
-  const cartItems = document.getElementById("cart-items");
-  if (cartItems) {
-    cartItems.addEventListener('touchend', function (event) {
-      if (event.target.tagName === "BUTTON") {
-        const now = new Date().getTime();
-        if (!event.target.dataset.lastTouch) {
-          event.target.dataset.lastTouch = now;
-        }
-        if (now - event.target.dataset.lastTouch <= 300) {
-          event.preventDefault();
-        }
-        event.target.dataset.lastTouch = now;
+  const quantityButtons = document.querySelectorAll('.quantity-controls button');
+
+  quantityButtons.forEach(button => {
+    let lastTouch = 0;
+
+    button.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouch <= 300) {
+        event.preventDefault(); // מונע זום כפול
       }
+      lastTouch = now;
     }, { passive: false });
-  }
+  });
 });
+
+// מאזין שני – לעגלת הקניות, אחרי שהכפתורים נוצרו דינמית
+function attachCartTouchListeners() {
+  const buttons = document.querySelectorAll('#cart-items .quantity-controls button');
+  buttons.forEach(button => {
+    let lastTouch = 0;
+
+    button.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouch <= 300) {
+        event.preventDefault(); // מונע זום כפול
+      }
+      lastTouch = now;
+    }, { passive: false });
+  });
+}
+
 
 
