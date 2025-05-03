@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -6,6 +5,7 @@
   <title>המאפים של אמא</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
 </head>
 
 <body>
@@ -16,29 +16,20 @@
   <span id="cart-count-badge" class="cart-badge">0</span>
 </button>
 
-
 <div class="side-cart" id="sideCart">
   <button class="close-btn" onclick="toggleCart()">×</button>
   <h3>🛒 הסל שלך</h3>
-
   <ul id="cart-items"></ul>
-
   <div class="cart-summary-wrapper">
     <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
     <a id="whatsappLink" href="#" target="_blank" class="whatsapp-send">📤 שלח בוואטסאפ</a>
   </div>
 </div>
 
-
-
 <header class="site-header">
   <div class="header-content">
     <h1 class="site-title">המאפים של מרגלית</h1>
-
-    <p class="order-note">
-      🕒 ההזמנות מוכנות תוך 1–3 ימי עסקים ממועד התשלום• איסוף עצמי בלבד (בתיאום)
-    </p>
-
+    <p class="order-note">🕒 ההזמנות מוכנות תוך 1–3 ימי עסקים ממועד התשלום• איסוף עצמי בלבד (בתיאום)</p>
     <nav class="main-nav">
       <a href="index.html">🏠 בית</a>
       <a href="menu.html">📋 תפריט</a>
@@ -46,8 +37,6 @@
     </nav>
   </div>
 </header>
-
-
 
 <main>
 
@@ -61,14 +50,12 @@
 
   <section class="carousel">
     <div class="carousel-wrapper">
-      <button class="carousel-btn" onclick="prevSlide()">‹</button>
-      
+      <button class="carousel-btn" id="prevBtn">‹</button>
       <div class="carousel-image-container">
         <img id="carouselImage" src="images/mash_events1.jpg" alt="מוצר דגל">
         <p id="carouselCaption" class="carousel-caption">מגש אירועים חגיגי – 50 עוגיות פרימיום</p>
       </div>
-      
-      <button class="carousel-btn" onclick="nextSlide()">›</button>
+      <button class="carousel-btn" id="nextBtn">›</button>
     </div>
   </section>
 
@@ -77,8 +64,7 @@
       לא מצאתם את מה שחיפשתם או יש לכם שאלה?
     </p>
     <a href="https://wa.me/972505183940?text=שלום!%20רציתי%20לברר%20על%20מאפה%20או%20הזמנה%20שלא%20מופיעה%20בתפריט"
-       target="_blank"
-       class="main-button">
+       target="_blank" class="main-button">
       📩 דברו איתנו בוואטסאפ
     </a>
   </section>
@@ -99,52 +85,44 @@
 
 <!-- סקריפט קרוסלת תמונות -->
 <script>
-  const images = [
-    'images/mash_events1.jpg',
-    'images/sfinge.jpg',
-    'images/fricasse.jpg'
-  ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+      'images/mash_events1.jpg',
+      'images/sfinge.jpg',
+      'images/fricasse.jpg'
+    ];
 
-  const captions = [
-    "מגש אירועים חגיגי",
-    "ספינג' מרוקאי אמיתי – וטרי",
-    "פריקסה טוניסאי – 10 יחידות מושקעות"
-  ];
+    const captions = [
+      "מגש אירועים חגיגי",
+      "ספינג' מרוקאי אמיתי – וטרי",
+      "פריקסה טוניסאי – 10 יחידות מושקעות"
+    ];
 
-  let index = 0;
+    let index = 0;
+    const imgElement = document.getElementById("carouselImage");
+    const captionElement = document.getElementById("carouselCaption");
 
-  const imgElement = document.getElementById("carouselImage");
-  const captionElement = document.getElementById("carouselCaption");
+    function updateCarousel() {
+      imgElement.src = images[index];
+      captionElement.textContent = captions[index];
+    }
 
-  function updateCarousel() {
-    imgElement.src = images[index];
-    captionElement.textContent = captions[index];
-  }
+    document.getElementById("nextBtn").onclick = () => {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    };
 
-  function nextSlide() {
-    index = (index + 1) % images.length;
-    updateCarousel();
-  }
+    document.getElementById("prevBtn").onclick = () => {
+      index = (index - 1 + images.length) % images.length;
+      updateCarousel();
+    };
 
-  function prevSlide() {
-    index = (index - 1 + images.length) % images.length;
-    updateCarousel();
-  }
-
-  // שינוי אוטומטי כל 5 שניות:
-  setInterval(nextSlide, 5000);
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    }, 5000);
+  });
 </script>
-
-
-<!-- סקריפט סל צדדי -->
-<script>
-  function toggleCart() {
-    document.getElementById("sideCart").classList.toggle("open");
-  }
-</script>
-
-
-<script src="cart.js" defer></script>
 
 </body>
 </html>
