@@ -137,6 +137,22 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const quantityButtons = document.querySelectorAll('.quantity-controls button');
+  
+    quantityButtons.forEach(button => {
+      let lastTouch = 0;
+  
+      button.addEventListener('touchend', function (event) {
+        const now = new Date().getTime();
+        if (now - lastTouch <= 300) {
+          event.preventDefault(); // מבטל זום כפול רק על כפתורי הכמות
+        }
+        lastTouch = now;
+      }, { passive: false });
+    });
+  });
+
 }
 /** 
 // טען את הסל ברגע שהדף נטען
@@ -151,18 +167,3 @@ window.onload = () => {
 };
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const quantityButtons = document.querySelectorAll('.quantity-controls button');
-
-  quantityButtons.forEach(button => {
-    let lastTouch = 0;
-
-    button.addEventListener('touchend', function (event) {
-      const now = new Date().getTime();
-      if (now - lastTouch <= 300) {
-        event.preventDefault(); // מבטל זום כפול רק על כפתורי הכמות
-      }
-      lastTouch = now;
-    }, { passive: false });
-  });
-});
