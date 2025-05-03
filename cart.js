@@ -94,7 +94,7 @@ function renderCart() {
   const totalSpan = document.getElementById("total");
   const link = document.getElementById("whatsappLink");
   const badge = document.getElementById("cart-count-badge");
-  const checkoutBtn = document.getElementById("checkoutButton");
+  const checkoutButton = document.getElementById("checkoutButton");
   ul.innerHTML = "";
 
   let total = 0;
@@ -109,9 +109,6 @@ function renderCart() {
   itemCount += discount.count;
   message += discount.message;
 
-  if (checkoutBtn) {
-    checkoutBtn.style.display = itemCount > 0 ? "block" : "none";
-  }
 
   // שאר פריטים
   const regular = handleRegularItems(ul, "חצי קג עוגיות מכונה");
@@ -124,6 +121,12 @@ function renderCart() {
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
   badge.style.display = itemCount > 0 ? "inline-block" : "none";
   badge.innerText = itemCount;
+
+
+  if (checkoutButton) {
+    checkoutButton.style.display = itemCount > 0 ? "block" : "none";
+  }
+
 }
 
 // טען את הסל ברגע שהדף נטען
