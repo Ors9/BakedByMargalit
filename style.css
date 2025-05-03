@@ -710,20 +710,23 @@ footer {
   
 }
 
+
+
+
 .cart-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background-color: #d6c1ae; /* softer beige tone */
-  color: #6b4f2d;
-  padding: 10px 20px;
-  margin-bottom: 10px;
+  display: inline-block;
+  background: #a47148;
+  color: white;
+  padding: 10px 22px; /* כאן padding קטן יותר */
   border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 20px;
   text-decoration: none;
-  transition: background 0.3s;
-  border: 1px solid #c2aa92;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+  border: none; /* הסר קו מסגרת שהיה לך קודם */
 }
 
 .cart-btn:hover {
