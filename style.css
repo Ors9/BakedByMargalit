@@ -296,7 +296,7 @@ main {
 
 /* כפתור 🛒 קבוע */
 .cart-toggle {
-  position: fixed;
+  position: fixed; /* שומר על מיקום הכפתור */
   bottom: 20px;
   right: 20px;
   background: linear-gradient(135deg, #c6824a, #a47148);
@@ -312,7 +312,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
+
+  position: relative;
 }
 .cart-toggle:hover {
   background: #8a5e3a;
