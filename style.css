@@ -689,11 +689,12 @@ footer {
   background-color: #fdf6e3;
   color: #7b633a;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: bold;
   padding: 4px 8px;
   margin: 5px auto 8px;
   max-width: 400px;
   text-align: center;
   border: none;
+  
 }
 

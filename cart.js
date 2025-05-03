@@ -140,10 +140,11 @@ function renderCart() {
   const quantityButtons = document.querySelectorAll('.quantity-controls button');
   quantityButtons.forEach(button => {
     let lastTouch = 0;
-    button.addEventListener('touchend', function (event) {
+  
+    button.addEventListener('touchstart', function (event) {
       const now = new Date().getTime();
       if (now - lastTouch <= 300) {
-        event.preventDefault();
+        event.preventDefault(); // מונע זום כפול
       }
       lastTouch = now;
     }, { passive: false });
