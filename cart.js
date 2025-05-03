@@ -101,15 +101,17 @@ function renderCart() {
   let message = "שלום! אני מעוניין להזמין:\n";
   let itemCount = 0;
 
-  if (checkoutBtn) {
-    checkoutBtn.style.display = itemCount > 0 ? "block" : "none";
-  }
+
 
   // מבצע
   const discount = handleDiscountedItem(ul);
   total += discount.total;
   itemCount += discount.count;
   message += discount.message;
+
+  if (checkoutBtn) {
+    checkoutBtn.style.display = itemCount > 0 ? "block" : "none";
+  }
 
   // שאר פריטים
   const regular = handleRegularItems(ul, "חצי קג עוגיות מכונה");
