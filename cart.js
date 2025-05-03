@@ -71,8 +71,7 @@ function renderCart() {
             <span>${product.count}</span>
             <button onclick="updateCart('${halfKey}', ${product.price}, 1, '${product.image}')">➕</button>
           </div>
-          <div class="price-line">סה"כ: ${itemTotal} ₪ 
-            <span style="color: green;">(${fullKg} ק"ג ב־100 ₪ + ${remainingHalves} חצי ק"ג)</span>
+            <div class="price-line">סה"כ: ${itemTotal} ₪</div>
           </div>
         </div>
       </div>
