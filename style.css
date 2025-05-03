@@ -545,7 +545,14 @@ footer {
 .carousel-btn:last-of-type {
   right: 10px;
 }
+
 @media (max-width: 600px) {
+
+  .quantity-controls button {
+    padding: 12px 16px;   /* הגדלת שטח הלחיצה */
+    font-size: 24px;       /* הגדלת טקסט בכפתור */
+  }
+
   .menu-item {
     display: flex;
     flex-direction: column;
@@ -579,13 +586,13 @@ footer {
   }
 
   .menu-item .price {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 8px;
   }
 
   .add-to-cart-label {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 6px;
   }
@@ -603,9 +610,14 @@ footer {
   }
 
   .quantity-controls span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
   }
+
+  .unit-label {
+    font-size: 18px;
+  }
+
 }
 
 .gallery-grid {
