@@ -135,7 +135,7 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
- 
+  attachCartTouchListeners();
 
 }
 
@@ -146,8 +146,38 @@ window.onload = () => {
 };
 
 
+// מאזין ראשון – לעמודים שבהם הכפתורים קיימים מראש (menu.html)
+document.addEventListener('DOMContentLoaded', function () {
+  const quantityButtons = document.querySelectorAll('.quantity-controls button');
 
+  quantityButtons.forEach(button => {
+    let lastTouch = 0;
 
+    button.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouch <= 300) {
+        event.preventDefault(); // מונע זום כפול
+      }
+      lastTouch = now;
+    }, { passive: false });
+  });
+});
+
+// מאזין שני – לעגלת הקניות, אחרי שהכפתורים נוצרו דינמית
+function attachCartTouchListeners() {
+  const buttons = document.querySelectorAll('#cart-items .quantity-controls button');
+  buttons.forEach(button => {
+    let lastTouch = 0;
+
+    button.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouch <= 300) {
+        event.preventDefault(); // מונע זום כפול
+      }
+      lastTouch = now;
+    }, { passive: false });
+  });
+}
 
 
 
