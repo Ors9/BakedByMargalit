@@ -2,8 +2,10 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>תנאי שימוש ומדיניות פרטיות</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>תנאי שימוש ומדיניות פרטיות - המאפים של מרגלית</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
   <style>
     body {
       font-family: 'Varela Round', sans-serif;
@@ -12,28 +14,75 @@
       padding: 40px;
       direction: rtl;
       line-height: 1.7;
+      font-weight: bold;
     }
 
     h1 {
       color: #6b4f2d;
       margin-bottom: 30px;
+      text-align: center;
     }
 
     p {
       max-width: 800px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
     }
 
     a {
-      display: inline-block;
+      display: block;
+      text-align: center;
       margin-top: 30px;
       color: #6b4f2d;
-      text-decoration: none;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 60px;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
 
+<!-- כפתור סל קניות קבוע -->
+<button class="cart-toggle" onclick="toggleCart()">
+  🛒
+  <span id="cart-count-badge" class="cart-badge">0</span>
+</button>
+
+<!-- סל קניות צדדי -->
+<div class="side-cart" id="sideCart">
+  <button class="close-btn" onclick="toggleCart()">×</button>
+  <h3>🛒 הסל שלך</h3>
+  <ul id="cart-items"></ul>
+  <div class="cart-summary-wrapper">
+    <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+    <a id="checkoutButton" href="checkout.html" class="main-button">💳 לתשלום</a>
+  </div>
+</div>
+
+<!-- כותרת ותפריט -->
+<header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">תנאי שימוש ומדיניות פרטיות</h1>
+    <p class="order-note">
+      🕒 ההזמנות מוכנות תוך 1–3 ימי עסקים ממועד התשלום • איסוף עצמי בלבד מ־יפה נוף 45, נהריה (בתיאום מראש)
+    </p>
+
+    <nav class="main-nav">
+      <a href="index.html">🏠 בית</a>
+      <a href="menu.html">📋 תפריט</a>
+      <a href="gallery.html">📷 גלריה</a>
+      <a href="terms.html">תנאי שימוש</a>
+    </nav>
+  </div>
+</header>
+
+<!-- תוכן העמוד -->
+<main>
   <h1>תנאי שימוש ומדיניות פרטיות</h1>
 
   <p>
@@ -47,9 +96,17 @@
     אנו לא שומרים פרטי אשראי או פרטים רגישים של המשתמשים. השימוש באתר מהווה הסכמה לתנאים אלה.
     לכל שאלה או הבהרה ניתן לפנות אלינו דרך כפתור הוואטסאפ.
   </p>
-  
 
-  <a href="index.html">חזרה לדף הבית</a>
+  <a href="index.html">⬅ חזרה לדף הבית</a>
+</main>
+
+<!-- פוטר -->
+<footer>
+  <p>
+    אתר זה מופעל על ידי המאפים של מרגלית. כל הזכויות שמורות. |
+    <a href="terms.html">תנאי שימוש</a>
+  </p>
+</footer>
 
 </body>
 </html>
