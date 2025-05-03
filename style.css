@@ -1,6 +1,7 @@
 
 html, body {
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 .gallery img {
@@ -257,6 +258,7 @@ main {
   margin-top: 8px;
 }
 .quantity-controls button {
+  touch-action: manipulation;
   padding: 10px 16px;
   font-size: 20px;
   margin: 0 5px;
@@ -452,6 +454,7 @@ footer {
 }
 
 .side-cart .quantity-controls button {
+  touch-action: manipulation;
   padding: 8px 12px;
   font-size: 20px;
   background: #e0c9a6;
@@ -601,6 +604,7 @@ footer {
   }
 
   .quantity-controls button {
+    touch-action: manipulation;
     padding: 10px 16px;
     font-size: 20px;
   }

@@ -181,22 +181,6 @@ function attachCartTouchListeners() {
 
 
 
-// מניעת pinch-zoom (שתי אצבעות)
-document.addEventListener('touchstart', function (event) {
-  if (event.touches.length > 1) {
-    event.preventDefault();
-  }
-}, { passive: false });
-
-// מניעת double-tap zoom בכל הדף
-let lastTouchTime = 0;
-document.addEventListener('touchend', function (event) {
-  const now = new Date().getTime();
-  if (now - lastTouchTime <= 300) {
-    event.preventDefault();
-  }
-  lastTouchTime = now;
-}, { passive: false });
 
 
 
