@@ -94,11 +94,16 @@ function renderCart() {
   const totalSpan = document.getElementById("total");
   const link = document.getElementById("whatsappLink");
   const badge = document.getElementById("cart-count-badge");
+  const checkoutBtn = document.getElementById("checkoutButton");
   ul.innerHTML = "";
 
   let total = 0;
   let message = "שלום! אני מעוניין להזמין:\n";
   let itemCount = 0;
+
+  if (checkoutBtn) {
+    checkoutBtn.style.display = itemCount > 0 ? "block" : "none";
+  }
 
   // מבצע
   const discount = handleDiscountedItem(ul);

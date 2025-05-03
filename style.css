@@ -314,7 +314,6 @@ main {
   align-items: center;
   overflow: hidden;
 
-  position: relative;
 }
 .cart-toggle:hover {
   background: #8a5e3a;
