@@ -92,7 +92,7 @@ function handleRegularItems(ul, skipItem) {
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
-  const link = document.getElementById("whatsappLink");
+  //const link = document.getElementById("whatsappLink");
   const badge = document.getElementById("cart-count-badge");
   const checkoutButton = document.getElementById("checkoutButton");
   ul.innerHTML = "";
@@ -125,7 +125,7 @@ function renderCart() {
   }
 
   totalSpan.innerText = total;
-  link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
+  //link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
 
   if (badge) {
     badge.innerText = totalItemCount;
@@ -138,9 +138,14 @@ function renderCart() {
   }
 
 }
-
+/** 
 // טען את הסל ברגע שהדף נטען
 document.addEventListener("DOMContentLoaded", () => {
   syncQuantitiesFromCart();
   renderCart();
-});
+});*/
+
+window.onload = () => {
+  syncQuantitiesFromCart();
+  renderCart();
+};
