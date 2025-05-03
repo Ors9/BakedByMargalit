@@ -137,18 +137,19 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
-  const quantityButtons = document.querySelectorAll('.quantity-controls button');
-  quantityButtons.forEach(button => {
-    let lastTouch = 0;
-  
-    button.addEventListener('touchstart', function (event) {
+  document.getElementById("cart-items").addEventListener('touchend', function (event) {
+    if (event.target.tagName === "BUTTON") {
       const now = new Date().getTime();
-      if (now - lastTouch <= 300) {
-        event.preventDefault(); // מונע זום כפול
+      if (!event.target.dataset.lastTouch) {
+        event.target.dataset.lastTouch = now;
       }
-      lastTouch = now;
-    }, { passive: false });
-  });
+      if (now - event.target.dataset.lastTouch <= 300) {
+        event.preventDefault();
+      }
+      event.target.dataset.lastTouch = now;
+    }
+  }, { passive: false });
+  
 
 }
 /** 
