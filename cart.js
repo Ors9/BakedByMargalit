@@ -135,7 +135,7 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
-  attachCartTouchListeners();
+  //attachCartTouchListeners();
 
 }
 
@@ -145,7 +145,7 @@ window.onload = () => {
   renderCart();
 };
 
-
+/*
 // מאזין ראשון – לעמודים שבהם הכפתורים קיימים מראש (menu.html)
 document.addEventListener('DOMContentLoaded', function () {
   const quantityButtons = document.querySelectorAll('.quantity-controls button');
@@ -179,7 +179,7 @@ function attachCartTouchListeners() {
   });
 }
 
-
+*/
 
 
 
