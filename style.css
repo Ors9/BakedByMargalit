@@ -710,3 +710,21 @@ footer {
   
 }
 
+.cart-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #a47148;
+  color: white;
+  padding: 14px 24px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cart-btn:hover {
+  background-color: #8a5e3a;
+}
