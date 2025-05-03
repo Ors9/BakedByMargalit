@@ -92,7 +92,6 @@ function handleRegularItems(ul, skipItem) {
 function renderCart() {
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
-  //const link = document.getElementById("whatsappLink");
   const badge = document.getElementById("cart-count-badge");
   const checkoutButton = document.getElementById("checkoutButton");
   ul.innerHTML = "";
@@ -125,7 +124,6 @@ function renderCart() {
   }
 
   totalSpan.innerText = total;
-  //link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
 
   if (badge) {
     badge.innerText = totalItemCount;
@@ -137,31 +135,34 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
-  document.getElementById("cart-items").addEventListener('touchend', function (event) {
-    if (event.target.tagName === "BUTTON") {
-      const now = new Date().getTime();
-      if (!event.target.dataset.lastTouch) {
-        event.target.dataset.lastTouch = now;
-      }
-      if (now - event.target.dataset.lastTouch <= 300) {
-        event.preventDefault();
-      }
-      event.target.dataset.lastTouch = now;
-    }
-  }, { passive: false });
   
 
 }
-/** 
-// טען את הסל ברגע שהדף נטען
-document.addEventListener("DOMContentLoaded", () => {
-  syncQuantitiesFromCart();
-  renderCart();
-});*/
+
 
 window.onload = () => {
   syncQuantitiesFromCart();
   renderCart();
 };
+
+
+// פתרון זום כפול בעגלת קניות
+document.addEventListener('DOMContentLoaded', function () {
+  const cartItems = document.getElementById("cart-items");
+  if (cartItems) {
+    cartItems.addEventListener('touchend', function (event) {
+      if (event.target.tagName === "BUTTON") {
+        const now = new Date().getTime();
+        if (!event.target.dataset.lastTouch) {
+          event.target.dataset.lastTouch = now;
+        }
+        if (now - event.target.dataset.lastTouch <= 300) {
+          event.preventDefault();
+        }
+        event.target.dataset.lastTouch = now;
+      }
+    }, { passive: false });
+  }
+});
 
 
