@@ -127,14 +127,19 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    let lastTouchTime = 0;
-    document.body.addEventListener('touchend', function (event) {
-      const now = new Date().getTime();
-      if (now - lastTouchTime <= 300) {
-        event.preventDefault(); // מונע זום מלחיצה כפולה
-      }
-      lastTouchTime = now;
-    }, { passive: false });
+    const quantityButtons = document.querySelectorAll('.quantity-controls button');
+
+    quantityButtons.forEach(button => {
+      let lastTouch = 0;
+
+      button.addEventListener('touchend', function (event) {
+        const now = new Date().getTime();
+        if (now - lastTouch <= 300) {
+          event.preventDefault(); // מבטל זום כפול רק על כפתורי כמות
+        }
+        lastTouch = now;
+      }, { passive: false });
+    });
   });
 </script>
 

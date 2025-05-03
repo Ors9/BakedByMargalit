@@ -149,3 +149,20 @@ window.onload = () => {
   syncQuantitiesFromCart();
   renderCart();
 };
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const quantityButtons = document.querySelectorAll('.quantity-controls button');
+
+  quantityButtons.forEach(button => {
+    let lastTouch = 0;
+
+    button.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouch <= 300) {
+        event.preventDefault(); // מבטל זום כפול רק על כפתורי הכמות
+      }
+      lastTouch = now;
+    }, { passive: false });
+  });
+});
