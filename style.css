@@ -257,8 +257,8 @@ main {
   margin-top: 8px;
 }
 .quantity-controls button {
-  padding: 5px 12px;
-  font-size: 18px;
+  padding: 10px 16px;
+  font-size: 24px;
   margin: 0 5px;
   border: none;
   background: #e0c9a6;        /* חום בהיר */
@@ -395,7 +395,7 @@ main {
   font-weight: 500;
 }
 .side-cart .price-line {
-  font-size: 16px;
+  font-size: 18px;
   color: #000;
   font-weight: bold;
   margin-top: 5px;
@@ -452,8 +452,8 @@ footer {
 }
 
 .side-cart .quantity-controls button {
-  padding: 5px 10px;
-  font-size: 16px;
+  padding: 10px 16px;
+  font-size: 24px;
   background: #e0c9a6;
   border: none;
   border-radius: 6px;
@@ -579,13 +579,13 @@ footer {
   }
 
   .menu-item .price {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;
   }
 
   .add-to-cart-label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 6px;
   }
