@@ -714,15 +714,16 @@ footer {
   display: block;
   width: 100%;
   text-align: center;
-  background-color: #a47148;
-  color: white;
-  padding: 14px 24px;
+  background-color: #d6c1ae; /* softer beige tone */
+  color: #6b4f2d;
+  padding: 10px 20px;
   margin-bottom: 10px;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
   transition: background 0.3s;
+  border: 1px solid #c2aa92;
 }
 
 .cart-btn:hover {
