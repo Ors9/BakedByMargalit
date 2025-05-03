@@ -117,12 +117,19 @@ function renderCart() {
   message += regular.message;
 
   // עדכון סה"כ
+  let totalItemCount = 0;
+  for (const item in cart) {
+    if (cart[item].count > 0) {
+      totalItemCount += cart[item].count;
+    }
+  }
+
   totalSpan.innerText = total;
   link.href = "https://wa.me/972505183940?text=" + encodeURIComponent(message + "\nסה\"כ לתשלום: " + total + " ₪");
-  
+
   if (badge) {
-    badge.style.display = itemCount > 0 ? "inline-block" : "none";
-    badge.innerText = itemCount;
+    badge.innerText = totalItemCount;
+    badge.style.display = totalItemCount > 0 ? "inline-block" : "none";
   }
 
 
