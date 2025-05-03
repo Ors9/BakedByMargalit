@@ -352,9 +352,13 @@ main {
   box-sizing: border-box; /* ✅ הפתרון לחריגה ברוחב */
 }
 .cart-summary-wrapper {
-  margin-top: 20px;
-  padding-top: 10px;
+  position: sticky;
+  bottom: 0;
+  background: #fffdf7;
+  padding: 12px 20px;
   border-top: 1px dashed #d2b48c;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .side-cart.open {
