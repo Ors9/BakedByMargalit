@@ -717,7 +717,7 @@ footer {
   display: inline-block;
   background: #a47148;
   color: white;
-  padding: 10px 22px; /* כאן padding קטן יותר */
+  padding: 14px 28px;
   border-radius: 12px;
   font-size: 20px;
   text-decoration: none;
@@ -725,8 +725,9 @@ footer {
   font-family: inherit;
   transition: background 0.3s, transform 0.2s;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 100%;
   text-align: center;
-  border: none; /* הסר קו מסגרת שהיה לך קודם */
+  margin-bottom: 10px; /* כדי ליצור רווח ביניהם */
 }
 
 .cart-btn:hover {
