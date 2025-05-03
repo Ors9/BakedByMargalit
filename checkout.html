@@ -113,5 +113,20 @@
   checkoutTotal.innerText = total;
 </script>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let lastTouchTime = 0;
+    document.body.addEventListener('touchend', function (event) {
+      const now = new Date().getTime();
+      if (now - lastTouchTime <= 300) {
+        event.preventDefault(); // מונע זום מלחיצה כפולה
+      }
+      lastTouchTime = now;
+    }, { passive: false });
+  });
+</script>
+
+
 </body>
 </html>
