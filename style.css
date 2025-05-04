@@ -704,7 +704,7 @@ footer {
   font-weight: bold;
   padding: 4px 8px;
   margin: 5px auto 8px;
-  max-width: 400px;
+  width: 100%;
   text-align: center;
   border: none;
   
