@@ -697,17 +697,17 @@ footer {
   }
 }
 
-.order-note {
-  background-color: #fdf6e3;
+order-note {
+  background-color: #fdf6e3; /* הרקע שאתה רוצה */
   color: #7b633a;
   font-size: 13px;
   font-weight: bold;
-  padding: 4px 8px;
-  margin: 5px auto 8px;
+  padding: 6px 12px;
+  margin: 0;
   width: 100%;
   text-align: center;
   border: none;
-  
+  box-sizing: border-box;
 }
 
 
