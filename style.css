@@ -736,25 +736,49 @@ footer {
   background-color: #8a5e3a;
 }
 
+
+
 .header-flex {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
+  flex-wrap: nowrap; /* מונע קפיצה של הלוגו למעלה */
 }
 
 .site-logo-fixed {
-  width: 60px;
+  width: 80px;
   height: auto;
   flex-shrink: 0;
 }
 
 .header-text {
   flex: 1;
+  min-width: 0;
 }
 
-@media screen and (min-width: 768px) {
+/* במובייל נקטין טיפה ונשמור מבנה */
+@media screen and (max-width: 600px) {
+  .header-flex {
+    gap: 10px;
+  }
+
   .site-logo-fixed {
-    width: 90px;
+    width: 60px;
+  }
+
+  .site-title {
+    font-size: 20px;
+  }
+
+  .order-note {
+    font-size: 14px;
+  }
+}
+
+/* במחשב נגדיל את הלוגו */
+@media screen and (min-width: 1000px) {
+  .site-logo-fixed {
+    width: 100px;
   }
 }
