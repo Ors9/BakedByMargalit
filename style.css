@@ -736,15 +736,25 @@ footer {
   background-color: #8a5e3a;
 }
 
-.horizontal-header {
+.header-flex {
   display: flex;
   align-items: center;
-  gap: 20px;
-  justify-content: center; /* או space-between אם אתה רוצה להרחיק */
-  flex-wrap: wrap; /* למובייל */
+  justify-content: flex-start;
+  gap: 15px;
 }
 
-.site-logo {
-  width: 120px;
+.site-logo-fixed {
+  width: 60px;
   height: auto;
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .site-logo-fixed {
+    width: 90px;
+  }
 }
