@@ -40,17 +40,20 @@
 
 <!-- סל קניות צדדי -->
 <div class="side-cart" id="sideCart">
-  <button class="close-btn" onclick="toggleCart()">×</button>
-  <h3>🛒 הסל שלך</h3>
-  <ul id="cart-items"></ul>
-  <div class="cart-summary-wrapper">
-    <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+    <button class="close-btn" onclick="toggleCart()">×</button>
+    <h3>🛒 הסל שלך</h3>
   
-    <a id="checkoutButton" href="checkout.html" class="main-button cart-btn">💳 לתשלום</a>
-
-    <a href="menu.html" class="main-button cart-btn">🔙 חזרה להמשך קניות</a>
+    <!-- מיכל גלילה לפריטים -->
+    <div class="cart-scrollable">
+      <ul id="cart-items"></ul>
+    </div>
+  
+    <div class="cart-summary-wrapper">
+      <p><strong>סה"כ: <span id="total">0</span> ₪</strong></p>
+      <a id="checkoutButton" href="checkout.html" class="main-button cart-btn">💳 לתשלום</a>
+      <a href="menu.html" class="main-button cart-btn">🔙 חזרה להמשך קניות</a>
+    </div>
   </div>
-</div>
 
 <!-- כותרת ותפריט -->
 <header class="site-header">
