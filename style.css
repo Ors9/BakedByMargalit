@@ -321,7 +321,7 @@ main {
 }
 
 .side-cart {
-  position: flex;
+  position: fixed;
   top: 0;
   right: 0;
   width: 320px;
@@ -335,13 +335,6 @@ main {
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
   border-radius: 8px 0 0 8px;
-}
-
-.cart-scrollable {
-  flex: 1;
-  overflow-y: auto;
-  margin-top: 20px;
-  padding-right: 4px; /* כדי שלא יחתך בגלילה */
 }
 
 .whatsapp-send {
