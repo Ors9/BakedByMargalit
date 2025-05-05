@@ -815,3 +815,9 @@ footer {
     font-size: 34px; /* אם אתה רוצה להגדיל גם את כותרת העמוד */
   }
 }
+
+.cart-scrollable {
+  max-height: 65vh;   /* היה אולי 300px, עכשיו הרבה יותר */
+  overflow-y: auto;
+  padding-right: 5px;
+}
