@@ -808,10 +808,10 @@ footer {
 
 @media (min-width: 768px) {
   .main-nav a {
-    font-size: 18px; /* גודל מוגדל רק למסכים רחבים */
+    font-size: 22px; /* גודל מוגדל רק למסכים רחבים */
   }
 
   .site-title {
-    font-size: 28px; /* אם אתה רוצה להגדיל גם את כותרת העמוד */
+    font-size: 34px; /* אם אתה רוצה להגדיל גם את כותרת העמוד */
   }
 }
