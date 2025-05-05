@@ -337,6 +337,12 @@ main {
   border-radius: 8px 0 0 8px;
 }
 
+.cart-scrollable {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
 .whatsapp-send {
   display: block;
   background-color: #25D366;
@@ -816,8 +822,3 @@ footer {
   }
 }
 
-.cart-scrollable {
-  max-height: 65vh;   /* היה אולי 300px, עכשיו הרבה יותר */
-  overflow-y: auto;
-  padding-right: 5px;
-}
