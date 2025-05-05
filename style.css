@@ -804,3 +804,14 @@ footer {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+
+@media (min-width: 768px) {
+  .main-nav a {
+    font-size: 18px; /* גודל מוגדל רק למסכים רחבים */
+  }
+
+  .site-title {
+    font-size: 28px; /* אם אתה רוצה להגדיל גם את כותרת העמוד */
+  }
+}
