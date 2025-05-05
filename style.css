@@ -700,7 +700,7 @@ footer {
 .order-note {
   background-color: #fdf6e3; /* הצבע הקרמי שאתה אוהב */
   color: #7b633a;
-  font-size: 1px;
+  font-size: 14px;
   font-weight: bold;
   padding: 4px 8px;
   margin: 0; /* כדי שלא ייראו רווחים עם לבן */
