@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-  <script src="https://direct.tranzila.com/js/tranzila-hosted-fields.js"></script>
 <head>
   <meta charset="UTF-8">
   <title>לתשלום - המאפים של אמא</title>
@@ -39,15 +38,6 @@
       text-align: center;
       color: #333;
     }
-    .payment-options {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .payment-options h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #6b4f2d;
-    }
     .pay-btn {
       background: #a47148;
       color: white;
@@ -65,84 +55,16 @@
   </style>
 </head>
 
-<script>
-  const supplier = "testsales"; // ← הספק לבדיקה
-
-  const options = {
-    supplier: supplier,
-    elements: {
-      card_number: { id: "card_number", placeholder: "Card Number" },
-      expdate: { id: "expdate", placeholder: "MMYY" },
-      cvv: { id: "cvv", placeholder: "CVV" }
-    }
-  };
-
-  let tranzila = null;
-  let tranzilaReady = false;
-
-  window.onload = function () {
-    tranzila = new TranzilaHostedFields(options);
-
-    tranzila.init().then(() => {
-      console.log("✅ Tranzila נטען בהצלחה");
-      tranzilaReady = true;
-    }).catch(err => {
-      console.error("❌ שגיאה ב-Tranzila:", err);
-      alert("שגיאה בטעינת Tranzila. נסה לרענן את הדף.");
-    });
-  };
-
-  function submitPayment() {
-    if (!tranzilaReady) {
-      alert("Tranzila עדיין לא נטען. נסה שוב בעוד כמה שניות.");
-      return;
-    }
-
-    tranzila.submit()
-      .then(result => {
-        if (result.success) {
-          alert("✔️ התשלום הצליח (בדיקה):\n" + JSON.stringify(result, null, 2));
-        } else {
-          alert("❌ שגיאה בתשלום:\n" + result.error);
-        }
-      })
-      .catch(err => {
-        alert("❌ שגיאה כללית:\n" + err.message);
-        console.error(err);
-      });
-  }
-</script>
+<body>
 
 <h1>אישור הזמנה ותשלום</h1>
 <div id="checkout-items"></div>
 <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
-<div style="text-align: center; margin-top: 30px;">
-</div>
-<!--
-<div class="payment-options">
-  <h3>בחרו אמצעי תשלום:</h3>
-  <button class="pay-btn" disabled>💳 תשלום בכרטיס אשראי</button>
-  <button class="pay-btn" disabled>📲 תשלום ב-Bit</button>
-  <button class="pay-btn" disabled>🍏 Apple Pay</button>
-  <button class="pay-btn" disabled>🟦 Google Pay</button>
+
+<!-- כפתורי פעולה -->
+<div class="payment-actions" style="text-align: center; margin-top: 30px;">
+  <button onclick="goToTranzilaPayment()" class="pay-btn">💳 עבור לתשלום מאובטח</button>
   <a href="menu.html" class="pay-btn">🔙 חזרה להמשך קניות</a>
-</div>
--->
-
-<div id="tranzila-form" style="direction: ltr; text-align: left; max-width: 400px; margin: auto;">
-  <label>Card Number</label>
-  <div id="card_number" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
-
-  <label>Expiry Date (MMYY)</label>
-  <div id="expdate" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
-
-  <label>CVV</label>
-  <div id="cvv" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
-  
-  <div class="payment-actions" style="text-align: center; margin-top: 20px;">
-    <button onclick="submitPayment()" class="pay-btn">💳 שלם עכשיו</button>
-    <a href="menu.html" class="pay-btn">🔙 חזרה להמשך קניות</a>
-  </div>
 </div>
 
 <script>
@@ -176,11 +98,13 @@
   }
 
   checkoutTotal.innerText = total;
+
+  function goToTranzilaPayment() {
+    const supplier = "testsales"; // ← שנה לשם הספק שלך
+    const url = `https://direct.tranzila.com/cgi-bin/tranzila31.cgi?supplier=${supplier}&sum=${total}&currency=1&lang=il`;
+    window.location.href = url;
+  }
 </script>
-
-
-</body>
-
 
 <footer style="text-align: center; font-size: 14px; color: #888; margin-top: 60px; padding: 20px 0;">
   <p>
@@ -189,4 +113,5 @@
   </p>
 </footer>
 
+</body>
 </html>
