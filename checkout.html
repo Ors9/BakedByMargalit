@@ -65,7 +65,6 @@
   </style>
 </head>
 
-
 <script>
   const supplier = "testsales"; // ← הספק לבדיקה
 
@@ -78,36 +77,48 @@
     }
   };
 
-  let tranzila;
+  let tranzila = null;
+  let tranzilaReady = false;
 
   window.onload = function () {
     tranzila = new TranzilaHostedFields(options);
-    tranzila.init();
+
+    tranzila.init().then(() => {
+      console.log("✅ Tranzila נטען בהצלחה");
+      tranzilaReady = true;
+    }).catch(err => {
+      console.error("❌ שגיאה ב-Tranzila:", err);
+      alert("שגיאה בטעינת Tranzila. נסה לרענן את הדף.");
+    });
   };
 
   function submitPayment() {
-    if (!tranzila) return alert("Tranzila עדיין לא הופעל");
-    
+    if (!tranzilaReady) {
+      alert("Tranzila עדיין לא נטען. נסה שוב בעוד כמה שניות.");
+      return;
+    }
+
     tranzila.submit()
       .then(result => {
         if (result.success) {
-          alert("✔️ התשלום הצליח (בדיקה): " + JSON.stringify(result));
+          alert("✔️ התשלום הצליח (בדיקה):\n" + JSON.stringify(result, null, 2));
         } else {
-          alert("❌ שגיאה בתשלום: " + result.error);
+          alert("❌ שגיאה בתשלום:\n" + result.error);
         }
+      })
+      .catch(err => {
+        alert("❌ שגיאה כללית:\n" + err.message);
+        console.error(err);
       });
   }
 </script>
-
-
-<body>
-
 
 <h1>אישור הזמנה ותשלום</h1>
 <div id="checkout-items"></div>
 <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
 <div style="text-align: center; margin-top: 30px;">
 </div>
+<!--
 <div class="payment-options">
   <h3>בחרו אמצעי תשלום:</h3>
   <button class="pay-btn" disabled>💳 תשלום בכרטיס אשראי</button>
@@ -116,6 +127,7 @@
   <button class="pay-btn" disabled>🟦 Google Pay</button>
   <a href="menu.html" class="pay-btn">🔙 חזרה להמשך קניות</a>
 </div>
+-->
 
 <div id="tranzila-form" style="direction: ltr; text-align: left; max-width: 400px; margin: auto;">
   <label>Card Number</label>
@@ -126,8 +138,9 @@
 
   <label>CVV</label>
   <div id="cvv" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
-
+  
   <button onclick="submitPayment()" class="pay-btn">💳 שלם עכשיו</button>
+  <a href="menu.html" class="pay-btn">🔙 חזרה להמשך קניות</a>
 </div>
 
 <script>
