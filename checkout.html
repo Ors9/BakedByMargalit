@@ -100,11 +100,32 @@
   checkoutTotal.innerText = total;
 
   function goToTranzilaPayment() {
-    const supplier = "testsales"; // ← שנה לשם הספק שלך
-    const url = `https://direct.tranzila.com/cgi-bin/tranzila31.cgi?supplier=${supplier}&sum=${total}&currency=1&lang=il`;
-    window.location.href = url;
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+  let total = 0;
+
+  for (let item in cart) {
+    const product = cart[item];
+    if (product.count > 0) {
+      const itemTotal = item === "חצי קג עוגיות מכונה"
+        ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
+        : product.count * product.price;
+      total += itemTotal;
+    }
   }
+
+  document.getElementById("tranzila-sum").value = total;
+  document.getElementById("tranzila-form").submit(); // שליחה בטופס POST
+}
 </script>
+
+
+<form id="tranzila-form" method="POST" action="https://direct.tranzila.com/cgi-bin/tranzila31.cgi" style="display: none;">
+  <input type="hidden" name="supplier" value="testsales">
+  <input type="hidden" name="sum" id="tranzila-sum">
+  <input type="hidden" name="currency" value="1">
+  <input type="hidden" name="lang" value="il">
+</form>
+
 
 <footer style="text-align: center; font-size: 14px; color: #888; margin-top: 60px; padding: 20px 0;">
   <p>
