@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+  <script src="https://direct.tranzila.com/js/tranzila-hosted-fields.js"></script>
 <head>
   <meta charset="UTF-8">
   <title>לתשלום - המאפים של אמא</title>
@@ -63,6 +64,42 @@
     }
   </style>
 </head>
+
+
+<script>
+  const supplier = "testsales"; // ← הספק לבדיקה
+
+  const options = {
+    supplier: supplier,
+    elements: {
+      card_number: { id: "card_number", placeholder: "Card Number" },
+      expdate: { id: "expdate", placeholder: "MMYY" },
+      cvv: { id: "cvv", placeholder: "CVV" }
+    }
+  };
+
+  let tranzila;
+
+  window.onload = function () {
+    tranzila = new TranzilaHostedFields(options);
+    tranzila.init();
+  };
+
+  function submitPayment() {
+    if (!tranzila) return alert("Tranzila עדיין לא הופעל");
+    
+    tranzila.submit()
+      .then(result => {
+        if (result.success) {
+          alert("✔️ התשלום הצליח (בדיקה): " + JSON.stringify(result));
+        } else {
+          alert("❌ שגיאה בתשלום: " + result.error);
+        }
+      });
+  }
+</script>
+
+
 <body>
 
 
@@ -78,6 +115,19 @@
   <button class="pay-btn">🍏 Apple Pay</button>
   <button class="pay-btn">🟦 Google Pay</button>
   <a href="menu.html" class="pay-btn">🔙 חזרה להמשך קניות</a>
+</div>
+
+<div id="tranzila-form" style="direction: ltr; text-align: left; max-width: 400px; margin: auto;">
+  <label>Card Number</label>
+  <div id="card_number" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
+
+  <label>Expiry Date (MMYY)</label>
+  <div id="expdate" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
+
+  <label>CVV</label>
+  <div id="cvv" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
+
+  <button onclick="submitPayment()" class="pay-btn">💳 שלם עכשיו</button>
 </div>
 
 <script>
