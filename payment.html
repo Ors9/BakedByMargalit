@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>לתשלום - המאפים של מרגלית</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Varela Round", sans-serif;
+      background: #fffdf7;
+      padding: 20px;
+      color: #222;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 700px;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔒 דף תשלום מאובטח</h2>
+  <p>אנא המתן, טופס התשלום בטעינה...</p>
+
+  <iframe id="tranzila-frame" src=""></iframe>
+
+  <script>
+    // שליפת העגלה מתוך localStorage וחישוב סכום כולל
+    const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+    let total = 0;
+
+    for (let item in cart) {
+      const product = cart[item];
+      if (product.count > 0) {
+        const itemTotal = item === "חצי קג עוגיות מכונה"
+          ? Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price
+          : product.count * product.price;
+        total += itemTotal;
+      }
+    }
+
+    // יצירת כתובת iframe לטרנזילה עם שם הטרמינל שלך
+    const iframeUrl = `https://direct.tranzila.com/fxporsaban/iframenew.php?sum=${total}&currency=1&lang=he`;
+    document.getElementById("tranzila-frame").src = iframeUrl;
+  </script>
+
+</body>
+</html>
