@@ -809,13 +809,35 @@ footer {
 }
 
 
+/* עיצוב כפתורי ניווט */
+.nav-button {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 5px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffe5b4;
+  border-color: #f0c36d;
+  color: #000;
+}
+
+
+
 @media (min-width: 768px) {
-  .main-nav a {
-    font-size: 22px; /* גודל מוגדל רק למסכים רחבים */
+  .nav-button {
+    font-size: 20px;
+    padding: 10px 20px;
   }
 
   .site-title {
-    font-size: 34px; /* אם אתה רוצה להגדיל גם את כותרת העמוד */
+    font-size: 34px;
   }
 }
-
