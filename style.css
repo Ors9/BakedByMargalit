@@ -763,18 +763,21 @@ footer {
   min-width: 0;
 }
 
-/* במובייל נקטין טיפה ונשמור מבנה */
 @media screen and (max-width: 600px) {
   .header-flex {
     gap: 10px;
   }
 
   .site-logo-fixed {
-    width: 60px;
+    width: 80px;         /* היה 60px — נגדיל */
+    max-height: 50px;    /* גובה מקסימלי שלא יחרוג מה־header */
+    height: auto;
+    object-fit: contain;
   }
 
   .site-title {
-    font-size: 20px;
+    font-size: 18px;     /* טיפה יותר קטן שיתאזן עם הלוגו */
+    margin: 0;
   }
 
   .order-note {
@@ -894,7 +897,7 @@ footer {
 
 @media (min-width: 768px) {
   .nav-button {
-    font-size: 14px;
+    font-size: 16px;
     padding: 4px 8px;
   }
 
