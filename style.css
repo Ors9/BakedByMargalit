@@ -821,17 +821,19 @@ footer {
 }
 
 .nav-button {
-  flex: 1; /* כל כפתור יקבל רבע מרוחב המסך */
+  flex: 1;
+  display: flex;               /* Flexbox בתוך הכפתור */
+  align-items: center;         /* מרכז אנכית */
+  justify-content: center;     /* מרכז אופקית */
   text-align: center;
-  padding: 12px 0;
-  margin: 0;
+  padding: 0;                  /* אפס רווח פנימי כדי לא להטות את הטקסט */
+  height: 50px;                /* גובה קבוע ונעים */
   background-color: #fff3e0;
   color: #4e342e;
   border: 1px solid #e0c097;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-right: 1px solid #e0c097; /* קו בין כפתורים */
   font-size: 16px;
 }
 
