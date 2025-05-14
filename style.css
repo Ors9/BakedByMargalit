@@ -793,7 +793,6 @@ footer {
 }
 
 
-
 .site-header {
   height: 70px;
   padding: 0;
@@ -826,10 +825,11 @@ footer {
   .site-logo-fixed {
     display: block;
     margin: 0;
-    padding: 0;
-    height: 100%;
+    padding: 2px 0; /* מרווח למניעת חיתוך ויזואלי */
+    height: 95%; /* במקום 100% – יותר בטוח */
     width: auto;
-    object-fit: contain;
+    object-fit: scale-down;
+    box-sizing: border-box;
   }
 
   .site-title {
