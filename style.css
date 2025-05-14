@@ -893,12 +893,12 @@ footer {
 
 @media (min-width: 768px) {
   .nav-button {
-    font-size: 16px;
-    padding: 6px 12px;
+    font-size: 14px;
+    padding: 4px 8px;
   }
 
   .site-title {
-    font-size: 30px; /* אם גם אותה אתה רוצה לצמצם טיפה */
+    font-size: 26px; /* אם גם אותה אתה רוצה לצמצם טיפה */
   }
 }
  
