@@ -808,10 +808,24 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.main-nav {
+  overflow-x: auto;
+  white-space: nowrap;
+  direction: rtl; /* מתאים לשפה העברית */
+}
 
-/* עיצוב כפתורי ניווט */
+.nav-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
 .nav-button {
   display: inline-block;
+  flex-shrink: 0; /* אל תכווץ את הכפתורים */
+  white-space: nowrap; /* מונע שבירת שורה */
   padding: 10px 18px;
   margin: 5px;
   background-color: #fff3e0; /* רקע בצבע קרם בהיר */
@@ -821,9 +835,7 @@ footer {
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  white-space: nowrap; /* מונע מעבר שורה בתוך כפתור */
 }
-
 
 .nav-button:hover {
   background-color: #ffe0b2;
@@ -831,7 +843,13 @@ footer {
   color: #3e2723;
 }
 
-
+.nav-button.active {
+  background-color: #ffd180; /* גוון כתום בהיר */
+  border-color: #ff8f00;
+  color: #3e2723;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* תחושת עומק */
+  cursor: default; /* לא עכבר של קישור */
+}
 
 @media (min-width: 768px) {
   .nav-button {
