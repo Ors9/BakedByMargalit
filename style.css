@@ -804,6 +804,20 @@ footer {
   height: auto;
 }
 
+@media screen and (max-width: 600px) {
+  .site-header {
+    padding: 5px 0;
+  }
+
+  .site-logo-fixed {
+    width: 50px;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+}
+
 
 .payment-options {
   display: flex;
