@@ -791,7 +791,8 @@ footer {
 
 
 .site-header {
-  padding: 8px 0; /* במקום ברירת מחדל גבוהה יותר */
+  height: 70px;
+  padding: 0;
 }
 
 .site-title {
