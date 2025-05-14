@@ -814,11 +814,14 @@ footer {
 
 @media screen and (max-width: 600px) {
   .site-header {
+    height: auto; 
     padding: 5px 0;
   }
 
   .site-logo-fixed {
-    width: 50px;
+      display: block;       /* מונע רווחים של inline element */
+      margin: 0;            /* מסיר ריווחים */
+      padding: 0;
   }
 
   .site-title {
