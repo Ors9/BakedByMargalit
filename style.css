@@ -815,26 +815,27 @@ footer {
 
 .nav-wrapper {
   display: flex;
-  justify-content: space-between;
   flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
   padding: 0;
 }
 
 .nav-button {
   flex: 1;
-  display: flex;               /* Flexbox בתוך הכפתור */
-  align-items: center;         /* מרכז אנכית */
-  justify-content: center;     /* מרכז אופקית */
-  text-align: center;
-  padding: 0;                  /* אפס רווח פנימי כדי לא להטות את הטקסט */
-  height: 50px;                /* גובה קבוע ונעים */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #e0c097;
   background-color: #fff3e0;
   color: #4e342e;
-  border: 1px solid #e0c097;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .nav-button:last-child {
