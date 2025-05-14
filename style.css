@@ -301,8 +301,8 @@ main {
   position: fixed; /* שומר על מיקום הכפתור */
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #c6824a, #a47148);
-  color: white;
+  background: linear-gradient(135deg, #fff5e1, #ffe8cc);;
+  color:#4e342e;
   border: none;
   border-radius: 50%;
   font-size: 24px;
@@ -317,7 +317,7 @@ main {
   overflow: hidden;
 }
 .cart-toggle:hover {
-  background: #8a5e3a;
+  background: #ffe0b2;
 }
 
 .side-cart {
