@@ -813,19 +813,24 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-.site-header {
-  height: 60px;   /* או הגובה שאתה מרוצה ממנו */
-  padding: 0;     /* או padding קטן מאוד */
-}
+  .site-header {
+    height: 60px;
+    padding: 0;
+  }
 
-.site-logo-fixed {
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 100%;         /* מפתח חשוב: יתפוס את כל גובה ההדר */
-  width: auto;
-  object-fit: contain;
-}
+  .header-flex {
+    height: 100%;
+    align-items: center;
+  }
+
+  .site-logo-fixed {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
 
   .site-title {
     font-size: 18px;
