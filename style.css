@@ -787,6 +787,24 @@ footer {
 }
 
 
+
+.site-header {
+  padding: 8px 0; /* במקום ברירת מחדל גבוהה יותר */
+}
+
+.site-title {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.site-logo-fixed {
+  width: 70px; /* היה 80px – מספיק כדי לחסוך גובה */
+  max-height: 60px;
+  height: auto;
+}
+
+
 .payment-options {
   display: flex;
   flex-direction: column;
