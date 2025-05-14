@@ -802,9 +802,10 @@ footer {
 }
 
 .site-logo-fixed {
-  width: 70px; /* היה 80px – מספיק כדי לחסוך גובה */
-  max-height: 60px;
-  height: auto;
+  width: auto;
+  height: 100%; /* יתפרס לגובה ההדר */
+  max-height: 70px; /* אפשר גם 75px אם אתה מרוצה מהגובה הכללי */
+  object-fit: contain;
 }
 
 @media screen and (max-width: 600px) {
