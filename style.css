@@ -813,10 +813,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  .site-header {
-    height: auto; 
-    padding: 5px 0;
-  }
+.site-header {
+  height: 60px;   /* או הגובה שאתה מרוצה ממנו */
+  padding: 0;     /* או padding קטן מאוד */
+}
 
 .site-logo-fixed {
   display: block;
