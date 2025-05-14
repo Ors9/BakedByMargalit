@@ -889,12 +889,12 @@ footer {
 
 @media (min-width: 768px) {
   .nav-button {
-    font-size: 20px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 6px 12px;
   }
 
   .site-title {
-    font-size: 34px;
+    font-size: 30px; /* אם גם אותה אתה רוצה לצמצם טיפה */
   }
 }
  
