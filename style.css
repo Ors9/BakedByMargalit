@@ -750,9 +750,10 @@ footer {
 }
 
 .site-logo-fixed {
-  height: 100%;     /* יתפרס לגובה ההדר */
-  width: auto;      /* כדי לשמור על יחס צדדים תקין */
-  object-fit: contain; /* ממלא את הגובה בצורה פרופורציונלית */
+  width: 110px;       /* לוגו קצת יותר רחב */
+  max-height: 65px;   /* מוגבל בגובה שלא יחרוג מההדר */
+  height: auto;
+  object-fit: contain;
 }
 
 
