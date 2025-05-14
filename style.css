@@ -813,27 +813,30 @@ footer {
 
 @media screen and (max-width: 600px) {
   .site-header {
-    height: 60px;
+    height: 60px;         /* גובה נמוך יותר מהדסקטופ */
     padding: 0;
   }
 
   .header-flex {
-    height: 100%;
+    height: 100%;         /* חשוב כדי שהלוגו יתפרש לגובה */
     align-items: center;
   }
 
   .site-logo-fixed {
+    width: auto;
+    height: 100%;         /* יתפרש לגובה ההדר */
+    max-height: 60px;     /* תואם לגובה .site-header */
+    object-fit: contain;  /* שומר על פרופורציה בלי לחתוך */
     display: block;
     margin: 0;
-    padding: 2px 0; /* מרווח למניעת חיתוך ויזואלי */
-    height: 95%; /* במקום 100% – יותר בטוח */
-    width: auto;
-    object-fit: scale-down;
+    padding: 0;
     box-sizing: border-box;
   }
 
   .site-title {
     font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
   }
 }
 
