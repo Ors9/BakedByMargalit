@@ -818,11 +818,14 @@ footer {
     padding: 5px 0;
   }
 
-  .site-logo-fixed {
-      display: block;       /* מונע רווחים של inline element */
-      margin: 0;            /* מסיר ריווחים */
-      padding: 0;
-  }
+.site-logo-fixed {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;         /* מפתח חשוב: יתפוס את כל גובה ההדר */
+  width: auto;
+  object-fit: contain;
+}
 
   .site-title {
     font-size: 18px;
