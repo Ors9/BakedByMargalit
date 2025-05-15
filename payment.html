@@ -27,12 +27,12 @@
   <h2>🔒 דף תשלום מאובטח</h2>
   <p>אנא המתן, טופס התשלום בטעינה...</p>
 
-  <iframe 
-  id="tranzila-frame" 
-  src="" 
-  allow="payment *" 
-  sandbox="allow-scripts allow-forms allow-same-origin"
-></iframe>
+<p id="loadingMessage">אנא המתן, טופס התשלום בטעינה...</p>
+<iframe id="tranzila-frame"
+        allow="payment *"
+        sandbox="allow-scripts allow-forms allow-same-origin"
+        onload="document.getElementById('loadingMessage').style.display = 'none';">
+</iframe>
 
   <script>
     // שליפת העגלה מתוך localStorage וחישוב סכום כולל
@@ -49,9 +49,13 @@
       }
     }
 
-    // יצירת כתובת iframe לטרנזילה עם שם הטרמינל שלך
-    const iframeUrl = `https://direct.tranzila.com/fxporsaban/iframenew.php?sum=${total}&currency=1&lang=il`;
-    document.getElementById("tranzila-frame").src = iframeUrl;
+window.onload = () => {
+  const params = new URLSearchParams(window.location.search);
+  const total = parseInt(params.get("sum") || "0");
+
+  const iframeUrl = `https://direct.tranzila.com/fxporsaban/iframenew.php?sum=${total}&currency=1&lang=il`;
+  document.getElementById("tranzila-frame").src = iframeUrl;
+};
   </script>
 
 </body>
