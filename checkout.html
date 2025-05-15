@@ -106,10 +106,9 @@
   checkoutTotal.innerText = total;
 
 
-  function goToTranzilaPayment() {
-  window.location.href = "payment.html";
-    
-  }
+function goToTranzilaPayment() {
+  window.location.href = `payment.html?sum=${total}`;
+}
 
 </script>
 
