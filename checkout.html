@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <title>לתשלום - המאפים של אמא</title>
@@ -22,15 +23,18 @@
       padding: 10px 0;
       align-items: center;
     }
+
     .cart-item img {
       width: 100px;
       height: 100px;
       object-fit: cover;
       border-radius: 8px;
     }
+
     .cart-details {
       flex: 1;
     }
+
     .total {
       font-size: 22px;
       font-weight: bold;
@@ -38,6 +42,7 @@
       text-align: center;
       color: #333;
     }
+
     .pay-btn {
       background: #a47148;
       color: white;
@@ -49,6 +54,7 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+
     .pay-btn:hover {
       background: #8a5e3a;
     }
@@ -57,52 +63,53 @@
 
 <body>
 
-<header class="site-header">
-  <div class="header-flex">
-    <a href="index.html">
-      <img src="images/logo.png" alt="המאפים של מרגלית" class="site-logo-fixed">
-    </a>
-    <div class="header-text">
-      <h1 class="site-title">המאפים של מרגלית</h1>
+  <header class="site-header">
+    <div class="header-flex">
+      <a href="index.html">
+        <img src="images/logo.png" alt="המאפים של מרגלית" class="site-logo-fixed">
+      </a>
+      <div class="header-text">
+        <h1 class="site-title">המאפים של מרגלית</h1>
+      </div>
     </div>
+  </header>
+
+  <h1>אישור הזמנה ותשלום</h1>
+  <p class="order-note">
+    🕒 ההזמנה מוכנה תוך 1–3 ימי עסקים.<br>
+    📍 <strong>איסוף עצמי בלבד</strong> מכתובת: יפה נוף 45, נהריה (פינת אוסישקין).<br>
+    📞 לאחר ההזמנה ניצור איתך קשר לתיאום איסוף מראש בטלפון או בוואטסאפ.<br>
+    🧁 <strong>שימו לב:</strong> לאחר ביצוע התשלום לא ניתן לשנות או לבטל את ההזמנה.
+  </p>
+  <div id="checkout-items"></div>
+  <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
+
+  <!-- כפתורי פעולה -->
+  <div class="payment-actions" style="text-align: center; margin-top: 30px;">
+    <button onclick="goToTranzilaPayment()" class="pay-btn">💳 עבור לתשלום מאובטח</button>
+    <a href="menu.html" class="pay-btn" style="margin-top: 10px; display: inline-block; width: auto;">🔙 חזרה להמשך
+      קניות</a>
   </div>
-</header>
 
-<h1>אישור הזמנה ותשלום</h1>
-<p class="order-note">
-  🕒 ההזמנה מוכנה תוך 1–3 ימי עסקים.<br>
-  📍 <strong>איסוף עצמי בלבד</strong> מכתובת: יפה נוף 45, נהריה (פינת אוסישקין).<br>
-   📞 לאחר ההזמנה ניצור איתך קשר לתיאום איסוף מראש בטלפון או בוואטסאפ.<br>
-  🧁 <strong>שימו לב:</strong> לאחר ביצוע התשלום לא ניתן לשנות או לבטל את ההזמנה.
-</p>
-<div id="checkout-items"></div>
-<div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
+  <script>
+    const checkoutItems = document.getElementById("checkout-items");
+    const checkoutTotal = document.getElementById("checkout-total");
+    const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
-<!-- כפתורי פעולה -->
-<div class="payment-actions" style="text-align: center; margin-top: 30px;">
-  <button onclick="goToTranzilaPayment()" class="pay-btn">💳 עבור לתשלום מאובטח</button>
-  <a href="menu.html" class="pay-btn" style="margin-top: 10px; display: inline-block; width: auto;">🔙 חזרה להמשך קניות</a>
-</div>
+    let total = 0;
 
-<script>
-  const checkoutItems = document.getElementById("checkout-items");
-  const checkoutTotal = document.getElementById("checkout-total");
-  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+    for (let item in cart) {
+      const product = cart[item];
+      if (product.count > 0) {
+        const itemTotal = item === "חצי קג עוגיות מכונה"
+          ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
+          : product.count * product.price;
 
-  let total = 0;
+        total += itemTotal;
 
-  for (let item in cart) {
-    const product = cart[item];
-    if (product.count > 0) {
-      const itemTotal = item === "חצי קג עוגיות מכונה"
-        ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
-        : product.count * product.price;
-
-      total += itemTotal;
-
-      const div = document.createElement("div");
-      div.className = "cart-item";
-      div.innerHTML = `
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `
         <img src="${product.image}" alt="${item}">
         <div class="cart-details">
           <strong>${item}</strong><br>
@@ -110,19 +117,18 @@
           סה"כ לפריט: ${itemTotal} ₪
         </div>
       `;
-      checkoutItems.appendChild(div);
+        checkoutItems.appendChild(div);
+      }
     }
-  }
 
-  checkoutTotal.innerText = total;
+    checkoutTotal.innerText = total;
 
 
-function goToTranzilaPayment() {
-  window.location.href = `payment.html?sum=${total}`;
-}
+    function goToTranzilaPayment() {
+      window.location.href = `payment.html?sum=${total}`;
+    }
 
-</script>
-
+  </script>
 
 
 
@@ -133,12 +139,14 @@ function goToTranzilaPayment() {
 
 
 
-<footer style="text-align: center; font-size: 14px; color: #888; margin-top: 60px; padding: 20px 0;">
-  <p>
-    אתר זה מופעל על ידי המאפים של מרגלית. כל הזכויות שמורות. |
-    <a href="terms.html" style="color: #6b4f2d;">תנאי שימוש</a>
-  </p>
-</footer>
+
+  <footer style="text-align: center; font-size: 14px; color: #888; margin-top: 60px; padding: 20px 0;">
+    <p>
+      אתר זה מופעל על ידי המאפים של מרגלית. כל הזכויות שמורות. |
+      <a href="terms.html" style="color: #6b4f2d;">תנאי שימוש</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>

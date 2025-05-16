@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
   overflow-x: hidden;
   touch-action: manipulation;
 }
@@ -9,7 +9,7 @@ html, body {
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
@@ -30,6 +30,7 @@ header {
   padding: 10px 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
 .header-container {
   display: flex;
   flex-direction: column;
@@ -58,9 +59,10 @@ header h1 {
     justify-content: space-between;
     align-items: center;
   }
-.header-container nav {
-  margin-top: 0;
- }
+
+  .header-container nav {
+    margin-top: 0;
+  }
 }
 
 nav a {
@@ -70,6 +72,7 @@ nav a {
   margin: 0 6px;
   font-weight: bold;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -86,10 +89,12 @@ main {
   text-align: center;
   margin-bottom: 40px;
 }
+
 .hero h2 {
   font-size: 28px;
   color: #6b4f2d;
 }
+
 .hero p {
   font-size: 18px;
   color: #333;
@@ -104,6 +109,7 @@ main {
   text-align: center;
   margin: 30px 0;
 }
+
 .carousel img {
   width: 90%;
   max-width: 600px;
@@ -117,6 +123,7 @@ main {
   text-align: center;
   margin: 40px auto;
 }
+
 .main-button {
   display: inline-block;
   background: #a47148;
@@ -128,8 +135,9 @@ main {
   font-weight: 600;
   font-family: inherit;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 .main-button:hover {
   background: #8a5e3a;
   transform: scale(1.05);
@@ -140,15 +148,17 @@ main {
   background: #ffffff;
   padding: 30px;
   border-radius: 14px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
   border: 1px solid #e0c9a6;
 }
+
 .quick-order label {
   display: block;
   margin: 15px 0 5px;
   color: #6b4f2d;
 }
+
 .quick-order input,
 .quick-order textarea {
   width: 100%;
@@ -158,6 +168,7 @@ main {
   border-radius: 6px;
   color: #222;
 }
+
 .quick-order button {
   margin-top: 20px;
   padding: 12px 30px;
@@ -168,6 +179,7 @@ main {
   font-size: 16px;
   cursor: pointer;
 }
+
 .quick-order button:hover {
   background: #8a5e3a;
 }
@@ -177,6 +189,7 @@ main {
   text-align: center;
   margin-top: 30px;
 }
+
 .contact-links a {
   background: #25D366;
   color: white;
@@ -185,6 +198,7 @@ main {
   text-decoration: none;
   font-size: 18px;
 }
+
 .contact-links a:hover {
   background: #1ebe57;
 }
@@ -200,13 +214,15 @@ main {
   border-radius: 16px;
   margin: 30px auto;
   max-width: 100%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
+
 .section-nav::-webkit-scrollbar {
   display: none;
 }
+
 .section-nav a {
   white-space: nowrap;
   font-size: 18px;
@@ -232,11 +248,13 @@ main {
   border-radius: 10px;
   border: 2px solid #f3e1c1;
 }
+
 .menu-item div {
   font-size: 20px;
   color: #222;
   line-height: 1.4;
 }
+
 .menu-item .price {
   font-size: 16px;
   font-weight: bold;
@@ -257,17 +275,20 @@ main {
 .quantity-controls {
   margin-top: 8px;
 }
+
 .quantity-controls button {
   touch-action: manipulation;
   padding: 10px 16px;
   font-size: 20px;
   margin: 0 5px;
   border: none;
-  background: #e0c9a6;        /* חום בהיר */
-  color: #4d392c;   
+  background: #e0c9a6;
+  /* חום בהיר */
+  color: #4d392c;
   border-radius: 6px;
   cursor: pointer;
 }
+
 .quantity-controls span {
   font-weight: bold;
   font-size: 18px;
@@ -275,7 +296,8 @@ main {
 
 /* סל קניות ישן */
 .cart-summary {
-  display: none; /* מוסתר – משתמשים בסל הצדדי */
+  display: none;
+  /* מוסתר – משתמשים בסל הצדדי */
 }
 
 .cart-badge {
@@ -288,7 +310,8 @@ main {
   font-weight: bold;
   padding: 2px 6px;
   border-radius: 50%;
-  display: none; /* מוסתר עד שיש פריטים */
+  display: none;
+  /* מוסתר עד שיש פריטים */
   z-index: 1001;
 }
 
@@ -298,11 +321,12 @@ main {
 
 /* כפתור 🛒 קבוע */
 .cart-toggle {
-  position: fixed; /* שומר על מיקום הכפתור */
+  position: fixed;
+  /* שומר על מיקום הכפתור */
   bottom: 20px;
   right: 20px;
   background: linear-gradient(135deg, #f5d7af, #eac39d);
-  color:#4e342e;
+  color: #4e342e;
   border: none;
   border-radius: 50%;
   font-size: 24px;
@@ -316,6 +340,7 @@ main {
   align-items: center;
   overflow: hidden;
 }
+
 .cart-toggle:hover {
   background: linear-gradient(135deg, #f2c89a, #ddb38c);
 }
@@ -354,8 +379,10 @@ main {
   width: 100%;
   margin: 10px 0;
 
-  box-sizing: border-box; /* ✅ הפתרון לחריגה ברוחב */
+  box-sizing: border-box;
+  /* ✅ הפתרון לחריגה ברוחב */
 }
+
 .cart-summary-wrapper {
   margin-top: 20px;
   padding-top: 10px;
@@ -365,6 +392,7 @@ main {
 .side-cart.open {
   transform: translateX(0);
 }
+
 .side-cart .close-btn {
   position: absolute;
   top: 10px;
@@ -373,13 +401,16 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  color: #a47148; /* חום כהה ברור */
+  color: #a47148;
+  /* חום כהה ברור */
 }
+
 .side-cart ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
+
 .side-cart li {
   margin-bottom: 10px;
 }
@@ -390,7 +421,7 @@ main {
   height: 100px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .side-cart span {
@@ -399,6 +430,7 @@ main {
   color: #444;
   font-weight: 500;
 }
+
 .side-cart .price-line {
   font-size: 18px;
   color: #000;
@@ -411,16 +443,19 @@ main {
   text-align: center;
   margin: 40px auto 20px;
 }
+
 .social-icons p {
   font-size: 18px;
   color: #6b4f2d;
   margin-bottom: 10px;
 }
+
 .icon-container {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
 .icon {
   width: 50px;
   height: 50px;
@@ -429,12 +464,15 @@ main {
   border-radius: 50%;
   transition: transform 0.2s ease;
 }
+
 .icon:hover {
   transform: scale(1.1);
 }
+
 .icon.instagram {
   background-image: url('images/instagram-icon.svg');
 }
+
 .icon.facebook {
   background-image: url('images/facebook-icon.svg');
 }
@@ -473,7 +511,7 @@ footer {
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .unit-label {
@@ -504,7 +542,8 @@ footer {
 
 .carousel-image-container {
   width: 100%;
-  aspect-ratio: 1 / 1; /* יחס 1:1 = ריבוע */
+  aspect-ratio: 1 / 1;
+  /* יחס 1:1 = ריבוע */
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -531,7 +570,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   font-size: 32px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border: none;
   padding: 5px 10px;
   cursor: pointer;
@@ -629,14 +668,16 @@ footer {
   gap: 15px;
   margin-top: 20px;
 }
+
 .gallery-grid img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
+
 .gallery-grid img:hover {
   transform: scale(1.03);
 }
@@ -701,13 +742,16 @@ footer {
 }
 
 .order-note {
-  background-color: #fdf6e3; /* הצבע הקרמי שאתה אוהב */
+  background-color: #fdf6e3;
+  /* הצבע הקרמי שאתה אוהב */
   color: #7b633a;
   font-size: 16px;
   font-weight: bold;
   padding: 4px 8px;
-  margin: 0; /* כדי שלא ייראו רווחים עם לבן */
-  width: 100%; /* כדי שהרקע יגיע מקצה לקצה */
+  margin: 0;
+  /* כדי שלא ייראו רווחים עם לבן */
+  width: 100%;
+  /* כדי שהרקע יגיע מקצה לקצה */
   text-align: center;
   border: none;
   box-sizing: border-box;
@@ -727,12 +771,13 @@ footer {
   font-weight: 600;
   font-family: inherit;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   width: calc(100% - 40px);
   text-align: center;
   margin: 10px auto;
   display: block;
-  margin-bottom: 10px; /* כדי ליצור רווח ביניהם */
+  margin-bottom: 10px;
+  /* כדי ליצור רווח ביניהם */
 }
 
 .cart-btn:hover {
@@ -746,12 +791,15 @@ footer {
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
-  flex-wrap: nowrap; /* מונע קפיצה של הלוגו למעלה */
+  flex-wrap: nowrap;
+  /* מונע קפיצה של הלוגו למעלה */
 }
 
 .site-logo-fixed {
-  width: 110px;       /* לוגו קצת יותר רחב */
-  max-height: 65px;   /* מוגבל בגובה שלא יחרוג מההדר */
+  width: 110px;
+  /* לוגו קצת יותר רחב */
+  max-height: 65px;
+  /* מוגבל בגובה שלא יחרוג מההדר */
   height: auto;
   object-fit: contain;
 }
@@ -769,14 +817,17 @@ footer {
   }
 
   .site-logo-fixed {
-    width: 80px;         /* היה 60px — נגדיל */
-    max-height: 50px;    /* גובה מקסימלי שלא יחרוג מה־header */
+    width: 80px;
+    /* היה 60px — נגדיל */
+    max-height: 50px;
+    /* גובה מקסימלי שלא יחרוג מה־header */
     height: auto;
     object-fit: contain;
   }
 
   .site-title {
-    font-size: 18px;     /* טיפה יותר קטן שיתאזן עם הלוגו */
+    font-size: 18px;
+    /* טיפה יותר קטן שיתאזן עם הלוגו */
     margin: 0;
   }
 
@@ -806,27 +857,34 @@ footer {
 
 .site-logo-fixed {
   width: auto;
-  height: 100%; /* יתפרס לגובה ההדר */
-  max-height: 70px; /* אפשר גם 75px אם אתה מרוצה מהגובה הכללי */
+  height: 100%;
+  /* יתפרס לגובה ההדר */
+  max-height: 70px;
+  /* אפשר גם 75px אם אתה מרוצה מהגובה הכללי */
   object-fit: contain;
 }
 
 @media screen and (max-width: 600px) {
   .site-header {
-    height: 60px;         /* גובה נמוך יותר מהדסקטופ */
+    height: 60px;
+    /* גובה נמוך יותר מהדסקטופ */
     padding: 0;
   }
 
   .header-flex {
-    height: 100%;         /* חשוב כדי שהלוגו יתפרש לגובה */
+    height: 100%;
+    /* חשוב כדי שהלוגו יתפרש לגובה */
     align-items: center;
   }
 
   .site-logo-fixed {
     width: auto;
-    height: 100%;         /* יתפרש לגובה ההדר */
-    max-height: 60px;     /* תואם לגובה .site-header */
-    object-fit: contain;  /* שומר על פרופורציה בלי לחתוך */
+    height: 100%;
+    /* יתפרש לגובה ההדר */
+    max-height: 60px;
+    /* תואם לגובה .site-header */
+    object-fit: contain;
+    /* שומר על פרופורציה בלי לחתוך */
     display: block;
     margin: 0;
     padding: 0;
@@ -859,12 +917,13 @@ footer {
   background-color: #f5e7d4;
   color: #333;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
   direction: rtl;
-  background-color: #fffaf0; /* צבע רקע שיתאים לאתר שלך */
+  background-color: #fffaf0;
+  /* צבע רקע שיתאים לאתר שלך */
 }
 
 .nav-wrapper {
@@ -893,7 +952,8 @@ footer {
 }
 
 .nav-button:last-child {
-  border-left: 1px solid #e0c097; /* קו לשמאלי ביותר */
+  border-left: 1px solid #e0c097;
+  /* קו לשמאלי ביותר */
 }
 
 .nav-button:hover {
@@ -902,7 +962,8 @@ footer {
 }
 
 .nav-button.active {
-  background-color: #fff0d5; /* קרם רך ועדין יותר */
+  background-color: #fff0d5;
+  /* קרם רך ועדין יותר */
   border-color: #e0b47a;
   color: #3e2723;
   box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
@@ -916,7 +977,7 @@ footer {
   }
 
   .site-title {
-    font-size: 26px; /* אם גם אותה אתה רוצה לצמצם טיפה */
+    font-size: 26px;
+    /* אם גם אותה אתה רוצה לצמצם טיפה */
   }
 }
- 

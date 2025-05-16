@@ -135,7 +135,7 @@ function renderCart() {
     checkoutButton.style.display = itemCount > 0 ? "block" : "none";
   }
 
- 
+
 
 }
 
