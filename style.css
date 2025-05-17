@@ -691,7 +691,7 @@ footer {
   gap: 10px;
   border-bottom: 1px dashed #d2b48c;
   padding-bottom: 20px;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 /* התצוגה במחשב: תמונה בצד ימין, תוכן בצד שמאל */
@@ -984,8 +984,6 @@ footer {
 
 .menu-shortcuts {
   background-color: #fffaf0;
-  padding: 12px;
-  margin: 20px auto;
   border-radius: 12px;
   max-width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
@@ -999,7 +997,7 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 12px;
+  gap: 5px;
 }
 
 .menu-shortcuts li {
@@ -1026,10 +1024,7 @@ footer {
   white-space: nowrap;
 }
 
-.menu-shortcuts li a:hover {
-  background-color: #ecd3b6;
-  transform: scale(1.05);
-}
+
 
 .menu-shortcuts p {
   font-size: 17px;
