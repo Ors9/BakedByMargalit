@@ -984,7 +984,7 @@ footer {
   background-color: #f5e7d4;
   color: #000000;
   font-weight: bold;
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 16px);
   text-decoration: none;
   padding: 12px;
   border-radius: 0px;
@@ -1014,6 +1014,9 @@ footer {
   background-color: #ecd3b6;
   transform: scale(1.02);
 }
+
+
+
 
 
 
