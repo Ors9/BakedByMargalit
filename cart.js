@@ -4,7 +4,20 @@ const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 // פתיחה/סגירה של הסל
 function toggleCart() {
   //document.getElementById("sideCart").classList.toggle("open"); //this to open side cart!
-  localStorage.setItem("cart", JSON.stringify(cart));
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+  let hasItems = false;
+  for (let item in cart) {
+    if (cart[item].count > 0) {
+      hasItems = true;
+      break;
+    }
+  }
+
+  if (!hasItems) {
+    alert("העגלה שלך ריקה. הוסף מוצרים לפני ההזמנה.");
+    return;
+  }
+
   window.location.href = "checkout.html";
 }
 
