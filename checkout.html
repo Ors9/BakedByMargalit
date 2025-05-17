@@ -115,9 +115,11 @@
 
   <!-- כפתורי פעולה -->
 <div class="fixed-payment-bar">
-  <div class="total-inline">מחיר כולל: <span id="checkout-total-inline">0</span> ₪</div>
-  <a href="menu.html" class="fixed-pay-btn back-btn">🔙 חזרה</a>
-  <button onclick="goToTranzilaPayment()" class="fixed-pay-btn">💳 לתשלום</button>
+  <div class="total-above">מחיר כולל: <span id="checkout-total-inline">0</span> ₪</div>
+  <div class="button-row">
+    <button onclick="goToTranzilaPayment()" class="fixed-pay-btn">💳 לתשלום</button>
+    <a href="menu.html" class="fixed-pay-btn back-btn">🔙 חזרה</a>
+  </div>
 </div>
 
   <script>
@@ -151,6 +153,11 @@
     }
 
     checkoutTotal.innerText = total;
+
+    const inlineTotal = document.getElementById("checkout-total-inline");
+  if (inlineTotal) {
+    inlineTotal.innerText = total;
+  }
 
 
     function goToTranzilaPayment() {
