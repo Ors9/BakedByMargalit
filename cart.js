@@ -3,7 +3,9 @@ const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
 // פתיחה/סגירה של הסל
 function toggleCart() {
-  document.getElementById("sideCart").classList.toggle("open");
+  //document.getElementById("sideCart").classList.toggle("open"); //this to open side cart!
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "checkout.html";
 }
 
 // עדכון פריט בסל
