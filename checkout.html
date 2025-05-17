@@ -114,10 +114,11 @@
   <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
 
   <!-- כפתורי פעולה -->
-  <div class="payment-actions" style="text-align: center; margin-top: 30px;">
-    <button onclick="goToTranzilaPayment()" class="pay-btn">💳 עבור לתשלום מאובטח</button>
-    <a href="menu.html" class="pay-btn" style="margin-top: 10px; display: inline-block; width: auto;">🔙 חזרה להמשך קניות</a>
-  </div>
+<div class="fixed-payment-bar">
+  <div class="total-inline">מחיר כולל: <span id="checkout-total-inline">0</span> ₪</div>
+  <a href="menu.html" class="fixed-pay-btn back-btn">🔙 חזרה</a>
+  <button onclick="goToTranzilaPayment()" class="fixed-pay-btn">💳 לתשלום</button>
+</div>
 
   <script>
     const checkoutItems = document.getElementById("checkout-items");
@@ -163,7 +164,7 @@
 
 
 
-
+<div style="height: 100px;"></div>
 
 
 

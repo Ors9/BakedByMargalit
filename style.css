@@ -859,6 +859,7 @@ footer {
 
 .pay-btn {
   width: 90%;
+  
   max-width: 300px;
   padding: 12px;
   font-size: 16px;
@@ -1056,6 +1057,53 @@ footer {
 }
 
 
+.fixed-payment-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fffdf7;
+  padding: 12px 16px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 9999;
+  border-top: 1px dashed #d2b48c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fixed-pay-btn {
+  flex: 1 1 45%;
+  max-width: 320px;
+  background-color: #a47148;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  min-width: 0px;
+}
+
+.fixed-pay-btn:hover {
+  background-color: #8a5e3a;
+  transform: scale(1.03);
+}
+
+.back-btn {
+  background-color: #e0c9a6;
+  color: #4e342e;
+}
+
+.back-btn:hover {
+  background-color: #d4b88c;
+}
 
 
 
