@@ -67,8 +67,17 @@
 
   <main>
 
-    <section class="menu-section" id="platters">
-      <h2>🧁 מגשי האירוח של מרגלית</h2>
+<nav class="menu-shortcuts">
+  <p>⬇ מעבר מהיר בתפריט:</p>
+  <ul>
+    <li><a href="#platters">🧁 מגשי אירועים</a></li>
+    <li><a href="#breads">🥐 מאפים</a></li>
+    <li><a href="#cookies">🍪 עוגיות</a></li>
+  </ul>
+</nav>
+
+<section class="menu-section" id="platters">
+  <h2>🧁 מגשי אירועים</h2>
 
 
       <div class="menu-item">
@@ -126,8 +135,8 @@
 
 
 
-    <section class="menu-section" id="breads">
-      <h2>🥐 המאפים האישיים של מרגלית</h2>
+<section class="menu-section" id="breads">
+  <h2>🥐 מאפים</h2>
 
       <div class="menu-item">
         <strong>🥪 פריקסה טוניסאי – מגש של 10 יחידות</strong>
@@ -164,8 +173,8 @@
     </section>
 
 
-    <section class="menu-section" id="cookies-by-weight">
-      <h2>🍪 עוגיות לפי משקל</h2>
+ <section class="menu-section" id="cookies">
+  <h2>🍪 עוגיות</h2>
 
       <div class="menu-item">
         <strong>🍪 עוגיות מכונה קלאסיות</strong>
@@ -181,7 +190,7 @@
             </span>
             <span class="add-to-cart-label">הוספה לסל:</span>
             <div class="quantity-controls">
-              <div style="margin-bottom: 5px;">חצי ק"ג:</div>
+              
               <button onclick="updateCart('חצי קג עוגיות מכונה', 60, -1, 'images/machine_cookies.jpg')">➖</button>
               <span id="count-חצי קג עוגיות מכונה">0</span>
               <button onclick="updateCart('חצי קג עוגיות מכונה', 60, 1, 'images/machine_cookies.jpg')">➕</button>

@@ -101,7 +101,7 @@ main {
 }
 
 .menu-item strong {
-  color: #6b4f2d;
+  color: #000000;
 }
 
 /* קרוסלה */
@@ -234,10 +234,10 @@ main {
 /* תפריט מוצרים */
 .menu-section h2 {
   font-size: 26px;
-  color: #6b4f2d;
+  color: #000000;
   border-bottom: 2px solid #e0c9a6;
-  padding-bottom: 5px;
   margin-top: 50px;
+  padding: 10px;
 }
 
 .menu-item img {
@@ -980,4 +980,61 @@ footer {
     font-size: 26px;
     /* אם גם אותה אתה רוצה לצמצם טיפה */
   }
+}
+
+.menu-shortcuts {
+  background-color: #fff8f0;
+  padding: 12px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+.menu-shortcuts ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 12px;
+}
+
+.menu-shortcuts li {
+  flex: 1;
+  display: flex;
+}
+
+.menu-shortcuts li a {
+  background-color: #f5e7d4;
+  color: #6b4f2d;
+  font-weight: bold;
+  font-size: clamp(12px, 3vw, 16px);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 24px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px; /* גובה אחיד לכל הכפתורים */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.menu-shortcuts li a:hover {
+  background-color: #ecd3b6;
+  transform: scale(1.05);
+}
+
+.menu-shortcuts p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #4a3622;
+  margin-bottom: 14px;
+  line-height: 1.4;
 }
