@@ -1014,13 +1014,13 @@ footer {
   font-size: clamp(12px, 3vw, 16px);
   text-decoration: none;
   padding: 12px;
-  border-radius: 24px;
+  border-radius: 8px;
   text-align: center;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px; /* גובה אחיד לכל הכפתורים */
+  height: 15px; /* גובה אחיד לכל הכפתורים */
   transition: background-color 0.3s ease, transform 0.2s ease;
   line-height: 1.2;
   white-space: nowrap;
