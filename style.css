@@ -683,16 +683,22 @@ footer {
 }
 
 
-
-
 .menu-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-bottom: 1px dashed #d2b48c;
-  padding-bottom: 20px;
-  margin: 10px 0;
+  border: 1px solid #f3e1c1;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  background-color: #fffdf7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
 }
+
+
+
+
 
 /* התצוגה במחשב: תמונה בצד ימין, תוכן בצד שמאל */
 .item-row {
@@ -1045,89 +1051,17 @@ footer {
 
 
 
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid #f3e1c1;
-  border-radius: 12px;
-  padding: 16px;
-  margin: 20px 0;
-  background-color: #fffdf7;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease;
-}
-
-.menu-item:hover {
-  transform: scale(1.01);
-}
-
-.item-row {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.item-row img {
-  width: 140px;
-  height: 140px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid #f3e1c1;
-}
-
-.item-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-}
 
 
-.menu-item strong {
-  font-size: 20px;
-  color: #4e342e;
-}
-
-.menu-item .price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #6b4f2d;
-}
-
-.add-to-cart-label {
-  font-size: 14px;
-  color: #444;
-  font-weight: 500;
-}
 
 
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 6px;
-}
 
-.quantity-controls button {
-  background-color: #e0c9a6;
-  border: none;
-  padding: 8px 14px;
-  font-size: 18px;
-  color: #000;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
 
-.quantity-controls button:hover {
-  background-color: #d2b48c;
-}
 
-.quantity-controls span {
-  font-size: 16px;
-  font-weight: bold;
-  width: 24px;
-  text-align: center;
-}
+
+
+
+
+
+
+
