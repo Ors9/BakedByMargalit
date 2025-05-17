@@ -1123,3 +1123,33 @@ footer {
 
 
 
+@media screen and (max-width: 600px) {
+  .fixed-payment-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fixed-pay-btn {
+    font-size: 15px;
+    padding: 10px;
+    flex: 1 1 45%;
+    max-width: 160px;
+  }
+
+  .total-above {
+    font-size: 15px;
+    text-align: center;
+    padding: 0 4px;
+  }
+}
