@@ -8,7 +8,7 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -114,7 +114,7 @@ main {
   width: 90%;
   max-width: 600px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -129,7 +129,7 @@ main {
   background: #a47148;
   color: white;
   padding: 14px 28px;
-  border-radius: 12px;
+  border-radius: 0px;
   font-size: 20px;
   text-decoration: none;
   font-weight: 600;
@@ -143,46 +143,7 @@ main {
   transform: scale(1.05);
 }
 
-/* טופס הזמנה (לא בשימוש כרגע) */
-.quick-order {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 40px;
-  border: 1px solid #e0c9a6;
-}
 
-.quick-order label {
-  display: block;
-  margin: 15px 0 5px;
-  color: #6b4f2d;
-}
-
-.quick-order input,
-.quick-order textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  color: #222;
-}
-
-.quick-order button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #a47148;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.quick-order button:hover {
-  background: #8a5e3a;
-}
 
 /* קישורי וואטסאפ */
 .contact-links {
@@ -194,7 +155,7 @@ main {
   background: #25D366;
   color: white;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 0px;
   text-decoration: none;
   font-size: 18px;
 }
@@ -211,7 +172,7 @@ main {
   overflow-x: auto;
   padding: 12px 16px;
   background: #f7ead2;
-  border-radius: 16px;
+  border-radius: 0px;
   margin: 30px auto;
   max-width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -245,7 +206,7 @@ main {
   height: 120px;
   object-fit: contain;
   background-color: #fffaf3;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 2px solid #f3e1c1;
 }
 
@@ -285,7 +246,7 @@ main {
   background: #e0c9a6;
   /* חום בהיר */
   color: #4d392c;
-  border-radius: 6px;
+  border-radius: 0px;
   cursor: pointer;
 }
 
@@ -330,8 +291,8 @@ main {
   border: none;
   border-radius: 50%;
   font-size: 24px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -359,7 +320,7 @@ main {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
-  border-radius: 8px 0 0 8px;
+  border-radius: 0px 0 0 8px;
   padding-bottom: 80px;
 }
 
@@ -372,7 +333,7 @@ main {
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 0px;
   font-size: 16px;
   font-weight: bold;
   box-shadow: none;
@@ -420,7 +381,7 @@ main {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -461,7 +422,6 @@ main {
   height: 50px;
   display: inline-block;
   background-size: cover;
-  border-radius: 50%;
   transition: transform 0.2s ease;
 }
 
@@ -500,7 +460,7 @@ footer {
   font-size: 20px;
   background: #e0c9a6;
   border: none;
-  border-radius: 6px;
+  border-radius: 0px;
   color: #4d392c;
   cursor: pointer;
 }
@@ -510,7 +470,7 @@ footer {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 00px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -547,7 +507,7 @@ footer {
   aspect-ratio: 1 / 1;
   /* יחס 1:1 = ריבוע */
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   position: relative;
@@ -585,7 +545,7 @@ footer {
   padding: 5px 10px;
   cursor: pointer;
   z-index: 2;
-  border-radius: 8px;
+  border-radius: 0px;
   transition: background 0.2s;
 }
 
@@ -625,7 +585,7 @@ footer {
   .item-row img {
     width: 45%;
     max-width: 180px;
-    border-radius: 10px;
+    border-radius: 0px;
     object-fit: cover;
   }
 
@@ -683,7 +643,7 @@ footer {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -698,7 +658,7 @@ footer {
   flex-direction: column;
   gap: 10px;
   border: 1px solid #f3e1c1;
-  border-radius: 12px;
+  border-radius: 0px;
   padding: 16px;
   margin: 20px 0;
   background-color: #fffdf7;
@@ -722,7 +682,7 @@ footer {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
   border: 2px solid #f3e1c1;
 }
 
@@ -760,9 +720,8 @@ footer {
 .order-note {
   background-color: #fdf6e3;
   /* הצבע הקרמי שאתה אוהב */
-  color: #7b633a;
+  color: #000000;
   font-size: 16px;
-  font-weight: bold;
   padding: 4px 8px;
   margin: 0;
   /* כדי שלא ייראו רווחים עם לבן */
@@ -781,7 +740,7 @@ footer {
   background: #a47148;
   color: white;
   padding: 14px 28px;
-  border-radius: 12px;
+  border-radius: 0px;
   font-size: 20px;
   text-decoration: none;
   font-weight: 600;
@@ -929,7 +888,7 @@ footer {
   padding: 12px;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: #f5e7d4;
   color: #333;
   cursor: pointer;
@@ -1000,7 +959,7 @@ footer {
 
 .menu-shortcuts {
   background-color: #fffaf0;
-  border-radius: 12px;
+  border-radius: 0px;
   max-width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
   text-align: center;
@@ -1028,7 +987,7 @@ footer {
   font-size: clamp(12px, 3vw, 16px);
   text-decoration: none;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 0px;
   text-align: center;
   flex: 1;
   display: flex;
@@ -1065,7 +1024,7 @@ footer {
 .carousel-image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
