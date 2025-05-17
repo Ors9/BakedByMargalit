@@ -536,9 +536,11 @@ footer {
 .carousel-wrapper {
   position: relative;
   width: 90%;
-  max-width: 350px;
+  max-width: 500px;
   margin: auto;
 }
+
+
 
 .carousel-image-container {
   width: 100%;
@@ -557,13 +559,21 @@ footer {
   object-fit: cover;
 }
 
+
 .carousel-caption {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: #fff;
   font-size: 16px;
-  color: #333;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
 }
+
+
 
 .carousel-btn {
   position: absolute;
@@ -1048,6 +1058,16 @@ footer {
 
 
 
+
+
+
+
+.carousel-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
 
 
