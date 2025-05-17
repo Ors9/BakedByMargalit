@@ -983,7 +983,7 @@ footer {
 }
 
 .menu-shortcuts {
-  background-color: #fff8f0;
+  background-color: #fffaf0;
   padding: 12px;
   margin: 20px auto;
   border-radius: 12px;
@@ -1009,7 +1009,7 @@ footer {
 
 .menu-shortcuts li a {
   background-color: #f5e7d4;
-  color: #6b4f2d;
+  color: #000000;
   font-weight: bold;
   font-size: clamp(12px, 3vw, 16px);
   text-decoration: none;
@@ -1034,7 +1034,8 @@ footer {
 .menu-shortcuts p {
   font-size: 17px;
   font-weight: 500;
-  color: #4a3622;
+  font-weight: bold;
+  color: #000000;
   margin-bottom: 14px;
   line-height: 1.4;
 }
