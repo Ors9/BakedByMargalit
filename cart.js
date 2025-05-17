@@ -35,12 +35,10 @@ function syncQuantitiesFromCart() {
 function createCartItemElement(item, product, itemTotal) {
   const li = document.createElement("li");
   li.innerHTML = `
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-      <img src="${product.image}" alt="${item}" class="cart-product-image">
+    <div style="display: flex; align-items: center; gap: 12px;">
       <div style="flex-grow: 1;">
         <strong>${item}</strong><br>
         <span class="unit-label">${product.count} יחידות</span>
-        <div class="add-to-cart-label">הוספה לסל:</div>
         <div class="quantity-controls">
           <button onclick="updateCart('${item}', ${product.price}, -1, '${product.image}')">➖</button>
           <span>${product.count}</span>
@@ -48,6 +46,7 @@ function createCartItemElement(item, product, itemTotal) {
         </div>
         <div class="price-line">סה"כ: ${itemTotal} ₪</div>
       </div>
+      <img src="${product.image}" alt="${item}" class="cart-product-image">
     </div>
   `;
   return li;

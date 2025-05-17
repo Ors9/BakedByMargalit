@@ -454,25 +454,10 @@ footer {
   gap: 10px;
 }
 
-.side-cart .quantity-controls button {
-  touch-action: manipulation;
-  padding: 8px 12px;
-  font-size: 20px;
-  background: #e0c9a6;
-  border: none;
-  border-radius: 0px;
-  color: #4d392c;
-  cursor: pointer;
-}
 
 
-.cart-product-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 00px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+
+
 
 .unit-label {
   font-size: 17px;
@@ -1035,7 +1020,50 @@ footer {
 
 
 
+.cart-product-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #e0c097;
+  border-radius: 6px;
+}
 
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.quantity-controls button {
+  padding: 4px 10px;
+  font-size: 18px;
+  background-color: #f3e1c1;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.quantity-controls button:hover {
+  background-color: #e5c79f;
+}
+
+.price-line {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+}
+
+.cart-item-box {
+  background: #fff;
+  border: 1px solid #f3e1c1;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
 
 
 
