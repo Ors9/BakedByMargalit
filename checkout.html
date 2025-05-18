@@ -6,88 +6,118 @@
   <title>לתשלום - המאפים של אמא</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="style.css">
-<style>
-  body {
-    background: #fffdf7;
-    padding: 10px;
-    color: #222;
-    max-width: 800px;
-    margin: auto;
-  
-  }
+  <style>
+main h1 {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  margin: 0 0 0px; 
+  padding-bottom: 2px;
+  border: 1px solid #e0c9a6;
+  font-weight: bold;
+}
 
-  .cart-item {
-    display: flex;
-    gap: 20px;
-    border: 1px solid #f3e1c1;
-    border-radius: px;
-    padding: 14px;
-    margin-bottom: 15px;
-    background: #fff;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  .cart-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 1px solid #e0c097;
-  }
-
-  .cart-details {
-    flex: 1;
-    font-size: 16px;
-    color: #333;
-  }
-
-  .cart-details strong {
-    font-size: 16px;
-    color: #000000;
-  }
-
-  .total {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-  }
-
-  .pay-btn {
-    background: #a47148;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    margin: 12px 6px;
-    border-radius: 0px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .pay-btn:hover {
-    background: #8a5e3a;
-    transform: scale(1.05);
-  }
-
-  @media screen and (max-width: 600px) {
-    .cart-item {
-      flex-direction: row;
+    .total {
+      font-size: 20px;
+      font-weight: bold;
       text-align: center;
+      color: #000;
+      margin-top: 0px;
+      border: 1px solid #f3e1c1;
+      padding-top: 5px;
+    }
+
+
+    .order-note2 {
+      border: 1px solid #f3e1c1;
+      padding: 14px;
+      border-radius: 0px;
+      margin: 06px 0;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    body {
+      background: #fffdf7;
+      padding: 10px;
+      color: #222;
+      max-width: 800px;
+      margin: auto;
+
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 20px;
+      border: 1px solid #f3e1c1;
+      border-radius: px;
+      padding: 10px;
+      margin-bottom: 5px;
+      background: #fff;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     .cart-item img {
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 1px solid #e0c097;
+    }
+
+    .cart-details {
+      flex: 1;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .cart-details strong {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: #000000;
     }
 
     .pay-btn {
-      width: 100%;
+      background: #a47148;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      margin: 12px 6px;
+      border-radius: 0px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-  }
-</style>
+
+    .pay-btn:hover {
+      background: #8a5e3a;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 600px) {
+      .cart-item {
+        flex-direction: row;
+        text-align: center;
+      }
+
+      .cart-item img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .pay-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -103,24 +133,28 @@
     </div>
   </header>
 
-  <h1>אישור הזמנה ותשלום</h1>
-  <p class="order-note">
-    🕒 ההזמנה מוכנה תוך 1–3 ימי עסקים.<br>
-    📍 <strong>איסוף עצמי בלבד</strong> מכתובת: יפה נוף 45, נהריה (פינת אוסישקין).<br>
-    📞 לאחר ההזמנה ניצור איתך קשר לתיאום איסוף מראש בטלפון או בוואטסאפ.<br>
-    🧁 <strong>שימו לב:</strong> לאחר ביצוע התשלום לא ניתן לשנות או לבטל את ההזמנה.
-  </p>
-  <div id="checkout-items"></div>
-  <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
+  <main>
+
+    <h1>אישור הזמנה ותשלום</h1>
+    <p class="order-note2">
+      🕒 ההזמנה מוכנה תוך 1–3 ימי עסקים.<br>
+      📍 <strong>איסוף עצמי בלבד</strong> מכתובת: יפה נוף 45, נהריה (פינת אוסישקין).<br>
+      📞 לאחר ההזמנה ניצור איתך קשר לתיאום איסוף מראש בטלפון או בוואטסאפ.<br>
+      🧁 <strong>שימו לב:</strong> לאחר ביצוע התשלום לא ניתן לשנות או לבטל את ההזמנה.
+    </p>
+    <div id="checkout-items"></div>
+    <div class="total">סה"כ לתשלום: <span id="checkout-total">0</span> ₪</div>
+
+  </main>
 
   <!-- כפתורי פעולה -->
-<div class="fixed-payment-bar">
-  <div class="total-above">מחיר כולל: <span id="checkout-total-inline">0</span> ₪</div>
-  <div class="button-row">
-    <button onclick="goToTranzilaPayment()" class="fixed-pay-btn">💳 לתשלום</button>
-    <a href="menu.html" class="fixed-pay-btn back-btn">🔙 חזרה</a>
+  <div class="fixed-payment-bar">
+    <div class="total-above">מחיר כולל: <span id="checkout-total-inline">0</span> ₪</div>
+    <div class="button-row">
+      <button onclick="goToTranzilaPayment()" class="fixed-pay-btn">💳 לתשלום</button>
+      <a href="menu.html" class="fixed-pay-btn back-btn">🔙 חזרה</a>
+    </div>
   </div>
-</div>
 
   <script>
     const checkoutItems = document.getElementById("checkout-items");
@@ -155,12 +189,18 @@
     checkoutTotal.innerText = total;
 
     const inlineTotal = document.getElementById("checkout-total-inline");
-  if (inlineTotal) {
-    inlineTotal.innerText = total;
-  }
+    if (inlineTotal) {
+      inlineTotal.innerText = total;
+    }
 
 
     function goToTranzilaPayment() {
+
+      if (total === 0) {
+        alert("יש להוסיף מוצרים לסל לפני ביצוע תשלום.");
+        return;
+      }
+
       window.location.href = `payment.html?sum=${total}`;
     }
 
@@ -171,7 +211,7 @@
 
 
 
-<div style="height: 100px;"></div>
+  <div style="height: 150px;"></div>
 
 
 
