@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "MyCodes",
+			"path": ".."
+		},
+		{
+			"name": "AsemblerProject",
+			"path": "../AsemblerProject"
+		}
+	],
+	"settings": {}
+}
