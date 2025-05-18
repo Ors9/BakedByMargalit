@@ -13,7 +13,7 @@ main h1 {
   text-align: center;
   margin: 0 0 0px; 
   padding-bottom: 2px;
-  border: 1px solid #e0c9a6;
+  border-bottom: 2px solid #e0c9a6;
   font-weight: bold;
 }
 
@@ -23,19 +23,21 @@ main h1 {
       text-align: center;
       color: #000;
       margin-top: 0px;
-      border: 1px solid #f3e1c1;
       padding-top: 5px;
     }
 
 
-    .order-note2 {
-      border: 1px solid #f3e1c1;
-      padding: 14px;
-      border-radius: 0px;
-      margin: 06px 0;
-      font-size: 16px;
-      line-height: 1.7;
-    }
+.order-note2 {
+  background: #fffdf9;
+  border: 2px solid #f8eedd;
+  border-radius: 0px;
+  padding: 12px;
+  margin: 10px 0 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
 
     body {
       background: #fffdf7;
@@ -46,17 +48,16 @@ main h1 {
 
     }
 
-    .cart-item {
-      display: flex;
-      gap: 20px;
-      border: 1px solid #f3e1c1;
-      border-radius: px;
-      padding: 10px;
-      margin-bottom: 5px;
-      background: #fff;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
+.cart-item {
+  display: flex;
+  gap: 16px;
+  border: 2px solid #f8eedd; /* טיפה בהיר יותר */
+  background: #fffdf9;        /* טון יותר חם, פחות ניגודיות */
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 0px;         /* פינות עגולות מרככות */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03); /* צל ממש עדין */
+}
 
     .cart-item img {
       width: 100px;
