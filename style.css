@@ -210,6 +210,12 @@ main {
   background-color: #fffaf3;
   border-radius: 0px;
   border: 2px solid #f3e1c1;
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu-item img:hover {
+  transform: scale(1.08);
+  cursor: zoom-in;
 }
 
 .menu-item div {
