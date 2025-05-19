@@ -1,4 +1,4 @@
-fetch('products.json')
+fetch('data/products.json')
   .then(response => response.json())
   .then(products => {
     products.forEach(product => {
