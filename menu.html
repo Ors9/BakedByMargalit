@@ -67,113 +67,120 @@
 
   <main>
 
-<nav class="menu-shortcuts">
-  <ul>
-    <li><a href="#platters">🧁 מגשי אירועים</a></li>
-    <li><a href="#breads">🥐 מאפים</a></li>
-    <li><a href="#cookies">🍪 עוגיות</a></li>
-  </ul>
-</nav>
+    <nav class="menu-shortcuts">
+      <ul>
+        <li><a href="#platters">🧁 מגשי אירועים</a></li>
+        <li><a href="#breads">🥐 מאפים</a></li>
+        <li><a href="#cookies">🍪 עוגיות</a></li>
+      </ul>
+    </nav>
 
-<section class="menu-section" id="platters">
-  <h2>🧁 מגשי אירועים</h2>
+    <section class="menu-section" id="platters">
+      <h2>🧁 מגשי אירועים</h2>
 
+      <div class="product-row">
 
-      <div class="menu-item">
-        <strong>🥜 המיקס המלכותי</strong>
-        <div class="item-row">
-          <img src="images/mash_events1.jpg" alt="המיקס המלכותי – מגש עוגיות ואגוזים מפנק">
-          <div class="item-info">
-            <span class="price">250 ₪</span>
-            <span class="add-to-cart-label">הוספה לסל:</span>
-            <div class="quantity-controls">
-              <button onclick="updateCart('המיקס המלכותי', 250, -1, 'images/mash_events1.jpg')">➖</button>
-              <span id="count-המיקס המלכותי">0</span>
-              <button onclick="updateCart('המיקס המלכותי', 250, 1, 'images/mash_events1.jpg')">➕</button>
+        <div class="menu-item">
+          <strong>🥜 המיקס המלכותי</strong>
+          <div class="item-row">
+            <img src="images/mash_events1.jpg" alt="המיקס המלכותי – מגש עוגיות ואגוזים מפנק">
+            <div class="item-info">
+              <span class="price">250 ₪</span>
+              <span class="add-to-cart-label">הוספה לסל:</span>
+              <div class="quantity-controls">
+                <button onclick="updateCart('המיקס המלכותי', 250, -1, 'images/mash_events1.jpg')">➖</button>
+                <span id="count-המיקס המלכותי">0</span>
+                <button onclick="updateCart('המיקס המלכותי', 250, 1, 'images/mash_events1.jpg')">➕</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="menu-item">
-        <strong>🥥 מגש הכדורים המתוקים</strong>
-        <div class="item-row">
-          <img src="images/mash_events2.jpg" alt="מגש הכדורים המתוקים – תמרים ורפאלו בקלאסה">
-          <div class="item-info">
-            <span class="price">200 ₪</span>
-            <span class="add-to-cart-label">הוספה לסל:</span>
-            <div class="quantity-controls">
-              <button onclick="updateCart('מגש הכדורים המתוקים', 200, -1, 'images/mash_events2.jpg')">➖</button>
-              <span id="count-מגש הכדורים המתוקים">0</span>
-              <button onclick="updateCart('מגש הכדורים המתוקים', 200, 1, 'images/mash_events2.jpg')">➕</button>
+        <div class="menu-item">
+          <strong>🥥 מגש הכדורים המתוקים</strong>
+          <div class="item-row">
+            <img src="images/mash_events2.jpg" alt="מגש הכדורים המתוקים – תמרים ורפאלו בקלאסה">
+            <div class="item-info">
+              <span class="price">200 ₪</span>
+              <span class="add-to-cart-label">הוספה לסל:</span>
+              <div class="quantity-controls">
+                <button onclick="updateCart('מגש הכדורים המתוקים', 200, -1, 'images/mash_events2.jpg')">➖</button>
+                <span id="count-מגש הכדורים המתוקים">0</span>
+                <button onclick="updateCart('מגש הכדורים המתוקים', 200, 1, 'images/mash_events2.jpg')">➕</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="menu-item">
-        <strong>🥮 עוגיות אגוזי מלך פריכות</strong>
-        <div class="item-row">
-          <img src="images/walnut_cookies.jpg" alt="עוגיות אגוזי מלך פריכות – טעם ביתי אמיתי">
-          <div class="item-info">
-            <span class="price">150 ₪</span>
-            <span class="add-to-cart-label">הוספה לסל:</span>
-            <div class="quantity-controls">
-              <button onclick="updateCart('עוגיות אגוזי מלך פריכות', 150, -1, 'images/walnut_cookies.jpg')">➖</button>
-              <span id="count-עוגיות אגוזי מלך פריכות">0</span>
-              <button onclick="updateCart('עוגיות אגוזי מלך פריכות', 150, 1, 'images/walnut_cookies.jpg')">➕</button>
+        <div class="menu-item">
+          <strong>🥮 עוגיות אגוזי מלך פריכות</strong>
+          <div class="item-row">
+            <img src="images/walnut_cookies.jpg" alt="עוגיות אגוזי מלך פריכות – טעם ביתי אמיתי">
+            <div class="item-info">
+              <span class="price">150 ₪</span>
+              <span class="add-to-cart-label">הוספה לסל:</span>
+              <div class="quantity-controls">
+                <button onclick="updateCart('עוגיות אגוזי מלך פריכות', 150, -1, 'images/walnut_cookies.jpg')">➖</button>
+                <span id="count-עוגיות אגוזי מלך פריכות">0</span>
+                <button onclick="updateCart('עוגיות אגוזי מלך פריכות', 150, 1, 'images/walnut_cookies.jpg')">➕</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-
-    </section>
-
-
-
-
-<section class="menu-section" id="breads">
-  <h2>🥐 מאפים</h2>
-
-      <div class="menu-item">
-        <strong>🥪 פריקסה טוניסאי – מגש של 10 יחידות</strong>
-        <div class="item-row">
-          <img src="images/fricasse.jpg" alt="מגש פריקסה טוניסאי – 10 יחידות">
-          <div class="item-info">
-            <span class="price">160 ₪ למגש</span>
-            <span class="add-to-cart-label">הוספה לסל:</span>
-            <div class="quantity-controls">
-              <button onclick="updateCart('פריקסה – מגש', 160, -1, 'images/fricasse.jpg')">➖</button>
-              <span id="count-פריקסה – מגש">0</span>
-              <button onclick="updateCart('פריקסה – מגש', 160, 1, 'images/fricasse.jpg')">➕</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="menu-item">
-        <strong>🍩 ספינג' מרוקאי – מגש של 15 יחידות</strong>
-        <div class="item-row">
-          <img src="images/sfinge.jpg" alt="מגש ספינג' מרוקאי – 15 יחידות">
-          <div class="item-info">
-            <span class="price">110 ₪ למגש</span>
-            <span class="add-to-cart-label">הוספה לסל:</span>
-            <div class="quantity-controls">
-              <button onclick="updateCart('ספינג – מגש', 110, -1, 'images/sfinge.jpg')">➖</button>
-              <span id="count-ספינג – מגש">0</span>
-              <button onclick="updateCart('ספינג – מגש', 110, 1, 'images/sfinge.jpg')">➕</button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
 
- <section class="menu-section" id="cookies">
-  <h2>🍪 עוגיות</h2>
+
+
+    <section class="menu-section" id="breads">
+      <h2>🥐 מאפים</h2>
+
+      <div class="product-row">
+
+        <div class="menu-item">
+          <strong>🥪 פריקסה טוניסאי – מגש של 10 יחידות</strong>
+          <div class="item-row">
+            <img src="images/fricasse.jpg" alt="מגש פריקסה טוניסאי – 10 יחידות">
+            <div class="item-info">
+              <span class="price">160 ₪ למגש</span>
+              <span class="add-to-cart-label">הוספה לסל:</span>
+              <div class="quantity-controls">
+                <button onclick="updateCart('פריקסה – מגש', 160, -1, 'images/fricasse.jpg')">➖</button>
+                <span id="count-פריקסה – מגש">0</span>
+                <button onclick="updateCart('פריקסה – מגש', 160, 1, 'images/fricasse.jpg')">➕</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <strong>🍩 ספינג' מרוקאי – מגש של 15 יחידות</strong>
+          <div class="item-row">
+            <img src="images/sfinge.jpg" alt="מגש ספינג' מרוקאי – 15 יחידות">
+            <div class="item-info">
+              <span class="price">110 ₪ למגש</span>
+              <span class="add-to-cart-label">הוספה לסל:</span>
+              <div class="quantity-controls">
+                <button onclick="updateCart('ספינג – מגש', 110, -1, 'images/sfinge.jpg')">➖</button>
+                <span id="count-ספינג – מגש">0</span>
+                <button onclick="updateCart('ספינג – מגש', 110, 1, 'images/sfinge.jpg')">➕</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <section class="menu-section" id="cookies">
+      <h2>🍪 עוגיות</h2>
+      <div class="product-row"></div>
 
       <div class="menu-item">
         <strong>🍪 עוגיות מכונה קלאסיות</strong>
@@ -189,13 +196,15 @@
             </span>
             <span class="add-to-cart-label">הוספה לסל:</span>
             <div class="quantity-controls">
-              
+
               <button onclick="updateCart('חצי קג עוגיות מכונה', 60, -1, 'images/machine_cookies.jpg')">➖</button>
               <span id="count-חצי קג עוגיות מכונה">0</span>
               <button onclick="updateCart('חצי קג עוגיות מכונה', 60, 1, 'images/machine_cookies.jpg')">➕</button>
             </div>
           </div>
         </div>
+      </div>
+
       </div>
     </section>
 
