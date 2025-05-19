@@ -1,0 +1,39 @@
+[
+    {
+        "name": "המיקס המלכותי",
+        "price": 250,
+        "image": "images/mash_events1.jpg",
+        "category": "platters"
+    },
+    {
+        "name": "מגש הכדורים המתוקים",
+        "price": 200,
+        "image": "images/mash_events2.jpg",
+        "category": "platters"
+    },
+    {
+        "name": "עוגיות אגוזי מלך פריכות",
+        "price": 150,
+        "image": "images/walnut_cookies.jpg",
+        "category": "platters"
+    },
+    {
+        "name": "פריקסה – מגש",
+        "price": 160,
+        "image": "images/fricasse.jpg",
+        "category": "breads"
+    },
+    {
+        "name": "ספינג – מגש",
+        "price": 110,
+        "image": "images/sfinge.jpg",
+        "category": "breads"
+    },
+    {
+        "name": "חצי קג עוגיות מכונה",
+        "price": 60,
+        "image": "images/machine_cookies.jpg",
+        "category": "cookies",
+        "note": "<span style='color: #006400; font-weight: bold; background-color: #eaffea; padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 15px; letter-spacing: 0.5px;'>🎁 מבצע: <u>ק\"ג רק ב־100 ₪</u></span>"
+    }
+]
