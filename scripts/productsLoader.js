@@ -8,9 +8,7 @@ fetch('data/products.json')
       const noteHtml = product.note
         ? `<span style="color: #006400; font-weight: bold; background-color: #eaffea; padding: 2px 6px; border-radius: 5px; display: inline-block; margin-top: 4px;">${product.note}</span>`
         : "";
-
-      const safeId = product.name.replace(/\s/g, "_").replace(/[^\w]/g, "");
-
+      const safeId = getSafeId(product.name);
       const item = document.createElement("div");
       item.className = "menu-item";
       item.innerHTML = `
