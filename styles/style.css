@@ -679,7 +679,7 @@ footer {
 
 .item-row img {
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
   display: block; /* מונע רווחים מיותרים */
   margin: 0 auto; /* גיבוי למרכז */
