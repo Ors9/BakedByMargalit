@@ -30,4 +30,6 @@ fetch('data/products.json')
 
       container.appendChild(item);
     });
+
+    syncQuantitiesFromCart();
   });
