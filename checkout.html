@@ -151,6 +151,8 @@ main h1 {
 <script src="scripts/cart.js"></script>
 <script>
   window.onload = () => {
+    syncQuantitiesFromCart();
+    renderCart();
     renderCheckoutCart();
   };
 </script>
