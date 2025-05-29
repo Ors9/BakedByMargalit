@@ -45,5 +45,40 @@
         "image": "images/megulgalotKinder.jpg",
         "category": "cookies",
         "note": ""
+    },
+            {
+        "name": "מגש מיקס קינוחי כוסות",
+        "price": 300,
+        "image": "images/magashMixKinohiKosot.jpg",
+        "category": "platters",
+        "note": ""
+    },
+            {
+        "name": " קינוחי כוסות מלבי עם רפאלו וקרם פטיסאר - יחידות 10",
+        "price": 150,
+        "image": "images/malabiWithRefaelo.jpg",
+        "category": "platters",
+        "note": ""
+    },
+            {
+        "name": "קינוחי כוסות מוס עם תות וגלי - 10 יחידות",
+        "price": 150,
+        "image": "images/musTutGeliCup.jpg",
+        "category": "platters",
+        "note": ""
+    },
+            {
+        "name": "קינוחי כוסות מוס מקספורניה שוקולד לבן ונשיקות - 10 יחידות",
+        "price": 150,
+        "image": "images/musWhiteChocolate.jpg",
+        "category": "platters",
+        "note": ""
+    } ,
+                {
+        "name": "עוגת פס אלפחורס",
+        "price": 100,
+        "image": "images/rolAlfhoraceCacke.jpg",
+        "category": "platters",
+        "note": ""
     }
 ]
