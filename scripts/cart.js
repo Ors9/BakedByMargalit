@@ -21,6 +21,46 @@ function toggleCart() {
   window.location.href = "checkout.html";
 }
 
+function updateCheckoutQuantity(itemName, delta) {
+  if (!cart[itemName]) return;
+
+  cart[itemName].count += delta;
+  if (cart[itemName].count < 1) cart[itemName].count = 1;
+
+  // חישוב מחדש לפריט הספציפי
+  let itemTotal;
+  if (itemName === "חצי קג עוגיות מכונה") {
+    itemTotal = Math.floor(cart[itemName].count / 2) * 100 +
+                (cart[itemName].count % 2) * cart[itemName].price;
+  } else {
+    itemTotal = cart[itemName].count * cart[itemName].price;
+  }
+
+  // עדכון תצוגה
+  document.getElementById(`count-${itemName}`).innerText = cart[itemName].count;
+  document.getElementById(`item-total-${itemName}`).innerText = itemTotal;
+
+  // חישוב סה"כ מחדש
+  let total = 0;
+  for (let item in cart) {
+    if (cart[item].count > 0) {
+      if (item === "חצי קג עוגיות מכונה") {
+        total += Math.floor(cart[item].count / 2) * 100 +
+                 (cart[item].count % 2) * cart[item].price;
+      } else {
+        total += cart[item].count * cart[item].price;
+      }
+    }
+  }
+
+  document.getElementById("checkout-total").innerText = total;
+  const inlineTotal = document.getElementById("checkout-total-inline");
+  if (inlineTotal) inlineTotal.innerText = total;
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+
 // עדכון פריט בסל
 function updateCart(item, price, delta, image = null) {
   if (!cart[item]) {
@@ -159,6 +199,46 @@ window.onload = () => {
   renderCart();
 };
 
+
+
+function renderCheckoutCart() {
+  const container = document.getElementById("checkout-items");
+  const totalSpan = document.getElementById("checkout-total");
+  const inlineTotal = document.getElementById("checkout-total-inline");
+  container.innerHTML = "";
+
+  let total = 0;
+
+  for (let item in cart) {
+    const product = cart[item];
+    if (product.count > 0) {
+      let itemTotal = item === "חצי קג עוגיות מכונה"
+        ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
+        : product.count * product.price;
+
+      total += itemTotal;
+
+      const div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <img src="${product.image}" alt="${item}">
+        <div class="cart-details">
+          <strong>${item}</strong><br>
+          <div class="quantity-control">
+            <button onclick="updateCheckoutQuantity('${item}', -1)">−</button>
+            <span id="count-${item}">${product.count}</span>
+            <button onclick="updateCheckoutQuantity('${item}', 1)">+</button>
+          </div>
+          סה"כ לפריט: <span id="item-total-${item}">${itemTotal}</span> ₪
+        </div>
+      `;
+      container.appendChild(div);
+    }
+  }
+
+  totalSpan.innerText = total;
+  if (inlineTotal) inlineTotal.innerText = total;
+}
 
 
 

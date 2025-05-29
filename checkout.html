@@ -6,6 +6,7 @@
   <title>לתשלום - המאפים של אמא</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="styles/style.css">
+  
   <style>
 main h1 {
   font-size: 20px;
@@ -163,12 +164,16 @@ main h1 {
 
         const div = document.createElement("div");
         div.className = "cart-item";
-        div.innerHTML = `
+      div.innerHTML = `
         <img src="${product.image}" alt="${item}">
         <div class="cart-details">
           <strong>${item}</strong><br>
-          כמות: ${product.count}<br>
-          סה"כ לפריט: ${itemTotal} ₪
+        <div class="quantity-controls">
+          <button onclick="updateCheckoutQuantity('${item}', -1)">−</button>
+          <span id="count-${item}">${product.count}</span>
+          <button onclick="updateCheckoutQuantity('${item}', 1)">+</button>
+        </div>
+          סה"כ לפריט: <span id="item-total-${item}">${itemTotal}</span> ₪
         </div>
       `;
         checkoutItems.appendChild(div);
@@ -196,7 +201,11 @@ main h1 {
   </script>
 
 
-
+<script>
+  window.onload = () => {
+    renderCheckoutCart();
+  };
+</script>
 
 
 
@@ -205,7 +214,7 @@ main h1 {
 
 
 
-
+<script src="scripts/cart.js"></script>
 
 </body>
 
