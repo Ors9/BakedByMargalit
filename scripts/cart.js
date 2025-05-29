@@ -224,7 +224,7 @@ function renderCheckoutCart() {
         <img src="${product.image}" alt="${item}">
         <div class="cart-details">
           <strong>${item}</strong><br>
-          <div class="quantity-control">
+          <div class="quantity-controls">
             <button onclick="updateCheckoutQuantity('${item}', -1)">−</button>
             <span id="count-${item}">${product.count}</span>
             <button onclick="updateCheckoutQuantity('${item}', 1)">+</button>
