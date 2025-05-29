@@ -51,10 +51,13 @@ function updateCart(item, price, delta, image = null) {
     cart[item].image = image;
   }
   localStorage.setItem("cart", JSON.stringify(cart));
-  const countSpan = document.getElementById("count-" + item);
+  
+  const safeId = getSafeId(item);
+  const countSpan = document.getElementById("count-" + safeId);
   if (countSpan) {
     countSpan.innerText = cart[item].count;
   }
+
   renderCart();
 }
 
@@ -62,7 +65,8 @@ function updateCart(item, price, delta, image = null) {
 function syncQuantitiesFromCart() {
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   for (let item in cart) {
-    const countSpan = document.getElementById("count-" + item);
+    const safeId = getSafeId(item);
+    const countSpan = document.getElementById("count-" + safeId);
     if (countSpan) countSpan.innerText = cart[item].count;
   }
 }
@@ -87,7 +91,9 @@ function createCartItemElement(item, product, itemTotal) {
   `;
   return li;
 }
-
+function getSafeId(name) {
+  return name.replace(/\s/g, "_").replace(/[^\wא-ת]/g, "");
+}
 // מטפל בפריט עם מבצע (עוגיות חצי ק"ג)
 function handleDiscountedItem(ul) {
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");

@@ -9,6 +9,9 @@ fetch('data/products.json')
         ? `<span style="color: #006400; font-weight: bold; background-color: #eaffea; padding: 2px 6px; border-radius: 5px; display: inline-block; margin-top: 4px;">${product.note}</span>`
         : "";
 
+      // תייצר ID תקני בלי רווחים ותווים מיוחדים
+      const safeId = product.name.replace(/\s/g, "_").replace(/[^\w]/g, "");
+
       const item = document.createElement("div");
       item.className = "menu-item";
       item.innerHTML = `
@@ -21,12 +24,13 @@ fetch('data/products.json')
             <span class="add-to-cart-label">הוספה לסל:</span>
             <div class="quantity-controls">
               <button onclick="updateCart('${product.name}', ${product.price}, -1, '${product.image}')">➖</button>
-              <span id="count-${product.name}">0</span>
+              <span id="count-${getSafeId(product.name)}">
               <button onclick="updateCart('${product.name}', ${product.price}, 1, '${product.image}')">➕</button>
             </div>
           </div>
         </div>
       `;
+
       container.appendChild(item);
     });
   });
