@@ -25,41 +25,16 @@ function updateCheckoutQuantity(itemName, delta) {
   if (!cart[itemName]) return;
 
   cart[itemName].count += delta;
-  if (cart[itemName].count < 1) cart[itemName].count = 1;
 
-  // חישוב מחדש לפריט הספציפי
-  let itemTotal;
-  if (itemName === "חצי קג עוגיות מכונה") {
-    itemTotal = Math.floor(cart[itemName].count / 2) * 100 +
-                (cart[itemName].count % 2) * cart[itemName].price;
-  } else {
-    itemTotal = cart[itemName].count * cart[itemName].price;
-  }
+  // אם הכמות ירדה מתחת ל־0 – אפס אותה
+  if (cart[itemName].count < 0) cart[itemName].count = 0;
 
-  // עדכון תצוגה
-  document.getElementById(`count-${itemName}`).innerText = cart[itemName].count;
-  document.getElementById(`item-total-${itemName}`).innerText = itemTotal;
-
-  // חישוב סה"כ מחדש
-  let total = 0;
-  for (let item in cart) {
-    if (cart[item].count > 0) {
-      if (item === "חצי קג עוגיות מכונה") {
-        total += Math.floor(cart[item].count / 2) * 100 +
-                 (cart[item].count % 2) * cart[item].price;
-      } else {
-        total += cart[item].count * cart[item].price;
-      }
-    }
-  }
-
-  document.getElementById("checkout-total").innerText = total;
-  const inlineTotal = document.getElementById("checkout-total-inline");
-  if (inlineTotal) inlineTotal.innerText = total;
-
+  // שמור ל-localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  renderCart();
+  // רנדר מחדש את כל העגלה והתצוגה
+  renderCheckoutCart(); // יעדכן את עמוד התשלום (הפריט ייעלם אם count == 0)
+  renderCart();         // יעדכן את side-cart + badge
 }
 
 
