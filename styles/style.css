@@ -203,20 +203,23 @@ main {
   padding: 10px;
 }
 
-.menu-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  background-color: #fffaf3;
-  border-radius: 0px;
-  border: 2px solid #f3e1c1;
-  transition: transform 0.25s ease-in-out;
-}
+  .menu-item img {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+      transition: transform 0.25s ease-in-out;
+
+  }
+
 
 .menu-item img:hover {
   transform: scale(1.08);
   cursor: zoom-in;
 }
+
+
 
 .menu-item div {
   font-size: 20px;
@@ -680,7 +683,7 @@ footer {
 .item-row img {
   width: 100%;
   max-width: 300px;
-  height: auto;
+  height: 300px;
   display: block; /* מונע רווחים מיותרים */
   margin: 0 auto; /* גיבוי למרכז */
 }
