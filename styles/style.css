@@ -1181,9 +1181,12 @@ footer {
 
 
 
+
+
 /* ברירת מחדל – מובייל: מוצרים בטור */
 .product-row {
   display: block;
+
 }
 
 /* במחשב – הצג מוצרים בשורה */
@@ -1194,5 +1197,14 @@ footer {
     justify-content: center;
   }
 
+  .product-row {
+  flex-wrap: wrap;
+}
+
+.product-row > div {
+  width: calc(40% - 10px);
+  box-sizing: auto;
+  margin-bottom: 10px;
+}
 
 }
