@@ -42,6 +42,7 @@ function updateCheckoutQuantity(itemName, delta) {
 
 // עדכון פריט בסל
 function updateCart(item, price, delta, image = null) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   if (!cart[item]) {
     cart[item] = { count: 0, price, image };
   }
@@ -89,6 +90,7 @@ function createCartItemElement(item, product, itemTotal) {
 
 // מטפל בפריט עם מבצע (עוגיות חצי ק"ג)
 function handleDiscountedItem(ul) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   const item = "חצי קג עוגיות מכונה";
   const product = cart[item];
   if (!product || product.count === 0) return { total: 0, count: 0, message: "" };
@@ -108,6 +110,7 @@ function handleDiscountedItem(ul) {
 
 // מטפל בכל שאר הפריטים
 function handleRegularItems(ul, skipItem) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   let total = 0, count = 0, message = "";
   for (let item in cart) {
     if (item === skipItem) continue;
@@ -124,6 +127,7 @@ function handleRegularItems(ul, skipItem) {
 }
 
 function renderCart() {
+  
   const cart = JSON.parse(localStorage.getItem("cart") || "{}"); 
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
@@ -183,6 +187,7 @@ window.onload = () => {
 
 
 function renderCheckoutCart() {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   const container = document.getElementById("checkout-items");
   const totalSpan = document.getElementById("checkout-total");
   const inlineTotal = document.getElementById("checkout-total-inline");
