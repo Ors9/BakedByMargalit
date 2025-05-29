@@ -22,6 +22,9 @@ function toggleCart() {
 }
 
 function updateCheckoutQuantity(itemName, delta) {
+
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}"); 
+
   if (!cart[itemName]) return;
 
   cart[itemName].count += delta;
@@ -121,6 +124,7 @@ function handleRegularItems(ul, skipItem) {
 }
 
 function renderCart() {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}"); 
   const ul = document.getElementById("cart-items");
   const totalSpan = document.getElementById("total");
   const badge = document.getElementById("cart-count-badge");
