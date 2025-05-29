@@ -150,11 +150,9 @@ main h1 {
 
 <script src="scripts/cart.js"></script>
 <script>
-  window.onload = () => {
-    syncQuantitiesFromCart();
-    renderCart();
-    renderCheckoutCart();
-  };
+window.onload = () => {
+  renderCheckoutCart(); // מספיק רק זה ב־checkout.html
+};
 </script>
 
 
@@ -164,6 +162,31 @@ main h1 {
 
 
 
+<script>
+function goToTranzilaPayment() {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+
+  let total = 0;
+  for (let item in cart) {
+    const p = cart[item];
+    if (p.count > 0) {
+      if (item === "חצי קג עוגיות מכונה") {
+        total += Math.floor(p.count / 2) * 100 + (p.count % 2) * p.price;
+      } else {
+        total += p.count * p.price;
+      }
+    }
+  }
+
+  if (total === 0) {
+    alert("העגלה שלך ריקה. אי אפשר להמשיך לתשלום.");
+    return;
+  }
+
+  // החלף את זה בקישור שלך לטרנזילה אם צריך
+  window.location.href = `payment.html?sum=${total}`;
+}
+</script>
 
 
 </body>
