@@ -65,29 +65,18 @@ function updateCheckoutQuantity(itemName, delta) {
 
 // עדכון פריט בסל
 function updateCart(item, price, delta, image = null) {
-  // ⬅️ תמיד לקרוא מה-localStorage כדי לקבל את העותק העדכני
-  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
-
   if (!cart[item]) {
     cart[item] = { count: 0, price, image };
   }
-
   cart[item].count = Math.max(0, cart[item].count + delta);
-
   if (image) {
     cart[item].image = image;
   }
-
-  // ⬅️ לשמור את העדכון
   localStorage.setItem("cart", JSON.stringify(cart));
-
-  // ⬅️ לעדכן את הכמות ליד הכפתורים
   const countSpan = document.getElementById("count-" + item);
   if (countSpan) {
     countSpan.innerText = cart[item].count;
   }
-
-  // ⬅️ לרנדר את הסל (badge, סכום, וכו')
   renderCart();
 }
 
