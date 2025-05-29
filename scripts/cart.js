@@ -1,5 +1,4 @@
-// טען עגלה מ-localStorage אם קיימת
-const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+
 
 // פתיחה/סגירה של הסל
 function toggleCart() {
@@ -60,6 +59,7 @@ function updateCart(item, price, delta, image = null) {
 
 
 function syncQuantitiesFromCart() {
+  const cart = JSON.parse(localStorage.getItem("cart") || "{}");
   for (let item in cart) {
     const countSpan = document.getElementById("count-" + item);
     if (countSpan) countSpan.innerText = cart[item].count;
