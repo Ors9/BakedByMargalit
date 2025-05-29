@@ -668,23 +668,23 @@ footer {
 
 
 
+/* התצוגה במחשב: תמונה בצד ימין, תוכן בצד שמאל */
 .item-row {
   display: flex;
-  flex-direction: column; /* שינוי לשורות אנכיות */
-  align-items: center;     /* מרכז אופקית */
-  text-align: center;      /* למרכז גם טקסט */
-  gap: 10px;               /* רווח בין תמונה לתוכן */
+  flex-direction: row; /* תמונה מצד ימין, טקסט מצד שמאל */
+  align-items: center; /* ממרכז אנכית */
+  gap: 30px; /* רווח יפה בין התמונה לטקסט */
+  flex-wrap: wrap; /* כדי שמובייל לא ייחתך */
 }
 
 .item-row img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 0px;
-  border: 0px solid #f3e1c1;
-  background: transparent;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #e0c9a6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 .item-info {
   display: flex;
