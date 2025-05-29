@@ -58,6 +58,8 @@ function updateCheckoutQuantity(itemName, delta) {
   if (inlineTotal) inlineTotal.innerText = total;
 
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  renderCart();
 }
 
 
