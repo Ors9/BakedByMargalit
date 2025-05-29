@@ -147,59 +147,54 @@ main h1 {
     </div>
   </div>
 
-  <script>
-    const checkoutItems = document.getElementById("checkout-items");
-    const checkoutTotal = document.getElementById("checkout-total");
-    const cart = JSON.parse(localStorage.getItem("cart") || "{}");
+<script>
+  const checkoutItems = document.getElementById("checkout-items");
+  const checkoutTotal = document.getElementById("checkout-total");
 
-    let total = 0;
+  let total = 0;
 
-    for (let item in cart) {
-      const product = cart[item];
-      if (product.count > 0) {
-        const itemTotal = item === "חצי קג עוגיות מכונה"
-          ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
-          : product.count * product.price;
+  for (let item in cart) {
+    const product = cart[item];
+    if (product.count > 0) {
+      const itemTotal = item === "חצי קג עוגיות מכונה"
+        ? (Math.floor(product.count / 2) * 100 + (product.count % 2) * product.price)
+        : product.count * product.price;
 
-        total += itemTotal;
+      total += itemTotal;
 
-        const div = document.createElement("div");
-        div.className = "cart-item";
+      const div = document.createElement("div");
+      div.className = "cart-item";
       div.innerHTML = `
         <img src="${product.image}" alt="${item}">
         <div class="cart-details">
           <strong>${item}</strong><br>
-        <div class="quantity-controls">
-          <button onclick="updateCheckoutQuantity('${item}', -1)">−</button>
-          <span id="count-${item}">${product.count}</span>
-          <button onclick="updateCheckoutQuantity('${item}', 1)">+</button>
-        </div>
+          <div class="quantity-controls">
+            <button onclick="updateCheckoutQuantity('${item}', -1)">−</button>
+            <span id="count-${item}">${product.count}</span>
+            <button onclick="updateCheckoutQuantity('${item}', 1)">+</button>
+          </div>
           סה"כ לפריט: <span id="item-total-${item}">${itemTotal}</span> ₪
         </div>
       `;
-        checkoutItems.appendChild(div);
-      }
+      checkoutItems.appendChild(div);
     }
+  }
 
-    checkoutTotal.innerText = total;
+  checkoutTotal.innerText = total;
 
-    const inlineTotal = document.getElementById("checkout-total-inline");
-    if (inlineTotal) {
-      inlineTotal.innerText = total;
+  const inlineTotal = document.getElementById("checkout-total-inline");
+  if (inlineTotal) {
+    inlineTotal.innerText = total;
+  }
+
+  function goToTranzilaPayment() {
+    if (total === 0) {
+      alert("יש להוסיף מוצרים לסל לפני ביצוע תשלום.");
+      return;
     }
-
-
-    function goToTranzilaPayment() {
-
-      if (total === 0) {
-        alert("יש להוסיף מוצרים לסל לפני ביצוע תשלום.");
-        return;
-      }
-
-      window.location.href = `payment.html?sum=${total}`;
-    }
-
-  </script>
+    window.location.href = `payment.html?sum=${total}`;
+  }
+</script>
 
 
 <script>
