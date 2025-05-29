@@ -1,3 +1,7 @@
+function getSafeId(name) {
+  return name.replace(/\s/g, "_").replace(/[^\wא-ת]/g, "");
+}
+
 fetch('data/products.json')
   .then(response => response.json())
   .then(products => {
