@@ -433,11 +433,10 @@ main {
 }
 
 .icon.instagram {
-  background-image: url('images/instagram-icon.svg');
+  background-image: url('../images/instagram-icon.svg');
 }
-
 .icon.facebook {
-  background-image: url('images/facebook-icon.svg');
+  background-image: url('../images/facebook-icon.svg');
 }
 
 /* תחתית */
