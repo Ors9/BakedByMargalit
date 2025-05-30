@@ -994,11 +994,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15px; /* גובה אחיד לכל הכפתורים */
   transition: background-color 0.3s ease, transform 0.2s ease;
   line-height: 1.2;
   white-space: nowrap;
 }
+
+
 
 
 
@@ -1018,7 +1019,12 @@ footer {
 
 
 
-
+@media (max-width: 600px) {
+  .menu-shortcuts li a {
+    font-size: clamp(9px, 2vw, 14px);
+    padding: 6px 2px;
+  }
+}
 
 
 
