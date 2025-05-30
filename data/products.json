@@ -3,34 +3,34 @@
         "name": "המיקס המלכותי",
         "price": 250,
         "image": "images/mash_events1.jpg",
-        "category": "platters",
+        "category": "event-boxes",
         "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>תיאור: מכיל עוגיות שקדים ,בוטנים,אגוזים,רפאלו,ועוד</span>" 
 
     },
     {
-        "name": "מגש עוגיות ריבה ואלפחורס",
+        "name": "עוגיות ריבה ואלפחורס",
         "price": 200,
         "image": "images/mash_events2.jpg",
-        "category": "platters"
+        "category": "event-boxes"
     },
     {
         "name": "עוגיות אגוזי מלך פריכות 12 יחידות",
         "price": 150,
         "image": "images/walnut_cookies.jpg",
-        "category": "platters"
+        "category": "event-boxes"
         
     },
     {
         "name": "פריקסה 10 יחידות",
         "price": 160,
         "image": "images/fricasse.jpg",
-        "category": "breads"
+        "category": "traditionals"
     },
     {
         "name": "ספינג 10 יחידות",
         "price": 110,
         "image": "images/sfinge.jpg",
-        "category": "breads"
+        "category": "traditionals"
     },
     {
         "name": "חצי קג עוגיות מכונה",
@@ -47,45 +47,45 @@
         "note": ""
     },
             {
-        "name": "מגש מיקס קינוחי כוסות",
+        "name": "מיקס קינוחי כוסות",
         "price": 300,
         "image": "images/magashMixKinohiKosot.jpg",
-        "category": "platters",
+        "category": "event-boxes",
         "note": ""
     },
             {
-        "name": " קינוחי כוסות מלבי עם רפאלו וקרם פטיסאר - יחידות 10",
+        "name": " מלבי עם רפאלו - יחידות 10",
         "price": 150,
         "image": "images/malabiWithRefaelo.jpg",
-        "category": "platters",
+        "category": "desserts",
         "note": ""
     },
             {
-        "name": "קינוחי כוסות מוס עם תות וגלי - 10 יחידות",
+        "name": "מוס תות וגלי - 10 יחידות",
         "price": 150,
         "image": "images/musTutGeliCup.jpg",
-        "category": "platters",
+        "category": "desserts",
         "note": ""
     },
             {
-        "name": "קינוחי כוסות מוס מקספורניה שוקולד לבן ונשיקות - 10 יחידות",
+        "name": "מוס שוקולד לבן - 10 יחידות",
         "price": 150,
         "image": "images/musWhiteChocolate.jpg",
-        "category": "platters",
+        "category": "desserts",
         "note": ""
     } ,
                 {
         "name": "עוגת פס אלפחורס",
         "price": 100,
         "image": "images/rolAlfhoraceCacke.jpg",
-        "category": "platters",
+        "category": "desserts",
         "note": ""
     },
     {
-    "name": "מופלטה – 10 יחידות",
+    "name": "מופלטה  10 יחידות",
     "price": 100,
     "image": "images/MufletaMenu.png",
-    "category": "platters",
+    "category": "traditionals",
     "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>📸 התמונה להמחשה בלבד – הכמות המוצגת גדולה מהכמות המסופקת</span>" 
     }
 ]
