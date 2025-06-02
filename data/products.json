@@ -4,7 +4,7 @@
         "price": 250,
         "image": "images/mash_events1.jpg",
         "category": "event-boxes",
-        "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>תיאור: מכיל עוגיות שקדים ,בוטנים,אגוזים,רפאלו,ועוד</span>" 
+        "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>תיאור: עוגיות בוטנית , שקדים , אגוזי מלך , פיסטוק , בוטנים מצופים שוקולד , רפאלו </span>" 
 
     },
     {
@@ -24,7 +24,9 @@
         "name": "פריקסה 10 יחידות",
         "price": 160,
         "image": "images/fricasse.jpg",
-        "category": "traditionals"
+        "category": "traditionals",
+        "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>תיאור: פריקסה ממולא אריסה פיקנטית , תפוח אדמה , ביצים , לימון כבוש , טונה , זיתים וסלט</span>" 
+
     },
     {
         "name": "ספינג 10 יחידות",
@@ -34,10 +36,9 @@
     },
     {
         "name": "עוגיות מכונה קופסא",
-        "price": 60,
+        "price": 50,
         "image": "images/machine_cookies.jpg",
-        "category": "cookies",
-        "note": "<span style='color: #006400; background-color: #eaffea; padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>🎁 מבצע: <u>ק\"ג רק ב־100 ₪</u></span><br><span style='color: #555; background-color: #eaffea; padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>📸 התמונה להמחשה בלבד – הכמות המוצגת גדולה מהכמות המסופקת</span>"
+        "category": "cookies"
     },
         {
         "name": "מגולגלות קינדר קופסא",
@@ -47,7 +48,7 @@
         "note": ""
     },
             {
-        "name": "מיקס קינוחי כוסות",
+        "name": "מיקס קינוחי כוסות ועוגיות"  ,
         "price": 300,
         "image": "images/magashMixKinohiKosot.jpg",
         "category": "event-boxes",
@@ -80,12 +81,5 @@
         "image": "images/rolAlfhoraceCacke.jpg",
         "category": "desserts",
         "note": ""
-    },
-    {
-    "name": "מופלטה  10 יחידות",
-    "price": 100,
-    "image": "images/MufletaMenu.png",
-    "category": "traditionals",
-    "note":"<span style='padding: 2px 6px; border-radius: 0px; display: inline-block; margin-top: 4px; font-size: 13px; letter-spacing: 0.5px;'>📸 התמונה להמחשה בלבד – הכמות המוצגת גדולה מהכמות המסופקת</span>" 
     }
 ]
